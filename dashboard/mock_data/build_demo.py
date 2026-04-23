@@ -1112,6 +1112,245 @@ def build_dashboard_data():
         ],
     }
 
+    # ─── Customer Journey data ───────────────────────────────────────────
+    # Shape: category_journeys keyed by category ("all" + per-category).
+    # Each: total_items, funnel.stages[{stage,count,percentage}],
+    # pain_breakdown.categories[{pain_category,count,percentage}],
+    # stages[{stage,count,percentage,emotional_state,emotion_distribution,intent_distribution}]
+    def _stage(stage_key, count, percentage, pos, neu, neg, emo_dist, intent_dist):
+        return {
+            "stage": stage_key,
+            "count": count,
+            "percentage": percentage,
+            "emotional_state": {"positive": pos, "neutral": neu, "negative": neg},
+            "emotion_distribution": emo_dist,
+            "intent_distribution": intent_dist,
+        }
+
+    cj_all = {
+        "total_items": 2040,
+        "funnel": {
+            "total": 2040,
+            "stages": [
+                {"stage": "awareness",     "count": 472, "percentage": 23},
+                {"stage": "consideration", "count": 612, "percentage": 30},
+                {"stage": "decision",      "count": 394, "percentage": 19},
+                {"stage": "purchase",      "count": 292, "percentage": 14},
+                {"stage": "experience",    "count": 270, "percentage": 13},
+            ],
+        },
+        "pain_breakdown": {
+            "total": 1284,
+            "categories": [
+                {"pain_category": "preis_transparenz",    "count": 386, "percentage": 30, "label_de": "Preis-Transparenz"},
+                {"pain_category": "hotel_qualitaet",       "count": 264, "percentage": 21, "label_de": "Hotel-Qualität unsicher"},
+                {"pain_category": "reisezeit_wahl",        "count": 192, "percentage": 15, "label_de": "Reisezeit-Entscheidung"},
+                {"pain_category": "flug_puenktlichkeit",   "count": 148, "percentage": 12, "label_de": "Flug-Pünktlichkeit"},
+                {"pain_category": "safety",                "count": 124, "percentage": 10, "label_de": "Reise-Sicherheit"},
+                {"pain_category": "ticket_dschungel",       "count":  98, "percentage":  8, "label_de": "Ticket-Optionen (Städtereisen)"},
+                {"pain_category": "verpflegung_vergleich",  "count":  72, "percentage":  6, "label_de": "All-Inclusive vs Halbpension"},
+            ],
+        },
+        "stages": [
+            _stage("awareness", 472, 23, 42, 54, 4,
+                {"curiosity": 180, "excitement": 120, "hope": 98, "inspiration": 74},
+                {"informational": 412, "comparing": 60}),
+            _stage("consideration", 612, 30, 34, 52, 14,
+                {"confusion": 208, "curiosity": 184, "calculation": 122, "frustration": 98},
+                {"commercial": 388, "informational": 224}),
+            _stage("decision", 394, 19, 28, 48, 24,
+                {"impatience": 132, "calculation": 108, "frustration": 92, "confusion": 62},
+                {"commercial": 248, "transactional": 146}),
+            _stage("purchase", 292, 14, 38, 46, 16,
+                {"hope": 112, "impatience": 96, "excitement": 58, "anxiety": 26},
+                {"transactional": 272, "commercial": 20}),
+            _stage("experience", 270, 13, 58, 30, 12,
+                {"romance": 68, "excitement": 74, "frustration": 62, "hope": 36},
+                {"informational": 186, "commercial": 84}),
+        ],
+    }
+    cj_strand = {
+        "total_items": 1124,
+        "funnel": {
+            "total": 1124,
+            "stages": [
+                {"stage": "awareness",     "count": 248, "percentage": 22},
+                {"stage": "consideration", "count": 354, "percentage": 32},
+                {"stage": "decision",      "count": 228, "percentage": 20},
+                {"stage": "purchase",      "count": 172, "percentage": 15},
+                {"stage": "experience",    "count": 122, "percentage": 11},
+            ],
+        },
+        "pain_breakdown": {
+            "total": 742,
+            "categories": [
+                {"pain_category": "preis_transparenz",    "count": 248, "percentage": 33, "label_de": "Preis-Transparenz Mallorca/Türkei"},
+                {"pain_category": "hotel_qualitaet",       "count": 168, "percentage": 23, "label_de": "Hotel-Qualität unsicher"},
+                {"pain_category": "all_inclusive_check",   "count": 112, "percentage": 15, "label_de": "All-Inclusive lohnt sich?"},
+                {"pain_category": "reisezeit_wahl",        "count":  98, "percentage": 13, "label_de": "Beste Reisezeit Kanaren/Ägypten"},
+                {"pain_category": "flug_puenktlichkeit",   "count":  74, "percentage": 10, "label_de": "Condor/TUIfly Pünktlichkeit"},
+                {"pain_category": "safety",                "count":  42, "percentage":  6, "label_de": "Ägypten-Sicherheit"},
+            ],
+        },
+        "stages": [
+            _stage("awareness", 248, 22, 44, 52, 4,
+                {"curiosity": 108, "excitement": 72, "hope": 48},
+                {"informational": 218, "comparing": 30}),
+            _stage("consideration", 354, 32, 36, 52, 12,
+                {"confusion": 128, "curiosity": 102, "calculation": 84},
+                {"commercial": 248, "informational": 106}),
+            _stage("decision", 228, 20, 30, 46, 24,
+                {"impatience": 82, "calculation": 64, "frustration": 50},
+                {"commercial": 156, "transactional": 72}),
+            _stage("purchase", 172, 15, 40, 44, 16,
+                {"hope": 68, "impatience": 58, "excitement": 34},
+                {"transactional": 160, "commercial": 12}),
+            _stage("experience", 122, 11, 60, 28, 12,
+                {"excitement": 42, "frustration": 28, "hope": 22},
+                {"informational": 82, "commercial": 40}),
+        ],
+    }
+    cj_city = {
+        "total_items": 498,
+        "funnel": {
+            "total": 498,
+            "stages": [
+                {"stage": "awareness",     "count": 124, "percentage": 25},
+                {"stage": "consideration", "count": 138, "percentage": 28},
+                {"stage": "decision",      "count":  92, "percentage": 18},
+                {"stage": "purchase",      "count":  68, "percentage": 14},
+                {"stage": "experience",    "count":  76, "percentage": 15},
+            ],
+        },
+        "pain_breakdown": {
+            "total": 342,
+            "categories": [
+                {"pain_category": "ticket_dschungel",    "count": 128, "percentage": 37, "label_de": "Vatikan/Kolosseum-Ticket-Wahl"},
+                {"pain_category": "hotel_lage",           "count":  78, "percentage": 23, "label_de": "Hotel-Lage vs Preis"},
+                {"pain_category": "sprache_vor_ort",      "count":  54, "percentage": 16, "label_de": "Sprachbarriere"},
+                {"pain_category": "transport_stadt",       "count":  46, "percentage": 13, "label_de": "ÖPNV / Transfers"},
+                {"pain_category": "preis_transparenz",    "count":  36, "percentage": 11, "label_de": "Preisvergleich Wochenende"},
+            ],
+        },
+        "stages": [
+            _stage("awareness", 124, 25, 48, 48, 4,
+                {"curiosity": 58, "inspiration": 42, "excitement": 24},
+                {"informational": 108, "comparing": 16}),
+            _stage("consideration", 138, 28, 38, 54, 8,
+                {"confusion": 52, "calculation": 46, "curiosity": 40},
+                {"commercial": 92, "informational": 46}),
+            _stage("decision", 92, 18, 34, 52, 14,
+                {"confusion": 32, "impatience": 28, "calculation": 22},
+                {"commercial": 58, "transactional": 34}),
+            _stage("purchase", 68, 14, 42, 42, 16,
+                {"hope": 26, "impatience": 22, "excitement": 14},
+                {"transactional": 64, "commercial": 4}),
+            _stage("experience", 76, 15, 56, 32, 12,
+                {"excitement": 22, "inspiration": 18, "frustration": 14},
+                {"informational": 54, "commercial": 22}),
+        ],
+    }
+    cj_exotic = {
+        "total_items": 276,
+        "funnel": {
+            "total": 276,
+            "stages": [
+                {"stage": "awareness",     "count": 78, "percentage": 28},
+                {"stage": "consideration", "count": 84, "percentage": 30},
+                {"stage": "decision",      "count": 52, "percentage": 19},
+                {"stage": "purchase",      "count": 34, "percentage": 12},
+                {"stage": "experience",    "count": 28, "percentage": 10},
+            ],
+        },
+        "pain_breakdown": {
+            "total": 186,
+            "categories": [
+                {"pain_category": "preis_exotik",    "count": 78, "percentage": 42, "label_de": "Malediven/Dubai Preis-Schock"},
+                {"pain_category": "regenzeit",        "count": 42, "percentage": 23, "label_de": "Regenzeit / Hurrikan-Saison"},
+                {"pain_category": "visum_einreise",   "count": 28, "percentage": 15, "label_de": "Visum & Einreisebestimmungen"},
+                {"pain_category": "impfen",           "count": 22, "percentage": 12, "label_de": "Impf-Empfehlungen"},
+                {"pain_category": "flug_dauer",       "count": 16, "percentage":  8, "label_de": "Flugdauer / Umsteigen"},
+            ],
+        },
+        "stages": [
+            _stage("awareness", 78, 28, 52, 44, 4,
+                {"inspiration": 36, "curiosity": 28, "excitement": 14},
+                {"informational": 72, "comparing": 6}),
+            _stage("consideration", 84, 30, 42, 48, 10,
+                {"calculation": 34, "confusion": 28, "hope": 22},
+                {"commercial": 52, "informational": 32}),
+            _stage("decision", 52, 19, 32, 48, 20,
+                {"impatience": 18, "calculation": 14, "anxiety": 12},
+                {"commercial": 30, "transactional": 22}),
+            _stage("purchase", 34, 12, 44, 40, 16,
+                {"hope": 14, "impatience": 10, "excitement": 8},
+                {"transactional": 32, "commercial": 2}),
+            _stage("experience", 28, 10, 64, 28, 8,
+                {"romance": 10, "excitement": 10, "hope": 6},
+                {"informational": 20, "commercial": 8}),
+        ],
+    }
+    cj_cruise = {
+        "total_items": 142,
+        "funnel": {
+            "total": 142,
+            "stages": [
+                {"stage": "awareness",     "count": 22, "percentage": 15},
+                {"stage": "consideration", "count": 36, "percentage": 25},
+                {"stage": "decision",      "count": 42, "percentage": 30},
+                {"stage": "purchase",      "count": 18, "percentage": 13},
+                {"stage": "experience",    "count": 24, "percentage": 17},
+            ],
+        },
+        "pain_breakdown": {
+            "total": 98,
+            "categories": [
+                {"pain_category": "anbieter_vergleich", "count": 42, "percentage": 43, "label_de": "MSC vs Costa vs AIDA"},
+                {"pain_category": "bordgeld",            "count": 22, "percentage": 23, "label_de": "Bordgeld + versteckte Kosten"},
+                {"pain_category": "erstkreuzer",         "count": 18, "percentage": 18, "label_de": "Erstkreuzer: wo anfangen?"},
+                {"pain_category": "hurricane",           "count": 16, "percentage": 16, "label_de": "Karibik Hurricane-Saison"},
+            ],
+        },
+        "stages": [
+            _stage("awareness", 22, 15, 54, 42, 4,
+                {"curiosity": 12, "inspiration": 8, "excitement": 2},
+                {"informational": 20, "comparing": 2}),
+            _stage("consideration", 36, 25, 40, 50, 10,
+                {"confusion": 14, "calculation": 12, "curiosity": 10},
+                {"commercial": 22, "informational": 14}),
+            _stage("decision", 42, 30, 32, 52, 16,
+                {"confusion": 16, "calculation": 14, "impatience": 8},
+                {"commercial": 28, "transactional": 14}),
+            _stage("purchase", 18, 13, 40, 44, 16,
+                {"hope": 8, "excitement": 6, "impatience": 4},
+                {"transactional": 16, "commercial": 2}),
+            _stage("experience", 24, 17, 66, 26, 8,
+                {"excitement": 10, "inspiration": 8, "hope": 4},
+                {"informational": 16, "commercial": 8}),
+        ],
+    }
+
+    category_journeys = {
+        "all":            cj_all,
+        "blood_pressure": cj_strand,
+        "pain_tens":      cj_city,
+        "infrarot":       cj_exotic,
+        "menstrual":      cj_cruise,
+    }
+
+    # Update journey_intelligence with kpi block for the tab's header KPIs
+    journey_intelligence["kpis"] = {
+        "bridge_rate": 44,
+        "total_journey_items": 2040,
+        "purchase_intent_count": 292,
+    }
+    journey_intelligence["narrative"] = (
+        "Der größte Kunden-Drop findet zwischen Consideration und Decision statt "
+        "(−36%). Die Hauptursache laut Pain-Analyse: fehlende Preis-Transparenz "
+        "(30% der negativen Signale). Bild-Preis-Tracker-Artikel und Daten-Stories "
+        "schließen genau hier."
+    )
+
     # SEO data
     seo_data = {
         "ranked_keywords_total": 1284,
@@ -1269,7 +1508,7 @@ def build_dashboard_data():
         "journey_intelligence": journey_intelligence,
         "deep_insights": deep_insights,
         "category_deep_insights": deep_insights["by_category"],
-        "category_journeys": {},
+        "category_journeys": category_journeys,
         "wow_metrics": {"volume_delta_pct": 24, "sentiment_delta_pp": 3, "content_delta_pct": 8},
         "brand_sentiment": brand_sentiment,
         "topic_sentiment": topic_sentiment,
