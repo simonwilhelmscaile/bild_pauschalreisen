@@ -6,64 +6,110 @@
     <title>BILD Pauschalreisen · Content Engine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M154.53%2C171.45c14.81-16.94%2C19.56-42.18%2C13.47-65.07-7.75-25.6-30.5-46.43-57.22-49.23-17.96-1.62-34.92%2C1.95-47.97%2C12.51V7.1h-31.98v114.29c.14%2C14.77%2C2.31%2C26.32%2C8.42%2C37.55%2C12.88%2C24.38%2C38.79%2C38.25%2C67.32%2C36.7%2C18.48-1.62%2C35.76-10.39%2C47.96-24.19M132.65%2C148.92c-9.17%2C11.99-24.6%2C18.31-40.39%2C15.02-14.54-3.76-26.35-16.58-28.61-31.7-2.63-15.8%2C4.7-30.71%2C17.67-39.22%2C11.38-7.5%2C29.67-7.32%2C41.24.83%2C5.54%2C3.76%2C10.29%2C9.22%2C13.46%2C15.86%2C5.79%2C11.55%2C4.48%2C28.46-3.36%2C39.2%22%20fill%3D%22%23c71553%22%2F%3E%3C%2Fsvg%3E">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <style>
         :root {
-            --beurer-magenta: #DD0000;
-            --beurer-magenta: #DD0000;
-            --beurer-magenta-light: rgba(221, 0, 0, 0.08);
-            --beurer-magenta-dark: #B00000;
-            --beurer-magenta-bright: #FF0F0F;
-            --beurer-magenta-glow: #FF3030;
-            --beurer-magenta-subtle: rgba(221, 0, 0, 0.04);
-            --accent-gold: #D4A574;
-            --accent-gold-light: rgba(212, 165, 116, 0.15);
-            --accent-gold-dark: #B8956A;
-            --gray-50: #FAFAFA;
-            --gray-100: #F5F5F7;
-            --gray-200: #E8E8ED;
-            --gray-300: #D2D2D7;
-            --gray-400: #86868B;
-            --gray-500: #6E6E73;
-            --gray-600: #515154;
-            --gray-700: #3A3A3C;
-            --gray-800: #2C2C2E;
-            --gray-900: #1D1D1F;
+            /* ═══════════════════════════════════════════════════════════
+             * SCAILE DESIGN SYSTEM v1
+             * Every CTA, focus ring and link is #0528F2 (electric blue).
+             * Every border is #C4CBF2 (lilac). Type is Inter 15px.
+             * Variable *names* retain their legacy prefixes because they are
+             * wired into 12k lines of existing code — their *values* now map
+             * onto Scaile tokens. (--beurer-magenta → scaile-blue, etc.)
+             * ═══════════════════════════════════════════════════════════ */
+
+            /* Scaile brand */
+            --scaile-blue:        #0528F2;
+            --scaile-blue-hover:  #0420D9;
+            --scaile-blue-2:      #296CF2;
+            --scaile-lilac:       #C4CBF2;
+
+            /* Legacy aliases → Scaile values */
+            --beurer-magenta:        var(--scaile-blue);
+            --beurer-magenta-light:  rgba(5, 40, 242, 0.08);
+            --beurer-magenta-dark:   var(--scaile-blue-hover);
+            --beurer-magenta-bright: var(--scaile-blue-2);
+            --beurer-magenta-glow:   var(--scaile-blue-2);
+            --beurer-magenta-subtle: rgba(196, 203, 242, 0.10);
+            --accent-gold:       #F59E0B;
+            --accent-gold-light: rgba(245, 158, 11, 0.15);
+            --accent-gold-dark:  #D97706;
+
+            /* Neutrals — pure ink scale, not Apple gray */
+            --gray-50:  #FAFAFA;
+            --gray-100: #F5F5F5;
+            --gray-200: var(--scaile-lilac);   /* Default border = lilac */
+            --gray-300: #D4D4D8;
+            --gray-400: #9CA3AF;
+            --gray-500: #626262;               /* Scaile ink-2 body */
+            --gray-600: #3F3F46;
+            --gray-700: #292929;               /* Scaile ink-1 */
+            --gray-800: #171717;
+            --gray-900: #0D0D0D;               /* Scaile ink-0 heading */
             --pure-white: #FFFFFF;
             --pure-black: #000000;
-            --success: #34C759;
-            --success-light: rgba(52, 199, 89, 0.1);
-            --warning: #FF9500;
-            --warning-light: rgba(255, 149, 0, 0.1);
-            --error: #FF3B30;
-            --error-light: rgba(255, 59, 48, 0.1);
-            --info: #007AFF;
-            --info-light: rgba(0, 122, 255, 0.1);
-            --gradient-magenta: linear-gradient(135deg, var(--beurer-magenta) 0%, var(--beurer-magenta-dark) 100%);
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.03);
-            --shadow-lg: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 20px;
-            --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-text: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-mono: 'SF Mono', 'Monaco', 'Consolas', monospace;
-            --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            /* Semantic status */
+            --success:       #10B981;
+            --success-light: rgba(16, 185, 129, 0.10);
+            --warning:       #F59E0B;
+            --warning-light: rgba(245, 158, 11, 0.10);
+            --error:         #EF4444;
+            --error-light:   rgba(239, 68, 68, 0.10);
+            --info:          var(--scaile-blue);
+            --info-light:    rgba(5, 40, 242, 0.08);
+
+            /* No gradients on Scaile — keep var for legacy refs but make it flat */
+            --gradient-magenta: var(--scaile-blue);
+
+            /* Shadows — very subtle, 0.1 alpha max */
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-lg: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-btn:       0 1px 2px rgba(5,40,242,0.10);
+            --shadow-btn-hover: 0 2px 4px rgba(5,40,242,0.15);
+
+            /* Radii — cards 12, buttons 6, badges full */
+            --radius-sm: 6px;     /* buttons, inputs */
+            --radius-md: 8px;     /* dropdowns, small cards */
+            --radius-lg: 12px;    /* cards, modals — Scaile default */
+            --radius-xl: 12px;    /* flattened from 20 */
+
+            /* Typography */
+            --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-text:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono:    'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+            /* Motion — iOS-style spring */
+            --ease-out:    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --ease-bouncy: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --dur-instant: 100ms;
+            --dur-fast:    200ms;
+            --dur-normal:  300ms;
+            --dur-slow:    500ms;
+
+            /* Layout */
             --sidebar-width-expanded: 240px;
             --sidebar-width-collapsed: 64px;
-            --sidebar-transition: 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --sidebar-transition: 0.22s var(--ease-out);
             --sidebar-bg: #FFFFFF;
-            --sidebar-border: var(--gray-200);
+            --sidebar-border: var(--scaile-lilac);
             --content-header-height: 60px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { font-size: 14px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        body { font-family: var(--font-text); background: #F7F7F8; color: var(--gray-900); line-height: 1.6; display: flex; min-height: 100vh; }
+        body {
+            font-family: var(--font-text);
+            background: #F2F2F2;                /* Scaile paper-2 */
+            color: var(--gray-900);
+            line-height: 1.5;
+            display: flex;
+            min-height: 100vh;
+            font-feature-settings: 'ss01', 'cv11';  /* Inter stylistic sets */
+        }
 
         /* ── SIDEBAR ── */
         .sidebar {
@@ -103,6 +149,42 @@
             overflow: hidden;
         }
         .sidebar.collapsed .sidebar-brand { opacity: 0; width: 0; }
+
+        /* Project switcher chip — shows BILD as the active project in the Scaile shell */
+        .sidebar-project {
+            padding: 8px 14px 14px;
+            border-bottom: 1px solid var(--scaile-lilac);
+            flex-shrink: 0;
+        }
+        .sidebar-project-inner {
+            display: flex; align-items: center; gap: 10px;
+            padding: 8px 10px;
+            background: var(--pure-white);
+            border: 1px solid var(--scaile-lilac);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+        }
+        .sidebar-project-inner:hover { border-color: var(--scaile-blue); background: rgba(5, 40, 242, 0.04); }
+        .sidebar-project-avatar {
+            width: 22px; height: 22px; border-radius: 4px;
+            display: inline-flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .sidebar-project-text { flex: 1; min-width: 0; overflow: hidden; }
+        .sidebar-project-title {
+            font-size: 12px; font-weight: 600; color: var(--gray-900);
+            line-height: 1.25; letter-spacing: -0.01em;
+            white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+        }
+        .sidebar-project-sub {
+            font-size: 10.5px; color: var(--gray-500);
+            line-height: 1.25; margin-top: 1px;
+        }
+        .sidebar-project-chev { color: var(--gray-400); flex-shrink: 0; }
+        .sidebar.collapsed .sidebar-project-text,
+        .sidebar.collapsed .sidebar-project-chev { opacity: 0; width: 0; overflow: hidden; }
+        .sidebar.collapsed .sidebar-project-inner { padding: 8px; }
 
         .sidebar-toggle {
             width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--gray-200);
@@ -324,7 +406,7 @@
             padding: 12px 14px; display: flex; flex-direction: column; gap: 6px;
             transition: border-color 0.15s, box-shadow 0.15s;
         }
-        .us-catalog-tile:hover { border-color: var(--beurer-magenta); box-shadow: 0 2px 6px rgba(198, 0, 80, 0.08); }
+        .us-catalog-tile:hover { border-color: var(--beurer-magenta); box-shadow: 0 2px 6px rgba(5, 40, 242, 0.08); }
         .us-catalog-tile.prelaunch { background: linear-gradient(135deg, var(--pure-white) 0%, #fff7fa 100%); }
         .us-catalog-tile-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; }
         .us-catalog-tile-sku { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--gray-900); letter-spacing: -0.02em; }
@@ -594,7 +676,7 @@
         .funnel-bar-text { font-size: 12px; font-weight: 700; color: white; white-space: nowrap; }
         .funnel-count { font-size: 13px; font-weight: 600; color: var(--gray-700); white-space: nowrap; }
         .funnel-pct { font-size: 12px; color: var(--gray-400); }
-        .funnel-stage.s2 .funnel-bar { background: linear-gradient(135deg, var(--beurer-magenta-bright) 0%, var(--beurer-magenta) 100%); }
+        .funnel-stage.s2 .funnel-bar { background: var(--beurer-magenta) 100%); }
         .funnel-stage.s3 .funnel-bar { background: linear-gradient(135deg, #D4A574 0%, #B8956A 100%); }
         .funnel-stage.s4 .funnel-bar { background: linear-gradient(135deg, #34C759 0%, #059669 100%); }
         .funnel-stage.s5 .funnel-bar { background: linear-gradient(135deg, #007AFF 0%, #0056CC 100%); }
@@ -756,7 +838,7 @@
         .heat-0 { color: var(--gray-300); }
         .heat-1 { background: var(--beurer-magenta-subtle); color: var(--gray-600); }
         .heat-2 { background: var(--beurer-magenta-light); color: var(--beurer-magenta); }
-        .heat-3 { background: var(--brand-heat-mid, rgba(198,0,80,0.22)); color: var(--beurer-magenta); }
+        .heat-3 { background: var(--brand-heat-mid, rgba(5, 40, 242, 0.22)); color: var(--beurer-magenta); }
         .heat-4 { background: var(--brand-heat-high, rgba(198,0,80,0.35)); color: white; }
         .heat-5 { background: var(--beurer-magenta); color: white; }
 
@@ -920,7 +1002,7 @@
         .add-topic-modal-body input:focus,
         .add-topic-modal-body select:focus,
         .add-topic-modal-body textarea:focus {
-          border-color: #DD0000; outline: none;
+          border-color: #0528F2; outline: none;
         }
         .add-topic-modal-body .product-chips {
           display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;
@@ -932,10 +1014,10 @@
           transition: all 0.15s ease;
         }
         .add-topic-modal-body .product-chip.selected {
-          background: #DD0000; color: white; border-color: #DD0000;
+          background: #0528F2; color: white; border-color: #0528F2;
         }
         .add-topic-modal-body .product-chip:hover {
-          border-color: #DD0000;
+          border-color: #0528F2;
         }
         .add-topic-modal-footer {
           padding: 14px 24px; border-top: 1px solid var(--gray-100);
@@ -950,7 +1032,7 @@
         }
         .add-topic-modal-footer .cancel-btn:hover { background: var(--gray-50); }
         .add-topic-modal-footer .submit-btn {
-          background: #DD0000; border: 1px solid #DD0000; color: white;
+          background: #0528F2; border: 1px solid #0528F2; color: white;
         }
         .add-topic-modal-footer .submit-btn:hover { background: #a80043; }
         .add-topic-modal-footer .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -970,7 +1052,7 @@
         /* Row highlight when selected */
         .content-matrix tr.selected-row {
           background: var(--gray-50) !important;
-          outline: 2px solid #DD0000;
+          outline: 2px solid #0528F2;
           outline-offset: -2px;
         }
 
@@ -1019,7 +1101,7 @@
 
         /* Q&A Thread Tab */
         .qa-filter-chips { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
-        .qa-chip { font-size:12px; padding:4px 12px; border-radius:20px; border:1px solid var(--gray-200);
+        .qa-chip { font-size:12px; padding:4px 12px; border-radius: 12px; border:1px solid var(--gray-200);
             background:white; cursor:pointer; transition:all 0.2s; color:var(--gray-600); }
         .qa-chip.active { background:var(--beurer-magenta); color:white; border-color:var(--beurer-magenta); }
         #qaThreadList { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
@@ -1032,7 +1114,7 @@
             display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
         .qa-card.expanded .qa-question-title { -webkit-line-clamp:unset; overflow:visible; }
         .qa-meta-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; align-items:center; }
-        .qa-source-badge { font-size:11px; padding:2px 8px; border-radius:20px; background:var(--gray-100); color:var(--gray-600); }
+        .qa-source-badge { font-size:11px; padding:2px 8px; border-radius: 12px; background:var(--gray-100); color:var(--gray-600); }
         .qa-answers-section { margin-top:16px; padding-top:16px; border-top:1px solid var(--gray-100); }
         .qa-answer-card { background:var(--gray-50); border-radius:8px; padding:12px; margin-bottom:8px; }
         .qa-answer-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
@@ -1065,11 +1147,11 @@
         .qa-show-more-btn:hover { border-color:var(--beurer-magenta); color:var(--beurer-magenta); }
 
         /* Bridge badges in Q&A */
-        .bridge-badge { font-size:10px; padding:2px 8px; border-radius:20px; background:rgba(212,165,116,0.15); color:#B8956A; font-weight:600; }
+        .bridge-badge { font-size:10px; padding:2px 8px; border-radius: 12px; background:rgba(212,165,116,0.15); color:#B8956A; font-weight:600; }
         .bridge-summary-bar { display:flex; align-items:center; gap:12px; padding:12px 16px; background:rgba(212,165,116,0.08);
             border-radius:10px; margin-bottom:16px; flex-wrap:wrap; }
         .bridge-summary-bar .bridge-total { font-size:13px; font-weight:600; color:var(--gray-700); }
-        .bridge-summary-bar .bridge-pill { font-size:11px; padding:3px 10px; border-radius:20px; background:rgba(212,165,116,0.2); color:#8B6914; }
+        .bridge-summary-bar .bridge-pill { font-size:11px; padding:3px 10px; border-radius: 12px; background:rgba(212,165,116,0.2); color:#8B6914; }
         .qa-chip.bridge-chip { border-color:rgba(212,165,116,0.4); color:#8B6914; }
         .qa-chip.bridge-chip.active { background:#D4A574; color:white; border-color:#D4A574; }
         .qa-filter-separator { width:1px; height:20px; background:var(--gray-200); margin:0 4px; }
@@ -1485,7 +1567,7 @@
         }
         .golden-actions button {
             font-size: 11px; padding: 2px 8px; border-radius: 4px;
-            border: 1px solid #D1D5DB; background: white; cursor: pointer; color: #374151;
+            border: 1px solid #C4CBF2; background: white; cursor: pointer; color: #374151;
         }
         .golden-actions button:hover { background: #F9FAFB; }
         .golden-actions button.restore-golden { border-color: #D97706; color: #92400E; }
@@ -1575,7 +1657,7 @@
         }
         .gen-modal-field input:focus,
         .gen-modal-field select:focus {
-            border-color: #DD0000;
+            border-color: #0528F2;
             background: #fff;
         }
         .gen-modal-context {
@@ -1610,7 +1692,7 @@
         }
         .gen-modal-cancel:hover { background: var(--gray-200); }
         .gen-modal-submit {
-            background: #DD0000;
+            background: #0528F2;
             color: #fff;
         }
         .gen-modal-submit:hover { background: #a30042; }
@@ -2212,12 +2294,24 @@
 <aside class="sidebar" id="appSidebar">
     <div class="sidebar-header">
         <div class="sidebar-logo-area">
-            <div class="sidebar-logo has-img" id="sidebar-logo"><img src="data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 3000 3000%22%3E%3Crect width=%223000%22 height=%223000%22 fill=%22%23DD0000%22/%3E%3Cpath fill=%22%23fff%22 d=%22M1438.33 297.761H1138.5v299.824h299.83V297.761Zm0 420.368H1138.5V2697.89h299.83V718.129Zm420.36-420.368h-299.82V2697.38h299.82V297.761Zm540.4 2099.629h-119.86V1017.61h119.86v1379.78Zm300 299.99V297.761h-299.83v420.028H2159.2c-119.86 0-179.96 60.102-179.96 179.963V2517.59c0 119.86 60.1 179.96 179.96 179.96h539.89v-.17ZM717.784 2397.39H597.923v-809.84h119.861v809.84Zm0-1109.83H597.923V597.585h119.861v689.975Zm299.996-59.93V477.724c0-119.861-60.102-179.963-179.963-179.963H297.756V2697.38h539.889c119.861 0 179.965-60.1 179.965-179.96v-929.87c0-98.05-40.013-161.76-119.863-179.62-.464-.08-.446-.6.017-.68 80.005-18.03 119.846-81.74 119.846-179.62%22/%3E%3C/svg%3E" alt="BILD Pauschalreisen"></div>
-            <span class="sidebar-brand" id="sidebar-brand">BILD · Pauschalreisen</span>
+            <div class="sidebar-logo" id="sidebar-logo" style="background:#0528F2;color:#fff;"><svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.8 11.5c-.5-1.7-2.1-2.8-4.2-2.8-2.7 0-4.6 1.5-4.6 3.6 0 1.8 1.1 2.8 3.2 3.3l2.9.7c1 .2 1.5.5 1.5 1.1 0 .7-.9 1.2-2 1.2-1.4 0-2.3-.5-2.6-1.5l-2.8.8c.7 2 2.6 3.2 5.3 3.2 2.9 0 4.9-1.5 4.9-3.8 0-1.9-1.2-2.9-3.4-3.5l-2.7-.6c-.9-.2-1.3-.5-1.3-1.1 0-.6.7-1 1.8-1 1.1 0 2 .4 2.3 1.3l2.7-.9Z" fill="currentColor"/></svg></div>
+            <span class="sidebar-brand" id="sidebar-brand" style="letter-spacing:-0.015em;font-weight:600;font-size:15px;">scaile</span>
         </div>
         <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
+    </div>
+    <div class="sidebar-project" id="sidebar-project">
+        <div class="sidebar-project-inner">
+            <span class="sidebar-project-avatar" aria-hidden="true">
+                <svg width="11" height="11" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#DD0000"/><path d="M15.4 6.3h-3.3v3.3h3.3V6.3Zm0 4.6h-3.3v14.8h3.3V10.9Zm4.6-4.6h-3.3v19.4h3.3V6.3Z" fill="#fff"/></svg>
+            </span>
+            <div class="sidebar-project-text">
+                <div class="sidebar-project-title">BILD Pauschalreisen</div>
+                <div class="sidebar-project-sub">Content Engine</div>
+            </div>
+            <svg class="sidebar-project-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 15l5 5 5-5"/><path d="M7 9l5-5 5 5"/></svg>
+        </div>
     </div>
     <nav class="sidebar-nav" id="sidebarNav"></nav>
     <div class="sidebar-footer" id="sidebarFooter"></div>
@@ -3951,7 +4045,7 @@ const STAGE_LABELS = {
 
 const STAGE_GRADIENTS = [
     'var(--gradient-magenta)',
-    'linear-gradient(135deg, var(--beurer-magenta-bright) 0%, var(--beurer-magenta) 100%)',
+    'var(--beurer-magenta) 100%)',
     'linear-gradient(135deg, #D4A574 0%, #B8956A 100%)',
     'linear-gradient(135deg, #34C759 0%, #059669 100%)',
     'linear-gradient(135deg, #007AFF 0%, #0056CC 100%)'
@@ -4038,14 +4132,14 @@ function buildSourcesByCategory() {
 
 function _css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
 const CHART_COLORS = {
-    get magenta() { return _css('--beurer-magenta') || '#DD0000'; },
+    get magenta() { return _css('--beurer-magenta') || '#0528F2'; },
     get magentaLight() { return _css('--beurer-magenta-light') || 'rgba(198,0,80,0.15)'; },
     gold: '#D4A574',
     success: '#34C759',
     warning: '#FF9500',
     error: '#FF3B30',
     info: '#007AFF',
-    gray300: '#D2D2D7',
+    gray300: '#C4CBF2',
     gray500: '#6E6E73'
 };
 
@@ -4524,7 +4618,7 @@ function switchDateRange(days) {
 
     // Show loading overlay
     let overlay = document.getElementById('dynamic-loading-overlay');
-    const _spinColor = _css('--beurer-magenta') || '#DD0000';
+    const _spinColor = _css('--beurer-magenta') || '#0528F2';
     if (!overlay) {
         overlay = document.createElement('div');
         overlay.id = 'dynamic-loading-overlay';
@@ -4684,7 +4778,7 @@ function renderSidebar(restoreTab) {
     if (logoEl && !logoEl.querySelector('img')) logoEl.textContent = 'B';
     const brandEl = document.getElementById('sidebar-brand');
     if (brandEl) {
-        brandEl.textContent = 'BILD · Pauschalreisen';
+        brandEl.textContent = 'scaile';
         brandEl.title = t('welcome_bullet_1') + ' | ' + t('welcome_bullet_2');
     }
 
@@ -4794,8 +4888,8 @@ function _renderSidebarFooter() {
     if (!footer) return;
     footer.innerHTML = `
         <div class="sidebar-footer-trigger" style="cursor:default;border-color:transparent;">
-            <span class="footer-logo has-img"><img src="data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 3000 3000%22%3E%3Crect width=%223000%22 height=%223000%22 fill=%22%23DD0000%22/%3E%3Cpath fill=%22%23fff%22 d=%22M1438.33 297.761H1138.5v299.824h299.83V297.761Zm0 420.368H1138.5V2697.89h299.83V718.129Zm420.36-420.368h-299.82V2697.38h299.82V297.761Zm540.4 2099.629h-119.86V1017.61h119.86v1379.78Zm300 299.99V297.761h-299.83v420.028H2159.2c-119.86 0-179.96 60.102-179.96 179.963V2517.59c0 119.86 60.1 179.96 179.96 179.96h539.89v-.17ZM717.784 2397.39H597.923v-809.84h119.861v809.84Zm0-1109.83H597.923V597.585h119.861v689.975Zm299.996-59.93V477.724c0-119.861-60.102-179.963-179.963-179.963H297.756V2697.38h539.889c119.861 0 179.965-60.1 179.965-179.96v-929.87c0-98.05-40.013-161.76-119.863-179.62-.464-.08-.446-.6.017-.68 80.005-18.03 119.846-81.74 119.846-179.62%22/%3E%3C/svg%3E" alt="BILD Pauschalreisen"></span>
-            <span class="footer-label">BILD Pauschalreisen</span>
+            <span class="footer-logo" style="background:#0528F2;color:#fff;display:inline-flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.8 11.5c-.5-1.7-2.1-2.8-4.2-2.8-2.7 0-4.6 1.5-4.6 3.6 0 1.8 1.1 2.8 3.2 3.3l2.9.7c1 .2 1.5.5 1.5 1.1 0 .7-.9 1.2-2 1.2-1.4 0-2.3-.5-2.6-1.5l-2.8.8c.7 2 2.6 3.2 5.3 3.2 2.9 0 4.9-1.5 4.9-3.8 0-1.9-1.2-2.9-3.4-3.5l-2.7-.6c-.9-.2-1.3-.5-1.3-1.1 0-.6.7-1 1.8-1 1.1 0 2 .4 2.3 1.3l2.7-.9Z" fill="currentColor"/></svg></span>
+            <span class="footer-label">Powered by scaile</span>
         </div>`;
 }
 
@@ -9330,7 +9424,7 @@ function renderMediaTabFromData() {
     <div class="card" style="margin-bottom:20px;">
         <div class="card-body" style="padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
             <div style="display:flex;align-items:center;gap:16px;">
-                <div style="width:40px;height:40px;border-radius:10px;background:#DD0000;display:flex;align-items:center;justify-content:center;">
+                <div style="width:40px;height:40px;border-radius:10px;background:#0528F2;display:flex;align-items:center;justify-content:center;">
                     <span style="color:white;font-weight:700;font-size:18px;">b</span>
                 </div>
                 <div>
@@ -9514,14 +9608,14 @@ function renderMediaCompetitorTable() {
             const rank = start + idx + 1;
             const isBrand = b.isBrand || false;
             const rowBg = isBrand ? 'background:rgba(198,0,80,0.04);' : '';
-            const leftBorder = isBrand ? 'border-left:3px solid #DD0000;' : 'border-left:3px solid transparent;';
+            const leftBorder = isBrand ? 'border-left:3px solid #0528F2;' : 'border-left:3px solid transparent;';
             const badge = isBrand
-                ? `<span style="font-size:10px;padding:1px 6px;border-radius:4px;background:#DD0000;color:white;margin-left:6px;font-weight:600;">You</span>`
+                ? `<span style="font-size:10px;padding:1px 6px;border-radius:4px;background:#0528F2;color:white;margin-left:6px;font-weight:600;">You</span>`
                 : '';
 
             const visBar = `<div style="display:inline-flex;align-items:center;gap:6px;">
                 <div style="width:40px;height:6px;background:var(--gray-100);border-radius:3px;overflow:hidden;">
-                    <div style="height:100%;width:${Math.min(100, b.score ?? 0)}%;background:${isBrand ? '#DD0000' : 'var(--gray-400)'};border-radius:3px;"></div>
+                    <div style="height:100%;width:${Math.min(100, b.score ?? 0)}%;background:${isBrand ? '#0528F2' : 'var(--gray-400)'};border-radius:3px;"></div>
                 </div>
                 <span style="font-weight:600;">${b.score}%</span>
             </div>`;
@@ -9560,8 +9654,8 @@ function _initTrendChart(history) {
     const datasets = [{
         label: 'BILD Pauschalreisen',
         data: beurerData,
-        borderColor: '#DD0000',
-        backgroundColor: '#DD000015',
+        borderColor: '#0528F2',
+        backgroundColor: '#0528F215',
         borderWidth: 2.5,
         pointRadius: 3,
         pointHoverRadius: 5,
@@ -9765,7 +9859,7 @@ function _showMediaChatModal(prompt, detail, loading) {
     if (loading) {
         existing.innerHTML = `
             <div style="position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this)closeMediaChatDetail()">
-                <div style="background:var(--pure-white);border-radius:16px;max-width:900px;width:100%;max-height:85vh;display:flex;flex-direction:column;box-shadow:var(--shadow-xl);padding:60px;text-align:center;">
+                <div style="background:var(--pure-white);border-radius: 12px;max-width:900px;width:100%;max-height:85vh;display:flex;flex-direction:column;box-shadow:var(--shadow-xl);padding:60px;text-align:center;">
                     <div class="loading-spinner" style="margin:0 auto 12px;"></div>
                     <p style="color:var(--gray-400);font-size:13px;">Loading chat data...</p>
                 </div>
@@ -9809,10 +9903,10 @@ function _showMediaChatModal(prompt, detail, loading) {
     // ── Helper: brand badge ──
     function _brandBadge(name, type) {
         const isBrand = name === 'BILD Pauschalreisen' || name === 'Beurer' || type === 'brand';
-        const badgeColor = isBrand ? '#DD0000' : 'var(--gray-500)';
+        const badgeColor = isBrand ? '#0528F2' : 'var(--gray-500)';
         const initial = esc(name.charAt(0).toLowerCase());
         const iconStyle = isBrand
-            ? 'background:#DD0000;color:white;'
+            ? 'background:#0528F2;color:white;'
             : 'background:var(--gray-200);color:var(--gray-600);';
         const icon = `<span style="width:14px;height:14px;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;${iconStyle}">${initial}</span>`;
         return `<span style="display:inline-flex;align-items:center;gap:3px;padding:1px 8px;border-radius:4px;border:1.5px solid ${badgeColor};font-size:11px;font-weight:600;color:${badgeColor};vertical-align:middle;">${icon} ${esc(name)}</span>`;
@@ -9850,7 +9944,7 @@ function _showMediaChatModal(prompt, detail, loading) {
                 const sentColor = b.sentiment === 'positive' ? '#34C759' : b.sentiment === 'negative' ? '#FF3B30' : '#FF9500';
                 const sentLabel = b.sentiment ? b.sentiment.charAt(0).toUpperCase() + b.sentiment.slice(1) : '';
                 const initial = esc(b.name.charAt(0).toLowerCase());
-                const iconStyle = isBrand ? 'background:#DD0000;color:white;' : 'background:var(--gray-100);color:var(--gray-500);';
+                const iconStyle = isBrand ? 'background:#0528F2;color:white;' : 'background:var(--gray-100);color:var(--gray-500);';
                 return `<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--gray-100);">
                     <div style="display:flex;align-items:center;gap:8px;">
                         <span style="width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;${iconStyle}">${initial}</span>
@@ -9888,7 +9982,7 @@ function _showMediaChatModal(prompt, detail, loading) {
 
     existing.innerHTML = `
         <div style="position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this)closeMediaChatDetail()">
-            <div style="background:var(--pure-white);border-radius:16px;max-width:900px;width:100%;max-height:85vh;display:flex;flex-direction:column;box-shadow:var(--shadow-xl);">
+            <div style="background:var(--pure-white);border-radius: 12px;max-width:900px;width:100%;max-height:85vh;display:flex;flex-direction:column;box-shadow:var(--shadow-xl);">
                 <!-- Header -->
                 <div style="padding:16px 24px;border-bottom:1px solid var(--gray-100);display:flex;align-items:center;justify-content:space-between;gap:12px;">
                     <div style="display:flex;align-items:center;gap:10px;">
@@ -9913,7 +10007,7 @@ function _showMediaChatModal(prompt, detail, loading) {
                         <div style="display:flex;justify-content:flex-end;margin-bottom:20px;">
                             <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
                                 <span style="font-size:11px;color:var(--gray-400);">&#128100; You</span>
-                                <div style="background:linear-gradient(135deg, #6366F1, #8B5CF6);color:white;padding:12px 18px;border-radius:16px 16px 4px 16px;max-width:85%;font-size:13px;line-height:1.5;">${esc(prompt.text)}</div>
+                                <div style="background:linear-gradient(135deg, #6366F1, #8B5CF6);color:white;padding:12px 18px;border-radius: 12px 16px 4px 16px;max-width:85%;font-size:13px;line-height:1.5;">${esc(prompt.text)}</div>
                             </div>
                         </div>
 
@@ -11114,7 +11208,7 @@ function renderAuthorPreview(container, author) {
             <div style="width:44px;height:44px;border-radius:50%;background:#f3f4f6;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">${imgHtml}</div>
             <div style="flex:1;min-width:0;">
                 <div style="font-size:12px;font-weight:600;color:#111;">${esc(author.name)}</div>
-                ${author.title ? '<div style="font-size:11px;color:#DD0000;font-weight:500;">' + esc(author.title) + '</div>' : ''}
+                ${author.title ? '<div style="font-size:11px;color:#0528F2;font-weight:500;">' + esc(author.title) + '</div>' : ''}
                 ${creds ? '<div style="margin-top:4px;">' + creds + '</div>' : ''}
             </div>
             <button onclick="handleRemoveAuthor()" style="background:none;border:none;cursor:pointer;color:#9ca3af;font-size:16px;line-height:1;padding:0 2px;" title="Remove">&times;</button>
@@ -11599,7 +11693,7 @@ function renderNewsTab() {
 
     const tierColors = { must_read: '#FF3B30', interesting: '#FF9500', worth_reading: '#8E8E93' };
     const tierLabels = { must_read: 'news_must_read', interesting: 'news_interesting', worth_reading: 'news_worth_reading' };
-    const catColors = { all: '#DD0000', curated: '#10B981', industry: '#007AFF', company: '#34C759', competitor: '#AF52DE' };
+    const catColors = { all: '#0528F2', curated: '#10B981', industry: '#007AFF', company: '#34C759', competitor: '#AF52DE' };
     const catLabelsMap = {
         all: currentLang === 'de' ? 'Alle' : 'All',
         curated: currentLang === 'de' ? 'Kuratiert' : 'Curated',
@@ -11671,11 +11765,11 @@ function renderNewsTab() {
     </div>
 
     <div id="newsFilterBar" style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;">
-        <button class="news-filter-chip active" data-filter="all" style="padding:6px 16px;border-radius:20px;border:1px solid var(--border);background:#DD0000;color:#fff;cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.all} (${articles.length})</button>
-        <button class="news-filter-chip" data-filter="curated" style="padding:6px 16px;border-radius:20px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.curated} (${curatedCount})</button>
-        <button class="news-filter-chip" data-filter="industry" style="padding:6px 16px;border-radius:20px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.industry} (${industryCount})</button>
-        <button class="news-filter-chip" data-filter="company" style="padding:6px 16px;border-radius:20px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.company} (${companyCount})</button>
-        <button class="news-filter-chip" data-filter="competitor" style="padding:6px 16px;border-radius:20px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.competitor} (${competitorCount})</button>
+        <button class="news-filter-chip active" data-filter="all" style="padding:6px 16px;border-radius: 12px;border:1px solid var(--border);background:#0528F2;color:#fff;cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.all} (${articles.length})</button>
+        <button class="news-filter-chip" data-filter="curated" style="padding:6px 16px;border-radius: 12px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.curated} (${curatedCount})</button>
+        <button class="news-filter-chip" data-filter="industry" style="padding:6px 16px;border-radius: 12px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.industry} (${industryCount})</button>
+        <button class="news-filter-chip" data-filter="company" style="padding:6px 16px;border-radius: 12px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.company} (${companyCount})</button>
+        <button class="news-filter-chip" data-filter="competitor" style="padding:6px 16px;border-radius: 12px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);cursor:pointer;font-size:13px;font-weight:500;">${catLabelsMap.competitor} (${competitorCount})</button>
     </div>
     <div id="newsEmptyMsg" style="display:none;text-align:center;padding:40px 20px;color:var(--text-secondary);">
         <div style="font-size:15px;font-weight:600;margin-bottom:8px;">${currentLang === 'de' ? 'Keine Artikel in dieser Kategorie' : 'No articles in this category'}</div>
@@ -12015,7 +12109,7 @@ function renderKundendienstTab() {
     const alerts = kd.alerts || [];
 
     // Reason display colors for charts
-    const reasonColors = ['#DD0000', '#007AFF', '#FF9500', '#34C759', '#AF52DE', '#FF3B30', '#5AC8FA', '#FFD60A', '#30D158', '#8E8E93'];
+    const reasonColors = ['#0528F2', '#007AFF', '#FF9500', '#34C759', '#AF52DE', '#FF3B30', '#5AC8FA', '#FFD60A', '#30D158', '#8E8E93'];
 
     let html = `
     <div class="section-header" style="margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
@@ -12220,7 +12314,7 @@ function _renderKdHeatmap(heatmap, catFilter) {
         reasons.forEach(r => {
             const v = (p.reasons || {})[r] || 0;
             const intensity = maxCount > 0 ? v / maxCount : 0;
-            const bg = v > 0 ? `rgba(198, 0, 80, ${0.08 + intensity * 0.52})` : 'transparent';
+            const bg = v > 0 ? `rgba(5, 40, 242, ${0.08 + intensity * 0.52})` : 'transparent';
             const textColor = intensity > 0.5 ? '#fff' : 'var(--gray-700)';
             bodyHtml += `<td style="text-align:center;padding:10px 8px;background:${bg};color:${v > 0 ? textColor : 'var(--gray-400)'};font-weight:${v > 0 ? '600' : '400'};font-size:13px;transition:background 0.2s">${v > 0 ? v : '\u2014'}</td>`;
         });
@@ -12481,7 +12575,7 @@ function initSourcesChart() {
         // Magenta gradient: decreasing opacity
         const colors = entries.map((_, i) => {
             const opacity = Math.max(0.25, 1 - (i * 0.12));
-            return `rgba(198, 0, 80, ${opacity})`;
+            return `rgba(5, 40, 242, ${opacity})`;
         });
         // Highlight active source
         const borderWidths = entries.map(e => e[0] === window.__activeSource ? 3 : 0);
@@ -12643,7 +12737,7 @@ function initCategoryChart() {
     _destroyChartById('categoryChart');
     const cats = DASHBOARD_DATA.volume_by_category || {};
     const entries = Object.entries(cats).sort((a, b) => b[1] - a[1]);
-    const colors = [CHART_COLORS.magenta, CHART_COLORS.gold, '#FF0F0F', CHART_COLORS.gray300, CHART_COLORS.info];
+    const colors = [CHART_COLORS.magenta, CHART_COLORS.gold, '#296CF2', CHART_COLORS.gray300, CHART_COLORS.info];
 
     chartInstances.push(new Chart(el, {
         type: 'doughnut',
@@ -12991,7 +13085,7 @@ try {
     const _initLang = currentMarket === 'US' ? 'en' : DEFAULT_LANG;
     renderDashboard(_initLang);
 } catch(e) {
-    const _errColor = (typeof _css === 'function' ? _css('--beurer-magenta') : '') || '#DD0000';
+    const _errColor = (typeof _css === 'function' ? _css('--beurer-magenta') : '') || '#0528F2';
     const _errTitle = (typeof t === 'function') ? t('dashboard_error') : 'Dashboard Error';
     document.body.innerHTML = '<div style="padding:40px;font-family:monospace;"><h2 style="color:' + _errColor + ';">' + _errTitle + '</h2><pre style="background:#f5f5f7;padding:20px;border-radius:8px;overflow:auto;color:#FF3B30;">' + e.message + '\n\n' + e.stack + '</pre></div>';
     console.error('Dashboard render error:', e);

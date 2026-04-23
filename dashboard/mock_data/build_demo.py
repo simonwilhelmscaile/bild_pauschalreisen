@@ -1977,8 +1977,8 @@ function renderPipelineTab() {
             <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--beurer-magenta);margin-bottom:4px;">Stage ${i+1}</div>
             <div style="font-size:13px;font-weight:700;color:var(--gray-900);line-height:1.3;margin-bottom:8px;">${_esc(s.name.replace(/^Stage \d+ — /, ''))}</div>
             <div style="display:flex;gap:10px;font-size:10px;color:var(--gray-500);flex-wrap:wrap;">
-                <span>⏱ ${s.avg_time_sec}s</span>
-                <span>✓ ${pct(s.success_pct)}</span>
+                <span><svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 3h6"/></svg> ${s.avg_time_sec}s</span>
+                <span><svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ${pct(s.success_pct)}</span>
                 <span>${(s.agents||[]).length} Agenten</span>
             </div>
         </button>`;
@@ -2072,10 +2072,10 @@ function renderPipelineTab() {
         </div><div class="card-body" style="padding:12px 24px 20px;">`;
         insights.forEach(i => {
             const config = {
-                success:    { bg: 'var(--success-light)',   fg: 'var(--success)',   icon: '✓' },
-                warning:    { bg: 'var(--warning-light)',   fg: 'var(--warning)',   icon: '⚠' },
-                opportunity:{ bg: 'var(--beurer-magenta-subtle)', fg: 'var(--beurer-magenta)', icon: '★' },
-            }[i.level] || { bg: 'var(--gray-100)', fg: 'var(--gray-700)', icon: 'ℹ' };
+                success:    { bg: 'var(--success-light)',   fg: 'var(--success)',   icon: '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' },
+                warning:    { bg: 'var(--warning-light)',   fg: 'var(--warning)',   icon: '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>' },
+                opportunity:{ bg: 'var(--beurer-magenta-subtle)', fg: 'var(--beurer-magenta)', icon: '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 9 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 9 12 2"/></svg>' },
+            }[i.level] || { bg: 'var(--gray-100)', fg: 'var(--gray-700)', icon: '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' };
             html += `<div style="background:${config.bg};color:var(--gray-800);padding:12px 16px;border-left:3px solid ${config.fg};border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:8px 0;font-size:13px;line-height:1.5;">
                 <span style="color:${config.fg};font-weight:700;margin-right:6px;">${config.icon}</span> ${_esc(i.text)}
             </div>`;
@@ -2303,7 +2303,7 @@ function renderContextLayerTab() {
             const st = c.status;
             const stClass = st === 'connected' ? 'success' : st === 'syncing' ? 'warning' : 'neutral';
             const stColor = st === 'connected' ? 'var(--success)' : st === 'syncing' ? 'var(--warning)' : 'var(--gray-500)';
-            const stLabel = st === 'connected' ? '● Live' : st === 'syncing' ? '⟳ Syncing' : '+ Verbinden';
+            const stLabel = st === 'connected' ? '● Live' : st === 'syncing' ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.5 15a9 9 0 1 1-2.1-9.4L23 10"/></svg> Syncing' : '+ Verbinden';
             const lastSync = c.last_sync ? new Date(c.last_sync).toLocaleString('de-DE', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }) : '—';
             const records = c.records === 0 ? '—' : (typeof c.records === 'number' ? c.records.toLocaleString('de-DE') : c.records);
             html += `<div style="border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:12px 14px;background:${st === 'connected' ? 'white' : 'var(--gray-50)'};cursor:pointer;transition:all 0.15s;" onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
@@ -2388,7 +2388,7 @@ function renderContextLayerTab() {
         const leadCol = c.lead_time_days >= 5 ? '#10B981' : c.lead_time_days >= 3 ? '#F59E0B' : '#EF4444';
         const corrScore = Math.round(c.correlation_coefficient * 100);
         const statusColor = c.action_status === 'published' ? 'var(--success)' : c.action_status === 'generating' ? 'var(--warning)' : 'var(--gray-500)';
-        const statusLabel = c.action_status === 'published' ? '✓ publiziert' : c.action_status === 'generating' ? '⚙ in Produktion' : c.action_status;
+        const statusLabel = c.action_status === 'published' ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> publiziert' : c.action_status === 'generating' ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/></svg> in Produktion' : c.action_status;
         html += `<div style="border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:18px 20px;margin-bottom:14px;background:white;">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:14px;flex-wrap:wrap;">
                 <div style="flex:1;min-width:280px;">
@@ -2497,10 +2497,10 @@ function _renderGrowthChart(traj) {
     const canvas = document.createElement('canvas');
     el.innerHTML = '';
     el.appendChild(canvas);
-    const labels = traj.map(p => (p.projected ? '📈 ' : '') + p.uploaded_docs + ' docs');
+    const labels = traj.map(p => (p.projected ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> ' : '') + p.uploaded_docs + ' docs');
     const nodesData = traj.map(p => p.nodes);
     const connectedData = traj.map(p => p.connected_pct);
-    const bgColors = traj.map(p => p.projected ? 'rgba(221,0,0,0.2)' : 'rgba(221,0,0,0.8)');
+    const bgColors = traj.map(p => p.projected ? 'rgba(5, 40, 242, 0.15)' : 'rgba(5, 40, 242, 0.8)');
     try {
         new Chart(canvas, {
             type: 'bar',
@@ -2615,7 +2615,7 @@ function renderContentScoringTab() {
             </thead><tbody>`;
     topics.forEach((t, idx) => {
         const statusColor = t.status === 'published' ? '#10B981' : t.status === 'generating' ? '#F59E0B' : '#94A3B8';
-        const statusIcon = t.status === 'published' ? '✓' : t.status === 'generating' ? '⚙' : '○';
+        const statusIcon = t.status === 'published' ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : t.status === 'generating' ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/></svg>' : '○';
         const decColor = t.decision.startsWith('SHIP') ? '#10B981' : t.decision.startsWith('HOLD') ? '#F59E0B' : t.decision.startsWith('KILL') ? '#EF4444' : '#64748B';
         html += `<tr style="border-top:1px solid var(--gray-100);cursor:pointer;" onclick="showScoringDetail(${idx})" onmouseover="this.style.background='#FAFBFF'" onmouseout="this.style.background='white'">
             <td style="padding:10px 14px;max-width:300px;font-weight:600;color:var(--gray-800);">${_ctxEsc(t.title)}<div style="font-size:10px;color:var(--gray-500);font-weight:400;margin-top:2px;">${_ctxEsc(t.destination || '')}</div></td>
@@ -2691,7 +2691,7 @@ function showScoringDetail(idx) {
     if (!host) return;
 
     let html = `<div class="card"><div class="card-header">
-        <h3>Warum ${t.decision.startsWith('SHIP') ? '✓ schreiben' : t.decision.startsWith('HOLD') ? '⏸ parken' : t.decision.startsWith('KILL') ? '✗ verwerfen' : '📋 backlog'}: "${_ctxEsc(t.title)}"</h3>
+        <h3>Warum ${t.decision.startsWith('SHIP') ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> schreiben' : t.decision.startsWith('HOLD') ? '⏸ parken' : t.decision.startsWith('KILL') ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> verwerfen' : '📋 backlog'}: "${_ctxEsc(t.title)}"</h3>
         <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Transparente Entscheidungs-Rationale · data-driven &amp; reviewbar</p>
     </div><div class="card-body" style="padding:20px 24px;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-bottom:20px;">
@@ -2746,9 +2746,9 @@ function showScoringDetail(idx) {
                     datasets: [{
                         label: 'Score',
                         data: dataArr,
-                        backgroundColor: 'rgba(221,0,0,0.2)',
-                        borderColor: '#DD0000',
-                        pointBackgroundColor: '#DD0000',
+                        backgroundColor: 'rgba(5, 40, 242, 0.15)',
+                        borderColor: '#0528F2',
+                        pointBackgroundColor: '#0528F2',
                         pointRadius: 4,
                     }]
                 },

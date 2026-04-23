@@ -25,19 +25,22 @@ from html import escape as _esc
 from textwrap import dedent
 
 
-# Bild red, system-safe monospace stack, inline styles — self-contained.
+# Scaile design-system tokens — primary #0528F2, lilac borders, Inter.
 _CSS = """
 :root {
-    --primary: #DD0000;
-    --primary-dark: #B00000;
-    --text: #1B1B1B;
-    --text-light: #5C6670;
+    --primary: #0528F2;
+    --primary-dark: #0420D9;
+    --primary-soft: rgba(5, 40, 242, 0.08);
+    --text: #0D0D0D;
+    --text-light: #626262;
     --bg: #ffffff;
-    --bg-light: #F7F7F8;
-    --border: #E5E5E5;
-    --radius-lg: 8px;
-    --radius-md: 6px;
-    --radius-sm: 4px;
+    --bg-light: #F2F2F2;
+    --border: #C4CBF2;
+    --border-muted: rgba(196, 203, 242, 0.4);
+    --radius-lg: 12px;
+    --radius-md: 8px;
+    --radius-sm: 6px;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.06);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -56,14 +59,14 @@ a:hover { color: var(--primary-dark); }
     border-radius: var(--radius-sm); margin-bottom: 16px;
 }
 h1 {
-    font-family: "Inter Tight", Inter, sans-serif;
+    font-family: Inter, sans-serif;
     font-size: clamp(2rem, 3vw + 1rem, 3rem);
     font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
     margin-bottom: 16px; color: #0B0B0B;
 }
 .teaser { font-size: 1.2em; color: var(--text-light); margin-bottom: 24px; line-height: 1.5; }
 .direct-answer {
-    background: #FFF5F5; border-left: 4px solid var(--primary);
+    background: rgba(5, 40, 242, 0.05); border-left: 4px solid var(--primary);
     padding: 18px 22px; margin-bottom: 32px;
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
 }
@@ -92,7 +95,7 @@ figcaption { font-size: 0.85em; color: var(--text-light); margin-top: 10px; line
 .toc li { margin: 4px 0; }
 .toc a { color: var(--text); text-decoration: none; }
 .toc a:hover { color: var(--primary); }
-article h2 { font-family: "Inter Tight", Inter, sans-serif;
+article h2 { font-family: Inter, sans-serif;
     font-size: 1.7em; font-weight: 800; line-height: 1.15;
     letter-spacing: -0.01em; margin: 44px 0 12px; color: #0B0B0B; }
 article h3 { font-size: 1.2em; font-weight: 700; margin: 24px 0 8px; }
@@ -109,9 +112,9 @@ article li { margin: 6px 0; }
     text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-light); }
 .price-table td { border-bottom: 1px solid var(--border); }
 .price-table tr:last-child td { border-bottom: none; }
-.price-table tr.highlight td { background: #FFF5F5; font-weight: 600; }
+.price-table tr.highlight td { background: rgba(5, 40, 242, 0.05); font-weight: 600; }
 .price-table tr.highlight td:first-child { color: var(--primary); }
-.callout { background: #FFFBF0; border-left: 4px solid #F59E0B;
+.callout { background: rgba(245, 158, 11, 0.06); border-left: 4px solid #F59E0B;
     padding: 16px 20px; margin: 24px 0; border-radius: 0 var(--radius-md) var(--radius-md) 0;
     font-size: 0.96em; }
 .callout strong { color: #C27803; }
@@ -154,7 +157,7 @@ article li { margin: 6px 0; }
 .bild-internal-link { display: block; padding: 14px 18px; background: var(--bg-light);
     border: 1px solid var(--border); border-radius: var(--radius-md);
     text-decoration: none; color: var(--text); transition: all 0.15s; }
-.bild-internal-link:hover { background: #FFF5F5; border-color: var(--primary);
+.bild-internal-link:hover { background: rgba(5, 40, 242, 0.05); border-color: var(--primary);
     color: var(--text); }
 .bild-internal-link .link-kicker { display: block; font-size: 0.72em;
     text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary);
