@@ -1,0 +1,111 @@
+Write a comprehensive, engaging blog article.
+
+TOPIC: {keyword}
+
+COMPANY CONTEXT:
+{company_context}
+
+LOCALIZATION:
+- Language: {language}
+- Country/Region: {country}
+
+PARAMETERS:
+- Word count: {word_count}
+- Sections: 4-6 content sections
+- PAA: 4 People Also Ask questions with answers
+- FAQ: 5-6 FAQ questions with answers
+- Takeaways: 3 key takeaways
+
+OPTIONAL (include when it enhances the article - use your judgment):
+- tables: comparison tables for topics involving multiple options, tools, pricing
+- TLDR: 2-3 sentence summary for longer articles
+- pros_cons: structured pros/cons for product reviews or tool comparisons
+- cta_text: specific call-to-action relevant to the topic and company
+- related_keywords: secondary keywords naturally covered in the content
+- content_type: classify as "listicle", "how-to", "comparison", "guide", or "explainer"
+- reading_time_min: estimated reading time based on word count
+
+Create the best possible article for this topic, like a skilled human writer would.
+
+{custom_instructions_section}
+
+Return ONLY valid JSON matching this exact schema:
+{{
+  "Headline": "Main headline with primary keyword (max 70 chars)",
+  "Subtitle": "Optional sub-headline for context",
+  "Teaser": "2-3 sentence hook highlighting pain point or benefit",
+  "Direct_Answer": "40-60 word direct answer to the primary question (for featured snippets)",
+  "Intro": "Opening paragraph (80-120 words) framing the problem",
+  "Meta_Title": "SEO title max 55 chars with primary keyword",
+  "Meta_Description": "SEO description max 130 chars with CTA",
+  "section_01_title": "First section heading",
+  "section_01_content": "<p>HTML content...</p>",
+  "section_02_title": "Second section heading",
+  "section_02_content": "<p>HTML content...</p>",
+  "section_03_title": "Third section heading",
+  "section_03_content": "<p>HTML content...</p>",
+  "section_04_title": "Fourth section heading",
+  "section_04_content": "<p>HTML content...</p>",
+  "section_05_title": "",
+  "section_05_content": "",
+  "section_06_title": "",
+  "section_06_content": "",
+  "section_07_title": "",
+  "section_07_content": "",
+  "section_08_title": "",
+  "section_08_content": "",
+  "section_09_title": "",
+  "section_09_content": "",
+  "key_takeaway_01": "Key insight #1",
+  "key_takeaway_02": "Key insight #2",
+  "key_takeaway_03": "Key insight #3",
+  "paa_01_question": "People Also Ask question #1",
+  "paa_01_answer": "Concise answer",
+  "paa_02_question": "People Also Ask question #2",
+  "paa_02_answer": "Concise answer",
+  "paa_03_question": "People Also Ask question #3",
+  "paa_03_answer": "Concise answer",
+  "paa_04_question": "People Also Ask question #4",
+  "paa_04_answer": "Concise answer",
+  "faq_01_question": "FAQ question #1",
+  "faq_01_answer": "Detailed answer",
+  "faq_02_question": "FAQ question #2",
+  "faq_02_answer": "Detailed answer",
+  "faq_03_question": "FAQ question #3",
+  "faq_03_answer": "Detailed answer",
+  "faq_04_question": "FAQ question #4",
+  "faq_04_answer": "Detailed answer",
+  "faq_05_question": "FAQ question #5",
+  "faq_05_answer": "Detailed answer",
+  "faq_06_question": "",
+  "faq_06_answer": "",
+  "TLDR": "2-3 sentence summary (optional)",
+  "tables": [
+    {{
+      "title": "Comparison of Top Options",
+      "headers": ["Feature", "Option A", "Option B"],
+      "rows": [["Pricing", "$10/mo", "$25/mo"]]
+    }}
+  ],
+  "pros_cons": {{"pros": ["Benefit 1", "Benefit 2"], "cons": ["Drawback 1"]}},
+  "cta_text": "Call-to-action text (optional)",
+  "related_keywords": ["secondary keyword 1", "secondary keyword 2"],
+  "content_type": "comparison",
+  "reading_time_min": 8,
+  "Sources": [
+    {{"title": "Gartner – Top Cybersecurity Trends 2025", "url": "https://www.gartner.com/en/cybersecurity/trends-2025", "description": "Industry analysis outlining key cybersecurity risks and enterprise priorities for 2025."}},
+    {{"title": "IBM – Cost of a Data Breach Report 2024", "url": "https://www.ibm.com/reports/data-breach", "description": "Annual global report with empirical data on breach costs, response times, and security investments."}}
+  ],
+  "Search_Queries": "Q1: query used\\nQ2: query used"
+}}
+
+CRITICAL REQUIREMENTS FOR SOURCES (YOUR RESPONSE WILL BE REJECTED WITHOUT SOURCES):
+1. The "Sources" field is MANDATORY - NEVER leave it empty
+2. Include 2-3 high-quality, authoritative sources from your Google Search results
+3. Each source MUST have ALL THREE fields:
+   - "title": Full source name (e.g., "Gartner – Top Cybersecurity Trends 2025")
+   - "url": Real, working URL from the source
+   - "description": 1-2 sentences explaining what insights, data, or analysis this source provides
+4. The "description" field is REQUIRED for EVERY source - it should explain the source's contribution (e.g., "Industry analysis outlining key risks..." or "Empirical research with metrics on..."), NOT just describe the website
+5. NEVER submit sources without descriptions - they will be rejected
+6. If you cannot find sources via search, use your knowledge to provide the most relevant and authoritative URLs for the topic

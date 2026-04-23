@@ -1,0 +1,22 @@
+{
+  "name": "beurer-social-listening-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "copy-template": "node -e \"const fs=require('fs');const src='../styles/dashboard_template.html';const dest='template/dashboard_template.html';fs.mkdirSync('template',{recursive:true});if(fs.existsSync(src)){fs.copyFileSync(src,dest);}else if(!fs.existsSync(dest)){console.error('No template found');process.exit(1);}\"",
+    "dev": "npm run copy-template && next dev",
+    "build": "npm run copy-template && next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.49.0",
+    "next": "^15.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

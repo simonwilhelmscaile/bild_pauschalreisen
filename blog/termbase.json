@@ -1,0 +1,7502 @@
+{
+  "meta": {
+    "source": "Beurer GmbH_Termbase_all_languages_30032026.xlsx",
+    "term_count": 1295,
+    "generated_at": "2026-03-31"
+  },
+  "terms": [
+    {
+      "id": 7236451,
+      "de": "Schwingungen",
+      "is_product_name": false,
+      "en": "oscillations"
+    },
+    {
+      "id": 7236453,
+      "de": "Leistungsstufe",
+      "is_product_name": false,
+      "en": "output level"
+    },
+    {
+      "id": 7236452,
+      "de": "Outdoor-Pulsuhr",
+      "is_product_name": false,
+      "en": "Outdoor heart rate monitor"
+    },
+    {
+      "id": 7236454,
+      "de": "Überhitzungsschutz",
+      "is_product_name": false,
+      "en": "overheating protection"
+    },
+    {
+      "id": 7236457,
+      "de": "OT 30 Bluetooth® – Basalthermometer",
+      "is_product_name": true,
+      "en": "Ovulation Thermometer OT 30 Bluetooth®"
+    },
+    {
+      "id": 7236456,
+      "de": "Basalthermometer",
+      "is_product_name": false,
+      "en": "Ovulation thermometer"
+    },
+    {
+      "id": 7236455,
+      "de": "Überlastungsanzeige",
+      "is_product_name": false,
+      "en": "Overload indicator"
+    },
+    {
+      "id": 7236458,
+      "de": "Schnuller",
+      "is_product_name": false,
+      "en": "pacifier"
+    },
+    {
+      "id": 7236461,
+      "de": "Schmerzlinderung",
+      "is_product_name": false,
+      "en": "pain relief"
+    },
+    {
+      "id": 7236462,
+      "de": "Schmerztherapie",
+      "is_product_name": false,
+      "en": "Pain therapy"
+    },
+    {
+      "id": 7236459,
+      "de": "Schnuller-Thermometer",
+      "is_product_name": false,
+      "en": "Pacifier thermometer"
+    },
+    {
+      "id": 7236465,
+      "de": "Elterneinheit",
+      "is_product_name": false,
+      "en": "parent unit"
+    },
+    {
+      "id": 7236466,
+      "de": "Elterngerät",
+      "is_product_name": false,
+      "en": "parent unit"
+    },
+    {
+      "id": 7236460,
+      "de": "VE",
+      "is_product_name": false,
+      "en": "pack"
+    },
+    {
+      "id": 7236469,
+      "de": "Patentierte Steckkupplung",
+      "is_product_name": false,
+      "en": "Patented plug-in coupling"
+    },
+    {
+      "id": 7236470,
+      "de": "Patentierter Ruheindikator",
+      "is_product_name": false,
+      "en": "Patented resting indicator"
+    },
+    {
+      "id": 7236464,
+      "de": "Paketwaage",
+      "is_product_name": false,
+      "en": "Parcel scale"
+    },
+    {
+      "id": 7236474,
+      "de": "Tiefenwirksame Klopfmassage zur Entspannung",
+      "is_product_name": false,
+      "en": "Penetrating tapping massage for relaxation"
+    },
+    {
+      "id": 7236473,
+      "de": "Schrittzähler",
+      "is_product_name": false,
+      "en": "Pedometer"
+    },
+    {
+      "id": 7236463,
+      "de": "Paraffinbad",
+      "is_product_name": false,
+      "en": "Paraffin bath"
+    },
+    {
+      "id": 7236468,
+      "de": "Patentierte elektronische Temperaturregelung",
+      "is_product_name": false,
+      "en": "Patented electronic temperature regulation"
+    },
+    {
+      "id": 7236478,
+      "de": "Tischventilator/-kühler",
+      "is_product_name": false,
+      "en": "personal air fan and cooler"
+    },
+    {
+      "id": 7236472,
+      "de": "Fußpflege",
+      "is_product_name": false,
+      "en": "pedicure"
+    },
+    {
+      "id": 7236476,
+      "de": "EM 50 Menstrual Relax – Regelschmerz Pad",
+      "is_product_name": true,
+      "en": "Period Pain Reliefer EM 50 Menstrual Relax"
+    },
+    {
+      "id": 7236477,
+      "de": "EM 55 – Regelschmerz Pad",
+      "is_product_name": true,
+      "en": "Period Pain Reliefer EM 55"
+    },
+    {
+      "id": 7236467,
+      "de": "Patentrechtlich geschützt",
+      "is_product_name": false,
+      "en": "Patented"
+    },
+    {
+      "id": 7236480,
+      "de": "Personenwaage",
+      "is_product_name": false,
+      "en": "Personal bathroom scale"
+    },
+    {
+      "id": 7236482,
+      "de": "Pilotton",
+      "is_product_name": false,
+      "en": "pilot tone"
+    },
+    {
+      "id": 7236481,
+      "de": "Körperwaage",
+      "is_product_name": false,
+      "en": "personal scale"
+    },
+    {
+      "id": 7236471,
+      "de": "PC-Schnittstelle",
+      "is_product_name": false,
+      "en": "PC interface"
+    },
+    {
+      "id": 7236486,
+      "de": "Porenreiniger",
+      "is_product_name": false,
+      "en": "Power deep pore cleanser"
+    },
+    {
+      "id": 7236485,
+      "de": "Positionsanzeige",
+      "is_product_name": false,
+      "en": "position indicator"
+    },
+    {
+      "id": 7236475,
+      "de": "EM 50 – Regelschmerz Pad",
+      "is_product_name": true,
+      "en": "Period Pain Reliefer EM 50"
+    },
+    {
+      "id": 7236489,
+      "de": "Körperbürste",
+      "is_product_name": false,
+      "en": "Powered body brush"
+    },
+    {
+      "id": 7236479,
+      "de": "LV 50 Fresh Breeze – Tischventilator/-kühler",
+      "is_product_name": true,
+      "en": "Personal Air Fan and Cooler LV 50 Fresh Breeze"
+    },
+    {
+      "id": 7236484,
+      "de": "Hornhautentferner",
+      "is_product_name": false,
+      "en": "Portable pedicure device"
+    },
+    {
+      "id": 7236483,
+      "de": "Pollen",
+      "is_product_name": false,
+      "en": "pollen"
+    },
+    {
+      "id": 7236490,
+      "de": "EKG-genaue Pulsmessung",
+      "is_product_name": false,
+      "en": "Precise ECG pulse measurement"
+    },
+    {
+      "id": 7236487,
+      "de": "Power Hantel",
+      "is_product_name": false,
+      "en": "Power dumbbell"
+    },
+    {
+      "id": 7236494,
+      "de": "PRODUKTÜBERSICHT",
+      "is_product_name": false,
+      "en": "PRODUCT OVERVIEW"
+    },
+    {
+      "id": 7236493,
+      "de": "Präzisionstrimmer",
+      "is_product_name": false,
+      "en": "Precision trimmer"
+    },
+    {
+      "id": 7236498,
+      "de": "Schutzkappe",
+      "is_product_name": false,
+      "en": "Protective cap"
+    },
+    {
+      "id": 7236488,
+      "de": "Netzgerät",
+      "is_product_name": false,
+      "en": "power supply unit"
+    },
+    {
+      "id": 7236502,
+      "de": "Pulsmessung",
+      "is_product_name": false,
+      "en": "pulse measurement"
+    },
+    {
+      "id": 7236492,
+      "de": "Präzisionsküchenwaage",
+      "is_product_name": false,
+      "en": "Precision kitchen scale"
+    },
+    {
+      "id": 7236491,
+      "de": "Präzisions-Haarschneider",
+      "is_product_name": false,
+      "en": "precision hair clipper"
+    },
+    {
+      "id": 7236506,
+      "de": "Pulsoximeter",
+      "is_product_name": false,
+      "en": "Pulse oximeter"
+    },
+    {
+      "id": 7236497,
+      "de": "Profiline Maniküre/Pediküre",
+      "is_product_name": false,
+      "en": "Profiline manicure/pedicure"
+    },
+    {
+      "id": 7236495,
+      "de": "professionelle Maniküre",
+      "is_product_name": false,
+      "en": "professional manicure"
+    },
+    {
+      "id": 7236499,
+      "de": "Schutzbezug",
+      "is_product_name": false,
+      "en": "protective cover"
+    },
+    {
+      "id": 7236496,
+      "de": "Profi Set mit Licht",
+      "is_product_name": false,
+      "en": "Professional set with light"
+    },
+    {
+      "id": 7236503,
+      "de": "Pulsmessung am Oberarm",
+      "is_product_name": false,
+      "en": "pulse measurement on the upper arm"
+    },
+    {
+      "id": 7236510,
+      "de": "Quick-Check-Display",
+      "is_product_name": false,
+      "en": "Quick-check display"
+    },
+    {
+      "id": 7236501,
+      "de": "Schutzkappe für Nagelstaub",
+      "is_product_name": false,
+      "en": "Protective Nail Dust Cap"
+    },
+    {
+      "id": 7236507,
+      "de": "PO 45 – Pulsoximeter",
+      "is_product_name": true,
+      "en": "Pulse Oximeter PO 45"
+    },
+    {
+      "id": 7236514,
+      "de": "Akku-Bodyshaver",
+      "is_product_name": false,
+      "en": "rechargeable body groomer"
+    },
+    {
+      "id": 7236511,
+      "de": "Radio-Lichtwecker",
+      "is_product_name": false,
+      "en": "Radio dawn simulator"
+    },
+    {
+      "id": 7236500,
+      "de": "Schutzhülle",
+      "is_product_name": false,
+      "en": "protective cover"
+    },
+    {
+      "id": 7236505,
+      "de": "Pulsmessgerät",
+      "is_product_name": false,
+      "en": "Pulse measuring instrument"
+    },
+    {
+      "id": 7236504,
+      "de": "Pulsmessung am Handgelenk",
+      "is_product_name": false,
+      "en": "pulse measurement on the wrist"
+    },
+    {
+      "id": 7236508,
+      "de": "Qualitätsurteil",
+      "is_product_name": false,
+      "en": "quality assessment"
+    },
+    {
+      "id": 7236518,
+      "de": "Funk-Diagnosewaage",
+      "is_product_name": false,
+      "en": "Remote diagnostic scale"
+    },
+    {
+      "id": 7236515,
+      "de": "Rezeptwaage",
+      "is_product_name": false,
+      "en": "Recipe scale"
+    },
+    {
+      "id": 7236512,
+      "de": "Reichweitenkontrolle",
+      "is_product_name": false,
+      "en": "range control"
+    },
+    {
+      "id": 7236509,
+      "de": "Quick Start Video",
+      "is_product_name": false,
+      "en": "Quick Start Video"
+    },
+    {
+      "id": 7236516,
+      "de": "Entspannung",
+      "is_product_name": false,
+      "en": "relaxation"
+    },
+    {
+      "id": 7236520,
+      "de": "herausnehmbarer Bürstenkopfbehälter",
+      "is_product_name": false,
+      "en": "Removable brush head holder"
+    },
+    {
+      "id": 7236522,
+      "de": "Abnehmbarer Spritzschutz",
+      "is_product_name": false,
+      "en": "Removable splash guard"
+    },
+    {
+      "id": 7236519,
+      "de": "Abnehmbare und waschbare Bezüge",
+      "is_product_name": false,
+      "en": "removable and washable covers"
+    },
+    {
+      "id": 7236524,
+      "de": "Nachkaufartikel",
+      "is_product_name": false,
+      "en": "replacement item"
+    },
+    {
+      "id": 7236513,
+      "de": "Schnellheiztaste",
+      "is_product_name": false,
+      "en": "Rapid heat-up button"
+    },
+    {
+      "id": 7236526,
+      "de": "Nachkaufset",
+      "is_product_name": false,
+      "en": "Replacement set"
+    },
+    {
+      "id": 7236528,
+      "de": "Atemwegserkrankungen",
+      "is_product_name": false,
+      "en": "respiratory diseases"
+    },
+    {
+      "id": 7236517,
+      "de": "Entspannende Shiatsu Rückenmassage",
+      "is_product_name": false,
+      "en": "Relaxing Shiatsu back massage"
+    },
+    {
+      "id": 7236523,
+      "de": "Abnehmbarer Schalter",
+      "is_product_name": false,
+      "en": "Removable switch"
+    },
+    {
+      "id": 7236521,
+      "de": "Abnehmbare Rollaufsätze",
+      "is_product_name": false,
+      "en": "removable roller attachments"
+    },
+    {
+      "id": 7236532,
+      "de": "LifePad® – Reanimationshilfe",
+      "is_product_name": true,
+      "en": "Resuscitation Aid LifePad®"
+    },
+    {
+      "id": 7236527,
+      "de": "Batteriewechsel",
+      "is_product_name": false,
+      "en": "Replacing the battery"
+    },
+    {
+      "id": 7236530,
+      "de": "Anzeige Ruheindikator",
+      "is_product_name": false,
+      "en": "Resting indicator display"
+    },
+    {
+      "id": 7236536,
+      "de": "Rotierende Warmluftbürste",
+      "is_product_name": false,
+      "en": "Rotating hot air brush"
+    },
+    {
+      "id": 7236525,
+      "de": "Ersatzteil",
+      "is_product_name": false,
+      "en": "Replacement part"
+    },
+    {
+      "id": 7236531,
+      "de": "Reanimationshilfe",
+      "is_product_name": false,
+      "en": "Resuscitation aid"
+    },
+    {
+      "id": 7236534,
+      "de": "Roll-Massage",
+      "is_product_name": false,
+      "en": "Roll massage"
+    },
+    {
+      "id": 7236538,
+      "de": "rotierende Shiatsu-Massage-Finger",
+      "is_product_name": false,
+      "en": "rotating Shiatsu massage fingers"
+    },
+    {
+      "id": 7236540,
+      "de": "UVP",
+      "is_product_name": false,
+      "en": "RRP"
+    },
+    {
+      "id": 7236542,
+      "de": "Sicherheitsglas",
+      "is_product_name": false,
+      "en": "safety glass"
+    },
+    {
+      "id": 7236535,
+      "de": "Rotationsrasierer",
+      "is_product_name": false,
+      "en": "Rotary Shaver"
+    },
+    {
+      "id": 7236529,
+      "de": "Ruheindikator",
+      "is_product_name": false,
+      "en": "resting indicator"
+    },
+    {
+      "id": 7236544,
+      "de": "Sicherheitsabschaltung",
+      "is_product_name": false,
+      "en": "safety switch-off"
+    },
+    {
+      "id": 7236546,
+      "de": "Sicherheitssystem + Überhitzungsschutz",
+      "is_product_name": false,
+      "en": "safety system with overheating protection"
+    },
+    {
+      "id": 7236533,
+      "de": "Stromschlaggefahr",
+      "is_product_name": false,
+      "en": "risk of electric shock"
+    },
+    {
+      "id": 7236548,
+      "de": "Verkaufsdisplay",
+      "is_product_name": false,
+      "en": "sales display"
+    },
+    {
+      "id": 7236550,
+      "de": "Saphirkegel",
+      "is_product_name": false,
+      "en": "Sapphire cone"
+    },
+    {
+      "id": 7236552,
+      "de": "Saphirscheibe",
+      "is_product_name": false,
+      "en": "sapphire wheel"
+    },
+    {
+      "id": 7236537,
+      "de": "rotierende Massageköpfe",
+      "is_product_name": false,
+      "en": "rotating massage heads"
+    },
+    {
+      "id": 7236539,
+      "de": "Saphirfräser, rund",
+      "is_product_name": false,
+      "en": "Round Sapphire Cutter"
+    },
+    {
+      "id": 7236556,
+      "de": "Sitzauflage",
+      "is_product_name": false,
+      "en": "seat cover"
+    },
+    {
+      "id": 7236541,
+      "de": "Laufsensor",
+      "is_product_name": false,
+      "en": "running sensor"
+    },
+    {
+      "id": 7236545,
+      "de": "Sicherheitssystem",
+      "is_product_name": false,
+      "en": "safety system"
+    },
+    {
+      "id": 7236560,
+      "de": "Sensor",
+      "is_product_name": false,
+      "en": "Sensor"
+    },
+    {
+      "id": 7236554,
+      "de": "Meeresklimagerät",
+      "is_product_name": false,
+      "en": "Sea air simulator"
+    },
+    {
+      "id": 7236564,
+      "de": "Schutzkappenset",
+      "is_product_name": false,
+      "en": "Set of replacement caps for"
+    },
+    {
+      "id": 7236549,
+      "de": "Speicherintervall",
+      "is_product_name": false,
+      "en": "sampling rate"
+    },
+    {
+      "id": 7236543,
+      "de": "Sicherheitshinweis",
+      "is_product_name": false,
+      "en": "Safety note"
+    },
+    {
+      "id": 7236553,
+      "de": "Schraubverschluss",
+      "is_product_name": false,
+      "en": "screw plug"
+    },
+    {
+      "id": 7236547,
+      "de": "Sicherheitssystem mit Überhitzungsschutz",
+      "is_product_name": false,
+      "en": "safety system with overheating protection"
+    },
+    {
+      "id": 7236557,
+      "de": "Wählbare Wecktöne",
+      "is_product_name": false,
+      "en": "Selectable alarm sounds"
+    },
+    {
+      "id": 7236551,
+      "de": "Saphirfräser",
+      "is_product_name": false,
+      "en": "sapphire cutter"
+    },
+    {
+      "id": 7236558,
+      "de": "Auswahlschalter",
+      "is_product_name": false,
+      "en": "Selection switch"
+    },
+    {
+      "id": 7236568,
+      "de": "Rasierer Wet & Dry",
+      "is_product_name": false,
+      "en": "Shaver Wet & Dry"
+    },
+    {
+      "id": 7236561,
+      "de": "Sensortasten",
+      "is_product_name": false,
+      "en": "Sensor buttons"
+    },
+    {
+      "id": 7236555,
+      "de": "maremed® – Meeresklimagerät",
+      "is_product_name": true,
+      "en": "Sea Air Simulator maremed®"
+    },
+    {
+      "id": 7236559,
+      "de": "Selbstklebende Gel-Elektroden",
+      "is_product_name": false,
+      "en": "Self-adhesive gel electrodes"
+    },
+    {
+      "id": 7236563,
+      "de": "Sensorspitze",
+      "is_product_name": false,
+      "en": "sensor tip"
+    },
+    {
+      "id": 7236562,
+      "de": "Sensoroberfläche",
+      "is_product_name": false,
+      "en": "sensor surface"
+    },
+    {
+      "id": 7236565,
+      "de": "Rasieraufsatz",
+      "is_product_name": false,
+      "en": "Shaver attachment"
+    },
+    {
+      "id": 7236572,
+      "de": "Shiatsu-Fußwärmer",
+      "is_product_name": false,
+      "en": "Shiatsu foot warmer"
+    },
+    {
+      "id": 7236567,
+      "de": "HL 36 – Rasierer",
+      "is_product_name": true,
+      "en": "Shaver HL 36"
+    },
+    {
+      "id": 7236566,
+      "de": "Rasierkopf",
+      "is_product_name": false,
+      "en": "shaver head"
+    },
+    {
+      "id": 7236570,
+      "de": "Shiatsu-Luftkompression-Sitzauﬂage",
+      "is_product_name": false,
+      "en": "Shiatsu air compression seat cover"
+    },
+    {
+      "id": 7236571,
+      "de": "FM 70 – Shiatsu Fuß- und Rückenmassagegerät",
+      "is_product_name": true,
+      "en": "Shiatsu Foot and Back Massager FM 70"
+    },
+    {
+      "id": 7236575,
+      "de": "Shiatsu-Massagesessel",
+      "is_product_name": false,
+      "en": "Shiatsu massage chair"
+    },
+    {
+      "id": 7236569,
+      "de": "Scherfolie und Schermesser",
+      "is_product_name": false,
+      "en": "Shaving foil and blade"
+    },
+    {
+      "id": 7236576,
+      "de": "Shiatsu-Massagekissen",
+      "is_product_name": false,
+      "en": "Shiatsu massage cushion"
+    },
+    {
+      "id": 7236574,
+      "de": "Shiatsu-Massagegürtel",
+      "is_product_name": false,
+      "en": "Shiatsu massage belt"
+    },
+    {
+      "id": 7236579,
+      "de": "Shiatsu-Nackenmassage",
+      "is_product_name": false,
+      "en": "Shiatsu neck massage"
+    },
+    {
+      "id": 7236573,
+      "de": "Shiatsu-Massage",
+      "is_product_name": false,
+      "en": "Shiatsu massage"
+    },
+    {
+      "id": 7236580,
+      "de": "Shiatsu-Nacken-Massagegerät",
+      "is_product_name": false,
+      "en": "Shiatsu neck massager"
+    },
+    {
+      "id": 7236583,
+      "de": "Schulter-/Nacken-Heizkissen",
+      "is_product_name": false,
+      "en": "Shoulder & neck heat pad"
+    },
+    {
+      "id": 7236577,
+      "de": "Shiatsu Massageköpfe",
+      "is_product_name": false,
+      "en": "Shiatsu massage heads"
+    },
+    {
+      "id": 7236578,
+      "de": "MG 330 – Shiatsu-Massagesitzauflage",
+      "is_product_name": true,
+      "en": "Shiatsu Massage Seat Cover MG 330"
+    },
+    {
+      "id": 7236581,
+      "de": "Shiatsu-Bürostuhl",
+      "is_product_name": false,
+      "en": "Shiatsu office chair"
+    },
+    {
+      "id": 7236582,
+      "de": "Transportkarton",
+      "is_product_name": false,
+      "en": "Shipping carton"
+    },
+    {
+      "id": 7236584,
+      "de": "Schulter-Heizkissen mit Powerbank",
+      "is_product_name": false,
+      "en": "Shoulder heat pad with powerbank"
+    },
+    {
+      "id": 7236586,
+      "de": "Signal-Konvertierungsprogramm",
+      "is_product_name": false,
+      "en": "signal conversion program"
+    },
+    {
+      "id": 7236587,
+      "de": "Zeichenerklärung",
+      "is_product_name": false,
+      "en": "Signs and symbols"
+    },
+    {
+      "id": 7236590,
+      "de": "Schlafsensor",
+      "is_product_name": false,
+      "en": "Sleep sensor"
+    },
+    {
+      "id": 7236585,
+      "de": "Schulter-Massagegerät",
+      "is_product_name": false,
+      "en": "Shoulder massager"
+    },
+    {
+      "id": 7236588,
+      "de": "FC 52 Laguna – Silikon-Gesichtsbürste",
+      "is_product_name": true,
+      "en": "Silicone Facial Brush FC 52 Laguna"
+    },
+    {
+      "id": 7236592,
+      "de": "Schnarchstopper",
+      "is_product_name": false,
+      "en": "Snore stopper"
+    },
+    {
+      "id": 7236594,
+      "de": "Softvlies",
+      "is_product_name": false,
+      "en": "Soft fleece"
+    },
+    {
+      "id": 7236591,
+      "de": "Schlummerfunktion",
+      "is_product_name": false,
+      "en": "Snooze function"
+    },
+    {
+      "id": 7236598,
+      "de": "Solar-Diagnosewaage",
+      "is_product_name": false,
+      "en": "Solar diagnostic bathroom scale"
+    },
+    {
+      "id": 7236589,
+      "de": "Hautfarbensensor",
+      "is_product_name": false,
+      "en": "skin colour sensor"
+    },
+    {
+      "id": 7236593,
+      "de": "anschmiegsam",
+      "is_product_name": false,
+      "en": "snuggly"
+    },
+    {
+      "id": 7236595,
+      "de": "Softklettverschluss",
+      "is_product_name": false,
+      "en": "soft hook-and-loop fastener"
+    },
+    {
+      "id": 7236596,
+      "de": "Soft-Wachspatronen",
+      "is_product_name": false,
+      "en": "Soft wax cartridges"
+    },
+    {
+      "id": 7236597,
+      "de": "Solarfläche",
+      "is_product_name": false,
+      "en": "solar cell area"
+    },
+    {
+      "id": 7236600,
+      "de": "Solar-Küchenwaage",
+      "is_product_name": false,
+      "en": "Solar kitchen scale"
+    },
+    {
+      "id": 7236603,
+      "de": "wohltuende Rückenmassage",
+      "is_product_name": false,
+      "en": "soothing back massages"
+    },
+    {
+      "id": 7236601,
+      "de": "Schallzahnbürste",
+      "is_product_name": false,
+      "en": "sonic toothbrush"
+    },
+    {
+      "id": 7236607,
+      "de": "Spa-Mini-Massagegerät",
+      "is_product_name": false,
+      "en": "Spa mini massager"
+    },
+    {
+      "id": 7236599,
+      "de": "Solar-Glaswaage",
+      "is_product_name": false,
+      "en": "Solar glass bathroom scale"
+    },
+    {
+      "id": 7236605,
+      "de": "Wohlfühl-Massage",
+      "is_product_name": false,
+      "en": "soothing massage"
+    },
+    {
+      "id": 7236606,
+      "de": "Wohltuende Roll-Massage",
+      "is_product_name": false,
+      "en": "Soothing roll massage"
+    },
+    {
+      "id": 7236609,
+      "de": "Ersatz-Infrarotstrahler",
+      "is_product_name": false,
+      "en": "Spare infrared radiator"
+    },
+    {
+      "id": 7236611,
+      "de": "Sprechendes Blutdruckmessgerät",
+      "is_product_name": false,
+      "en": "Speaking blood pressure monitor"
+    },
+    {
+      "id": 7236604,
+      "de": "wohltuende Wärme",
+      "is_product_name": false,
+      "en": "Soothing heat"
+    },
+    {
+      "id": 7236610,
+      "de": "Ersatz-Lichtkartusche",
+      "is_product_name": false,
+      "en": "Spare light cartridge"
+    },
+    {
+      "id": 7236613,
+      "de": "Spezial-Meersalz",
+      "is_product_name": false,
+      "en": "Special sea salt"
+    },
+    {
+      "id": 7236608,
+      "de": "Distanzkamm",
+      "is_product_name": false,
+      "en": "spacer comb"
+    },
+    {
+      "id": 7236612,
+      "de": "Sprechende Personenwaage",
+      "is_product_name": false,
+      "en": "speaking personal scale"
+    },
+    {
+      "id": 7236615,
+      "de": "Geschwindigkeitsstufen",
+      "is_product_name": false,
+      "en": "speed settings"
+    },
+    {
+      "id": 7236614,
+      "de": "Spezial-Meersalz und Filter",
+      "is_product_name": false,
+      "en": "Special sea salt and filters"
+    },
+    {
+      "id": 7236617,
+      "de": "Spirometer",
+      "is_product_name": false,
+      "en": "Spirometer"
+    },
+    {
+      "id": 7236619,
+      "de": "Splissentferner",
+      "is_product_name": false,
+      "en": "Split End Trimmer"
+    },
+    {
+      "id": 7236616,
+      "de": "Wirbelsäule",
+      "is_product_name": false,
+      "en": "spine"
+    },
+    {
+      "id": 7236620,
+      "de": "HT 22 – Splissentferner",
+      "is_product_name": true,
+      "en": "Split End Trimmer HT 22"
+    },
+    {
+      "id": 7236618,
+      "de": "Spritzschutz",
+      "is_product_name": false,
+      "en": "splash protection"
+    },
+    {
+      "id": 7236621,
+      "de": "Löffelwaage",
+      "is_product_name": false,
+      "en": "Spoon scale"
+    },
+    {
+      "id": 7236624,
+      "de": "Edelstahlapplikation",
+      "is_product_name": false,
+      "en": "Stainless steel casing"
+    },
+    {
+      "id": 7236623,
+      "de": "Punktuelle Shiatsu-Massage",
+      "is_product_name": false,
+      "en": "Spot Shiatsu massage"
+    },
+    {
+      "id": 7236622,
+      "de": "Punktuelle Massage",
+      "is_product_name": false,
+      "en": "spot massage"
+    },
+    {
+      "id": 7236627,
+      "de": "Startgewicht",
+      "is_product_name": false,
+      "en": "Starting weight"
+    },
+    {
+      "id": 7236626,
+      "de": "Trittfläche aus Sicherheitsglas",
+      "is_product_name": false,
+      "en": "Standing surface made of safety glass"
+    },
+    {
+      "id": 7236628,
+      "de": "Dampfinhalator",
+      "is_product_name": false,
+      "en": "Steam inhaler"
+    },
+    {
+      "id": 7236631,
+      "de": "Sterilisationsbehälter",
+      "is_product_name": false,
+      "en": "sterilisation container"
+    },
+    {
+      "id": 7236630,
+      "de": "Sterile Nadel-Lanzetten für alle Beurer Blutzuckermessgeräte",
+      "is_product_name": false,
+      "en": "Sterile lancet needles for all Beurer blood glucose monitors"
+    },
+    {
+      "id": 7236625,
+      "de": "Eichgewicht",
+      "is_product_name": false,
+      "en": "standard weight"
+    },
+    {
+      "id": 7236635,
+      "de": "Sterilisator",
+      "is_product_name": false,
+      "en": "steriliser"
+    },
+    {
+      "id": 7236639,
+      "de": "Aufbewahrungsbox",
+      "is_product_name": false,
+      "en": "storage box"
+    },
+    {
+      "id": 7236629,
+      "de": "Dampfsterilisator",
+      "is_product_name": false,
+      "en": "Steam steriliser"
+    },
+    {
+      "id": 7236632,
+      "de": "Sterilisatorfunktion",
+      "is_product_name": false,
+      "en": "sterilisation function"
+    },
+    {
+      "id": 7236636,
+      "de": "Stoppuhr",
+      "is_product_name": false,
+      "en": "stopwatch"
+    },
+    {
+      "id": 7236634,
+      "de": "Sterilisationszeit",
+      "is_product_name": false,
+      "en": "sterilisation time"
+    },
+    {
+      "id": 7236643,
+      "de": "Diabetiker geeignet",
+      "is_product_name": false,
+      "en": "suitable for diabetics"
+    },
+    {
+      "id": 7236640,
+      "de": "Glätteisen",
+      "is_product_name": false,
+      "en": "Straighteners"
+    },
+    {
+      "id": 7236638,
+      "de": "Aufbewahrungstasche",
+      "is_product_name": false,
+      "en": "Storage bag"
+    },
+    {
+      "id": 7236647,
+      "de": "Schaltnetzteil",
+      "is_product_name": false,
+      "en": "switching mains adapter"
+    },
+    {
+      "id": 7236633,
+      "de": "Sterilisationsvorgang",
+      "is_product_name": false,
+      "en": "sterilisation process"
+    },
+    {
+      "id": 7236644,
+      "de": "Netzteiltauglich",
+      "is_product_name": false,
+      "en": "suitable for use with mains adapter"
+    },
+    {
+      "id": 7236651,
+      "de": "Registerkarte",
+      "is_product_name": false,
+      "en": "tab"
+    },
+    {
+      "id": 7236637,
+      "de": "Aufbewahrung",
+      "is_product_name": false,
+      "en": "storage"
+    },
+    {
+      "id": 7236648,
+      "de": "Abschaltfunktion",
+      "is_product_name": false,
+      "en": "switch-off function"
+    },
+    {
+      "id": 7236655,
+      "de": "Klopf-Massagegerät",
+      "is_product_name": false,
+      "en": "Tapping massager"
+    },
+    {
+      "id": 7236642,
+      "de": "Zahnspangen geeignet",
+      "is_product_name": false,
+      "en": "Suitable for braces"
+    },
+    {
+      "id": 7236641,
+      "de": "Irrtum und Änderung vorbehalten",
+      "is_product_name": false,
+      "en": "Subject to errors and changes"
+    },
+    {
+      "id": 7236652,
+      "de": "sprechende Glaswaage",
+      "is_product_name": false,
+      "en": "Talking glass bathroom scale"
+    },
+    {
+      "id": 7236646,
+      "de": "Oberflächentemperatur",
+      "is_product_name": false,
+      "en": "surface temperature"
+    },
+    {
+      "id": 7236645,
+      "de": "Superflauschige Oberfläche",
+      "is_product_name": false,
+      "en": "Super soft surface"
+    },
+    {
+      "id": 7236650,
+      "de": "Büro-Drehstuhl",
+      "is_product_name": false,
+      "en": "Swivel office chair"
+    },
+    {
+      "id": 7236659,
+      "de": "Technische Angaben",
+      "is_product_name": false,
+      "en": "Technical specifications"
+    },
+    {
+      "id": 7236649,
+      "de": "Einschalttechnik",
+      "is_product_name": false,
+      "en": "Switch-on technology"
+    },
+    {
+      "id": 7236653,
+      "de": "sprechendes Handgelenk-Blutdruckmessgerät",
+      "is_product_name": false,
+      "en": "Talking wrist blood pressure monitor"
+    },
+    {
+      "id": 7236656,
+      "de": "Tara-Zuwiegefunktion",
+      "is_product_name": false,
+      "en": "tare weighing"
+    },
+    {
+      "id": 7236660,
+      "de": "Fieberalarm",
+      "is_product_name": false,
+      "en": "temperature alarm"
+    },
+    {
+      "id": 7236654,
+      "de": "Klopfmassage",
+      "is_product_name": false,
+      "en": "tapping massage"
+    },
+    {
+      "id": 7236664,
+      "de": "Temperaturstufen",
+      "is_product_name": false,
+      "en": "temperature settings"
+    },
+    {
+      "id": 7236658,
+      "de": "Technische Daten",
+      "is_product_name": false,
+      "en": "Technical data"
+    },
+    {
+      "id": 7236657,
+      "de": "Zielgewichtsanalyse",
+      "is_product_name": false,
+      "en": "Target weight analysis"
+    },
+    {
+      "id": 7236663,
+      "de": "Temperaturbereich",
+      "is_product_name": false,
+      "en": "temperature range"
+    },
+    {
+      "id": 7236668,
+      "de": "Teststreifen",
+      "is_product_name": false,
+      "en": "Test strip"
+    },
+    {
+      "id": 7236662,
+      "de": "Temperaturmessung",
+      "is_product_name": false,
+      "en": "temperature measurement"
+    },
+    {
+      "id": 7236661,
+      "de": "Temperaturanzeige",
+      "is_product_name": false,
+      "en": "temperature display"
+    },
+    {
+      "id": 7236667,
+      "de": "Test",
+      "is_product_name": false,
+      "en": "test"
+    },
+    {
+      "id": 7236671,
+      "de": "Uhrzeit und Weckfunktion",
+      "is_product_name": false,
+      "en": "Time and alarm function"
+    },
+    {
+      "id": 7236666,
+      "de": "Verspannungen",
+      "is_product_name": false,
+      "en": "tension"
+    },
+    {
+      "id": 7236665,
+      "de": "TENS-Gerät",
+      "is_product_name": false,
+      "en": "TENS device"
+    },
+    {
+      "id": 7236670,
+      "de": "Thermometer",
+      "is_product_name": false,
+      "en": "Thermometer"
+    },
+    {
+      "id": 7236675,
+      "de": "Zahnbürstenkopf",
+      "is_product_name": false,
+      "en": "toothbrush head"
+    },
+    {
+      "id": 7236672,
+      "de": "Zeitloses Design",
+      "is_product_name": false,
+      "en": "Timeless design"
+    },
+    {
+      "id": 7236679,
+      "de": "Trainingseinheit",
+      "is_product_name": false,
+      "en": "training unit"
+    },
+    {
+      "id": 7236683,
+      "de": "Reisehaartrockner",
+      "is_product_name": false,
+      "en": "Travel hair dryer"
+    },
+    {
+      "id": 7236669,
+      "de": "Thermo-Hygrometer",
+      "is_product_name": false,
+      "en": "Thermo hygrometer"
+    },
+    {
+      "id": 7236674,
+      "de": "Zahnbürsten-Sanitizer",
+      "is_product_name": false,
+      "en": "toothbrush cleaner"
+    },
+    {
+      "id": 7236676,
+      "de": "Zahnbürstenaufsätze",
+      "is_product_name": false,
+      "en": "toothbrush heads"
+    },
+    {
+      "id": 7236678,
+      "de": "Turmventilator",
+      "is_product_name": false,
+      "en": "tower fan"
+    },
+    {
+      "id": 7236680,
+      "de": "Übertragungsfrequenz",
+      "is_product_name": false,
+      "en": "transmission frequency"
+    },
+    {
+      "id": 7236687,
+      "de": "Turbo-Aktiventkalker",
+      "is_product_name": false,
+      "en": "Turbo active descaler"
+    },
+    {
+      "id": 7236684,
+      "de": "REISEWAAGE",
+      "is_product_name": false,
+      "en": "TRAVEL SCALE"
+    },
+    {
+      "id": 7236673,
+      "de": "Zahnbürstensanitiser",
+      "is_product_name": false,
+      "en": "toothbrush cleaner"
+    },
+    {
+      "id": 7236677,
+      "de": "Touch Screen Aktivierungsschalter",
+      "is_product_name": false,
+      "en": "Touch screen activation switch"
+    },
+    {
+      "id": 7236682,
+      "de": "Reiseluftbefeuchter",
+      "is_product_name": false,
+      "en": "Travel air humidifier"
+    },
+    {
+      "id": 7236688,
+      "de": "Turbo-Schnellheizung",
+      "is_product_name": false,
+      "en": "Turbo heating"
+    },
+    {
+      "id": 7236681,
+      "de": "Transportsicherung",
+      "is_product_name": false,
+      "en": "transport lock"
+    },
+    {
+      "id": 7236691,
+      "de": "Ultraschallgerät",
+      "is_product_name": false,
+      "en": "ultrasound device"
+    },
+    {
+      "id": 7236686,
+      "de": "Schläuche",
+      "is_product_name": false,
+      "en": "tubes"
+    },
+    {
+      "id": 7236685,
+      "de": "Schlauch",
+      "is_product_name": false,
+      "en": "tube"
+    },
+    {
+      "id": 7236690,
+      "de": "Ultraschallreiniger",
+      "is_product_name": false,
+      "en": "Ultrasonic cleaner"
+    },
+    {
+      "id": 7236689,
+      "de": "Ultraflache Bauhöhe",
+      "is_product_name": false,
+      "en": "Ultra-flat design"
+    },
+    {
+      "id": 7236692,
+      "de": "Ultraschallkopf",
+      "is_product_name": false,
+      "en": "ultrasound head"
+    },
+    {
+      "id": 7236693,
+      "de": "Ultraschall-Membran",
+      "is_product_name": false,
+      "en": "ultrasound membrane"
+    },
+    {
+      "id": 7236696,
+      "de": "Untergewicht",
+      "is_product_name": false,
+      "en": "underweight"
+    },
+    {
+      "id": 7236695,
+      "de": "Unterbett",
+      "is_product_name": false,
+      "en": "underblanket"
+    },
+    {
+      "id": 7236697,
+      "de": "Universal-Glaswaage",
+      "is_product_name": false,
+      "en": "Universal glass bathroom scale"
+    },
+    {
+      "id": 7236700,
+      "de": "BM 81 easyLock – Oberarm-Blutdruckmessgerät",
+      "is_product_name": true,
+      "en": "Upper Arm Blood Pressure Monitor BM 81 easyLock"
+    },
+    {
+      "id": 7236699,
+      "de": "Oberarm-Blutdruckmessgerät",
+      "is_product_name": false,
+      "en": "Upper arm blood pressure monitor"
+    },
+    {
+      "id": 7236694,
+      "de": "Ultraschall-Quelle",
+      "is_product_name": false,
+      "en": "Ultrasound source"
+    },
+    {
+      "id": 7236704,
+      "de": "Benutzerspeicherplatz",
+      "is_product_name": false,
+      "en": "user memory space"
+    },
+    {
+      "id": 7236698,
+      "de": "Oberarm-Blutdruckcomputer",
+      "is_product_name": false,
+      "en": "upper arm blood pressure computer"
+    },
+    {
+      "id": 7236708,
+      "de": "UV-Nageltrockner",
+      "is_product_name": false,
+      "en": "UV nail dryer"
+    },
+    {
+      "id": 7236701,
+      "de": "Oberarmumfang",
+      "is_product_name": false,
+      "en": "upper arm circumference"
+    },
+    {
+      "id": 7236703,
+      "de": "Benutzerspeicher",
+      "is_product_name": false,
+      "en": "user memory"
+    },
+    {
+      "id": 7236705,
+      "de": "UV-Reinigungsgerät",
+      "is_product_name": false,
+      "en": "UV cleaning device"
+    },
+    {
+      "id": 7236707,
+      "de": "UV-Messgerät",
+      "is_product_name": false,
+      "en": "UV meter"
+    },
+    {
+      "id": 7236702,
+      "de": "Anwendung",
+      "is_product_name": false,
+      "en": "Usage"
+    },
+    {
+      "id": 7236709,
+      "de": "UVC-Lampe",
+      "is_product_name": false,
+      "en": "UVC lamp"
+    },
+    {
+      "id": 7236712,
+      "de": "V Batterie CR2032",
+      "is_product_name": false,
+      "en": "V CR2032 battery"
+    },
+    {
+      "id": 7236716,
+      "de": "Vibrations-Sitzauflage",
+      "is_product_name": false,
+      "en": "Vibrating seat cover"
+    },
+    {
+      "id": 7236711,
+      "de": "V Batterie AAA",
+      "is_product_name": false,
+      "en": "V AAA batteries"
+    },
+    {
+      "id": 7236713,
+      "de": "V Lithium-Batterie CR2032",
+      "is_product_name": false,
+      "en": "V CR2032 lithium battery"
+    },
+    {
+      "id": 7236715,
+      "de": "Massageball mit Vibration",
+      "is_product_name": false,
+      "en": "Vibrating Massage Ball"
+    },
+    {
+      "id": 7236717,
+      "de": "Vibrationsmassage",
+      "is_product_name": false,
+      "en": "vibration massage"
+    },
+    {
+      "id": 7236706,
+      "de": "UV-Licht Technologie",
+      "is_product_name": false,
+      "en": "UV light technology"
+    },
+    {
+      "id": 7236720,
+      "de": "Video-Babyphone",
+      "is_product_name": false,
+      "en": "Video baby monitor"
+    },
+    {
+      "id": 7236710,
+      "de": "V Batterie AA",
+      "is_product_name": false,
+      "en": "V AA batteries"
+    },
+    {
+      "id": 7236721,
+      "de": "Baby Video Monitor 2-in-1",
+      "is_product_name": false,
+      "en": "Video Baby Monitor 2-in-1"
+    },
+    {
+      "id": 7236714,
+      "de": "Velours",
+      "is_product_name": false,
+      "en": "Velour"
+    },
+    {
+      "id": 7236719,
+      "de": "Vibration-On Technik",
+      "is_product_name": false,
+      "en": "Vibration-On technology"
+    },
+    {
+      "id": 7236718,
+      "de": "Vibrationsmotoren",
+      "is_product_name": false,
+      "en": "vibration motors"
+    },
+    {
+      "id": 7236724,
+      "de": "Sprachausgabe",
+      "is_product_name": false,
+      "en": "Voice output"
+    },
+    {
+      "id": 7236723,
+      "de": "Sprachfunktion",
+      "is_product_name": false,
+      "en": "voice function"
+    },
+    {
+      "id": 7236725,
+      "de": "Lautstärkenregulierung",
+      "is_product_name": false,
+      "en": "Volume control"
+    },
+    {
+      "id": 7236722,
+      "de": "Optische Geräuschpegelüberwachung",
+      "is_product_name": false,
+      "en": "Visual noise level monitoring"
+    },
+    {
+      "id": 7236728,
+      "de": "Lichtwecker",
+      "is_product_name": false,
+      "en": "Wake up light"
+    },
+    {
+      "id": 7236727,
+      "de": "Bauchumfang",
+      "is_product_name": false,
+      "en": "waist circumference"
+    },
+    {
+      "id": 7236726,
+      "de": "Taillenumfang",
+      "is_product_name": false,
+      "en": "waist circumference"
+    },
+    {
+      "id": 7236729,
+      "de": "Wake-up Light",
+      "is_product_name": false,
+      "en": "Wake-up light"
+    },
+    {
+      "id": 7236731,
+      "de": "Wandmontage",
+      "is_product_name": false,
+      "en": "Wall fastening"
+    },
+    {
+      "id": 7236730,
+      "de": "Wandhalterung",
+      "is_product_name": false,
+      "en": "wall bracket"
+    },
+    {
+      "id": 7236735,
+      "de": "Warmwachs-Haarentferner",
+      "is_product_name": false,
+      "en": "Warm wax hair remover"
+    },
+    {
+      "id": 7236734,
+      "de": "Wandaufhängung",
+      "is_product_name": false,
+      "en": "wall-mounting fixture"
+    },
+    {
+      "id": 7236732,
+      "de": "Fixierhilfe",
+      "is_product_name": false,
+      "en": "wall mount bracket"
+    },
+    {
+      "id": 7236733,
+      "de": "Wandküchenwaage",
+      "is_product_name": false,
+      "en": "Wall-mounted kitchen scale"
+    },
+    {
+      "id": 7236736,
+      "de": "Wärmende Wohlfühl-Massage",
+      "is_product_name": false,
+      "en": "warm, soothing massage"
+    },
+    {
+      "id": 7236738,
+      "de": "Warnung",
+      "is_product_name": false,
+      "en": "Warning"
+    },
+    {
+      "id": 7236740,
+      "de": "Wasserzusatz",
+      "is_product_name": false,
+      "en": "water additives"
+    },
+    {
+      "id": 7236739,
+      "de": "Warn- und Sicherheitshinweise",
+      "is_product_name": false,
+      "en": "Warnings and safety notes"
+    },
+    {
+      "id": 7236737,
+      "de": "Aufwärmvorgang",
+      "is_product_name": false,
+      "en": "warming process"
+    },
+    {
+      "id": 7236744,
+      "de": "Wasserstandssensor",
+      "is_product_name": false,
+      "en": "water level sensor"
+    },
+    {
+      "id": 7236741,
+      "de": "Wasserdesinfektion",
+      "is_product_name": false,
+      "en": "Water disinfection"
+    },
+    {
+      "id": 7236742,
+      "de": "Wasserheizung",
+      "is_product_name": false,
+      "en": "water heating"
+    },
+    {
+      "id": 7236748,
+      "de": "HT 65 – Welleneisen",
+      "is_product_name": true,
+      "en": "Wave Styler HT 65"
+    },
+    {
+      "id": 7236746,
+      "de": "Wassertemperierung",
+      "is_product_name": false,
+      "en": "Water temperature regulator"
+    },
+    {
+      "id": 7236743,
+      "de": "Wasserstandsanzeige",
+      "is_product_name": false,
+      "en": "water level gauge"
+    },
+    {
+      "id": 7236752,
+      "de": "Wetterstation",
+      "is_product_name": false,
+      "en": "Weather station"
+    },
+    {
+      "id": 7236745,
+      "de": "Wassertank",
+      "is_product_name": false,
+      "en": "water tank"
+    },
+    {
+      "id": 7236747,
+      "de": "Wasserdicht",
+      "is_product_name": false,
+      "en": "Waterproof"
+    },
+    {
+      "id": 7236749,
+      "de": "Tragekomfort",
+      "is_product_name": false,
+      "en": "wearing comfort"
+    },
+    {
+      "id": 7236750,
+      "de": "Verschleißteile",
+      "is_product_name": false,
+      "en": "Wearing parts"
+    },
+    {
+      "id": 7236753,
+      "de": "Wetterstationswaage",
+      "is_product_name": false,
+      "en": "Weather station scale"
+    },
+    {
+      "id": 7236756,
+      "de": "Wiegefläche",
+      "is_product_name": false,
+      "en": "weighing surface"
+    },
+    {
+      "id": 7236751,
+      "de": "Hygrometer",
+      "is_product_name": false,
+      "en": "Weather station"
+    },
+    {
+      "id": 7236754,
+      "de": "Wiegevorgang",
+      "is_product_name": false,
+      "en": "weighing"
+    },
+    {
+      "id": 7236757,
+      "de": "Tragkraft",
+      "is_product_name": false,
+      "en": "Weight capacity"
+    },
+    {
+      "id": 7236760,
+      "de": "Gewichtswert",
+      "is_product_name": false,
+      "en": "weight value"
+    },
+    {
+      "id": 7236758,
+      "de": "Gewichtskontrolle",
+      "is_product_name": false,
+      "en": "weight control"
+    },
+    {
+      "id": 7236761,
+      "de": "Wohlbefinden",
+      "is_product_name": false,
+      "en": "well-being"
+    },
+    {
+      "id": 7236764,
+      "de": "Was tun bei Problemen?",
+      "is_product_name": false,
+      "en": "What if there are problems?"
+    },
+    {
+      "id": 7236762,
+      "de": "Wellness Fußsprudelbad",
+      "is_product_name": false,
+      "en": "Wellness foot spa"
+    },
+    {
+      "id": 7236755,
+      "de": "Wiegen und Zuwiegen",
+      "is_product_name": false,
+      "en": "Weighing and additional weighing"
+    },
+    {
+      "id": 7236765,
+      "de": "Weltgesundheitsorganisation",
+      "is_product_name": false,
+      "en": "World Health Organization"
+    },
+    {
+      "id": 7236765,
+      "de": "WHO",
+      "is_product_name": false,
+      "en": "WHO"
+    },
+    {
+      "id": 7236766,
+      "de": "Winterhandschuh",
+      "is_product_name": false,
+      "en": "Winter glove"
+    },
+    {
+      "id": 7236759,
+      "de": "Gewichtsmanagement",
+      "is_product_name": false,
+      "en": "Weight management"
+    },
+    {
+      "id": 7236768,
+      "de": "Mit Magic-LED",
+      "is_product_name": false,
+      "en": "With magic LED"
+    },
+    {
+      "id": 7236763,
+      "de": "FB 65 – Wellness Fußsprudelbad",
+      "is_product_name": true,
+      "en": "Wellness Foot Spa FB 65"
+    },
+    {
+      "id": 7236769,
+      "de": "Mit Wippmechanik",
+      "is_product_name": false,
+      "en": "With rocker mechanism"
+    },
+    {
+      "id": 7236767,
+      "de": "Mit Memoryboard",
+      "is_product_name": false,
+      "en": "with chalk board"
+    },
+    {
+      "id": 7236770,
+      "de": "Armband",
+      "is_product_name": false,
+      "en": "wrist band"
+    },
+    {
+      "id": 7236772,
+      "de": "Handgelenksumfänge",
+      "is_product_name": false,
+      "en": "wrist circumferences"
+    },
+    {
+      "id": 7236773,
+      "de": "XXL-Glaswaage",
+      "is_product_name": false,
+      "en": "XXL glass scale"
+    },
+    {
+      "id": 7236771,
+      "de": "Handgelenk-Blutdruckmessgerät",
+      "is_product_name": false,
+      "en": "Wrist blood pressure monitor"
+    },
+    {
+      "id": 7236778,
+      "de": "Insektenstichheiler",
+      "is_product_name": false,
+      "en": "Insect bite healer"
+    },
+    {
+      "id": 7236774,
+      "de": "XXL-Heizkissen",
+      "is_product_name": false,
+      "en": "XXL heat pad"
+    },
+    {
+      "id": 7236780,
+      "de": "Arrhythmieerkennung",
+      "is_product_name": false,
+      "en": "arrhythmia detection"
+    },
+    {
+      "id": 7236780,
+      "de": "Arrhythmie-Erkennung",
+      "is_product_name": false
+    },
+    {
+      "id": 7236775,
+      "de": "Yoga-& Stretchmatte",
+      "is_product_name": false,
+      "en": "Yoga & stretching mat"
+    },
+    {
+      "id": 7236783,
+      "de": "IPL dauerhafte Haarentfernung",
+      "is_product_name": false,
+      "en": "IPL long-lasting hair removal"
+    },
+    {
+      "id": 7236783,
+      "de": "IPL langanhaltende Haarentfernung",
+      "is_product_name": false
+    },
+    {
+      "id": 7236781,
+      "de": "Body-Mass-Index",
+      "is_product_name": false,
+      "en": "Body mass index"
+    },
+    {
+      "id": 7236781,
+      "de": "Body Mass Index",
+      "is_product_name": false
+    },
+    {
+      "id": 7236784,
+      "de": "Klettverschluss",
+      "is_product_name": false,
+      "en": "hook-and-loop fastener"
+    },
+    {
+      "id": 7236784,
+      "de": "Klett-Verschluss",
+      "is_product_name": false
+    },
+    {
+      "id": 7236785,
+      "de": "Massagegerät",
+      "is_product_name": false,
+      "en": "massager"
+    },
+    {
+      "id": 7236785,
+      "de": "Massage-Gerät",
+      "is_product_name": false
+    },
+    {
+      "id": 7236785,
+      "de": "Massageprodukt",
+      "is_product_name": false
+    },
+    {
+      "id": 7236782,
+      "de": "Ersatzzahnbürsten",
+      "is_product_name": false,
+      "en": "replacement toothbrushes"
+    },
+    {
+      "id": 7236782,
+      "de": "Ersatz-Zahnbürsten",
+      "is_product_name": false
+    },
+    {
+      "id": 7236787,
+      "de": "Pediküre-Set",
+      "is_product_name": false,
+      "en": "pedicure set"
+    },
+    {
+      "id": 7236787,
+      "de": "Pediküreset",
+      "is_product_name": false
+    },
+    {
+      "id": 7236788,
+      "de": "test2",
+      "is_product_name": false
+    },
+    {
+      "id": 7236793,
+      "de": "Powerbank",
+      "is_product_name": false
+    },
+    {
+      "id": 7236791,
+      "de": "EM 59 Heat Digital TENS/EMS mit Wärmefunktion",
+      "is_product_name": true
+    },
+    {
+      "id": 7236797,
+      "de": "flauschig",
+      "is_product_name": false
+    },
+    {
+      "id": 7236796,
+      "de": "super flauschig",
+      "is_product_name": false
+    },
+    {
+      "id": 7236801,
+      "de": "extra weiche Oberfläche",
+      "is_product_name": false
+    },
+    {
+      "id": 7236789,
+      "de": "Shiatsu-Fußmassagegerät",
+      "is_product_name": false,
+      "en": "Shiatsu foot massager"
+    },
+    {
+      "id": 7236805,
+      "de": "Gekreppte Wellen",
+      "is_product_name": false
+    },
+    {
+      "id": 7236809,
+      "de": "5 Jahre Garantie",
+      "is_product_name": false
+    },
+    {
+      "id": 7236800,
+      "de": "extra weich",
+      "is_product_name": false
+    },
+    {
+      "id": 7236814,
+      "de": "cellulite releaZer® compact",
+      "is_product_name": true
+    },
+    {
+      "id": 7236804,
+      "de": "Flauschfaser-Oberfläche",
+      "is_product_name": false
+    },
+    {
+      "id": 7236819,
+      "de": "2 Geschwindigkeitsstufen",
+      "is_product_name": false
+    },
+    {
+      "id": 7236786,
+      "de": "Nadel-Lanzetten",
+      "is_product_name": false,
+      "en": "lancet needles"
+    },
+    {
+      "id": 7236786,
+      "de": "Nadellanzetten",
+      "is_product_name": false
+    },
+    {
+      "id": 7236808,
+      "de": "3 Jahre Garantie",
+      "is_product_name": false
+    },
+    {
+      "id": 7236823,
+      "de": "kuschelige Wärme",
+      "is_product_name": false
+    },
+    {
+      "id": 7236813,
+      "de": "cellulite releaZer®",
+      "is_product_name": true
+    },
+    {
+      "id": 7236827,
+      "de": "kosmetisches Ultraschallgerät \"Pureo Sonic\"",
+      "is_product_name": false,
+      "en": "“Pureo Sonic” cosmetic ultrasound device"
+    },
+    {
+      "id": 7236818,
+      "de": "Fieberalarm: ab",
+      "is_product_name": false
+    },
+    {
+      "id": 7236822,
+      "de": "Teddy-Fußsack",
+      "is_product_name": false
+    },
+    {
+      "id": 7236826,
+      "de": "Shiatsu-Sitzauflage",
+      "is_product_name": false,
+      "en": "Shiatsu seat cover"
+    },
+    {
+      "id": 7236790,
+      "de": "Dampfvernebler",
+      "is_product_name": false,
+      "en": "steam vaporiser"
+    },
+    {
+      "id": 7236794,
+      "de": "Dimmer",
+      "is_product_name": false
+    },
+    {
+      "id": 7236798,
+      "de": "flauschig weich",
+      "is_product_name": false
+    },
+    {
+      "id": 7236802,
+      "de": "Flauschig weich und traumhaft kuschelig",
+      "is_product_name": false
+    },
+    {
+      "id": 7236806,
+      "de": "2 in 1",
+      "is_product_name": false
+    },
+    {
+      "id": 7236806,
+      "de": "2-in-1",
+      "is_product_name": false
+    },
+    {
+      "id": 7236831,
+      "de": "2-in-1 Volumen- & Haartrocknungsbürste",
+      "is_product_name": false,
+      "en": "2-in-1 Volumising Hair Dryer Brush"
+    },
+    {
+      "id": 7236795,
+      "de": "Superflausch-Oberfläche",
+      "is_product_name": false
+    },
+    {
+      "id": 7236810,
+      "de": "Yearpack",
+      "is_product_name": false
+    },
+    {
+      "id": 7236799,
+      "de": "weich",
+      "is_product_name": false
+    },
+    {
+      "id": 7236815,
+      "de": "stress releaZer®",
+      "is_product_name": true
+    },
+    {
+      "id": 7236820,
+      "de": "Fieberalarm: ab 38 °C",
+      "is_product_name": false
+    },
+    {
+      "id": 7236803,
+      "de": "Flauschfaser",
+      "is_product_name": false
+    },
+    {
+      "id": 7236824,
+      "de": "ITO",
+      "is_product_name": false
+    },
+    {
+      "id": 7236807,
+      "de": "2 Jahre Garantie",
+      "is_product_name": false
+    },
+    {
+      "id": 7236811,
+      "de": "fascia releaZer®",
+      "is_product_name": true
+    },
+    {
+      "id": 7236828,
+      "de": "10 Benutzerspeicher",
+      "is_product_name": false,
+      "en": "10 user memories"
+    },
+    {
+      "id": 7236817,
+      "de": "Geschwindigkeitsstufe",
+      "is_product_name": false
+    },
+    {
+      "id": 7236830,
+      "de": "FM 120 – 2-in-1 Shiatsu-Fußmassagegerät",
+      "is_product_name": true,
+      "en": "2-in-1 Shiatsu Foot Massager FM 120"
+    },
+    {
+      "id": 7236821,
+      "de": "Freier durchatmen mit [maremed®] - auch im Schlaf",
+      "is_product_name": true
+    },
+    {
+      "id": 7236825,
+      "de": "Herren-Ganzkörperrasierer",
+      "is_product_name": false,
+      "en": "men's body groomer"
+    },
+    {
+      "id": 7236834,
+      "de": "3D Shiatsu Rückenmassage",
+      "is_product_name": false,
+      "en": "3D Shiatsu back massage"
+    },
+    {
+      "id": 7236835,
+      "de": "3D Shiatsu-Massagegerät",
+      "is_product_name": false,
+      "en": "3D Shiatsu massager"
+    },
+    {
+      "id": 7236832,
+      "de": "HC 45 Ocean – 2-in-1 Volumen- & Haartrocknungsbürste",
+      "is_product_name": true,
+      "en": "2-in-1 Volumising Hair Dryer Brush HC 45 Ocean"
+    },
+    {
+      "id": 7236836,
+      "de": "Epilierer 3-in-1",
+      "is_product_name": false,
+      "en": "3-in-1 epilator"
+    },
+    {
+      "id": 7236838,
+      "de": "50 Vliesstreifen",
+      "is_product_name": false,
+      "en": "50 fabric strips"
+    },
+    {
+      "id": 7236829,
+      "de": "2 Wachspatronen",
+      "is_product_name": false,
+      "en": "2 wax cartridges"
+    },
+    {
+      "id": 7236839,
+      "de": "Bauch-/Rücken-Heizkissen",
+      "is_product_name": false,
+      "en": "Abdominal and back heat pad"
+    },
+    {
+      "id": 7236840,
+      "de": "Bauch- und Rückenmuskelgürtel",
+      "is_product_name": false,
+      "en": "Abdominal and back muscle belt"
+    },
+    {
+      "id": 7236842,
+      "de": "Bauchmuskulatur",
+      "is_product_name": false,
+      "en": "abdominal muscles"
+    },
+    {
+      "id": 7236833,
+      "de": "3 Kräutereinlagen",
+      "is_product_name": false,
+      "en": "3 herb inserts"
+    },
+    {
+      "id": 7236843,
+      "de": "Bauchmuskel-Gürtel",
+      "is_product_name": false,
+      "en": "Abdominal toning belt"
+    },
+    {
+      "id": 7236846,
+      "de": "Präzise elektronische Temperaturregelung",
+      "is_product_name": false,
+      "en": "Accurate electronic temperature regulation"
+    },
+    {
+      "id": 7236844,
+      "de": "Zubehör- und Ersatzteile",
+      "is_product_name": false,
+      "en": "Accessories and replacement parts"
+    },
+    {
+      "id": 7236837,
+      "de": "3 in 1-Thermometer",
+      "is_product_name": false,
+      "en": "3-in-1 Thermometer"
+    },
+    {
+      "id": 7236850,
+      "de": "Aktivitätsumsatz",
+      "is_product_name": false,
+      "en": "Active metabolic rate"
+    },
+    {
+      "id": 7236847,
+      "de": "Achillessehnenmassagegerät",
+      "is_product_name": false,
+      "en": "Achilles tendon massager"
+    },
+    {
+      "id": 7236854,
+      "de": "Zusatzfunktion",
+      "is_product_name": false,
+      "en": "additional feature"
+    },
+    {
+      "id": 7236841,
+      "de": "Bauchmuskel-Trainer",
+      "is_product_name": false,
+      "en": "Abdominal muscle trainer"
+    },
+    {
+      "id": 7236859,
+      "de": "Luftentfeuchter",
+      "is_product_name": false,
+      "en": "Air dehumidifier"
+    },
+    {
+      "id": 7236848,
+      "de": "FM 200 Achilomed® – Achillessehnenmassagegerät",
+      "is_product_name": true,
+      "en": "Achilles Tendon Massager FM 200 Achillomed®"
+    },
+    {
+      "id": 7236851,
+      "de": "Aktivitätsgrad",
+      "is_product_name": false,
+      "en": "activity level"
+    },
+    {
+      "id": 7236852,
+      "de": "Aktivitätssensor",
+      "is_product_name": false,
+      "en": "Activity sensor"
+    },
+    {
+      "id": 7236855,
+      "de": "Intensität einstellbar",
+      "is_product_name": false,
+      "en": "Adjustable intensity"
+    },
+    {
+      "id": 7236845,
+      "de": "EKG-genaue Herzfrequenzmessung",
+      "is_product_name": false,
+      "en": "Accurate ECG heart rate measurement"
+    },
+    {
+      "id": 7236863,
+      "de": "Luftreiniger",
+      "is_product_name": false,
+      "en": "Air purifier"
+    },
+    {
+      "id": 7236860,
+      "de": "Luftfilter",
+      "is_product_name": false,
+      "en": "air filter"
+    },
+    {
+      "id": 7236849,
+      "de": "Signalton",
+      "is_product_name": false,
+      "en": "Acoustic signal"
+    },
+    {
+      "id": 7236856,
+      "de": "Regulierbare Lautstärkeneinstellung",
+      "is_product_name": false,
+      "en": "adjustable volume setting"
+    },
+    {
+      "id": 7236864,
+      "de": "LR 401 WIFI – Luftreiniger",
+      "is_product_name": true,
+      "en": "Air Purifier LR 401 WIFI"
+    },
+    {
+      "id": 7236853,
+      "de": "Aktivitätsuhr",
+      "is_product_name": false,
+      "en": "Activity watch"
+    },
+    {
+      "id": 7236861,
+      "de": "Luftbefeuchtung",
+      "is_product_name": false,
+      "en": "Air humidification"
+    },
+    {
+      "id": 7236868,
+      "de": "Aleo-Vera Wachstpatrone",
+      "is_product_name": false,
+      "en": "Aloe-vera wax cartridge"
+    },
+    {
+      "id": 7236867,
+      "de": "Luftsprudelbad",
+      "is_product_name": false,
+      "en": "Air whirl bath"
+    },
+    {
+      "id": 7236865,
+      "de": "Luftwäscher",
+      "is_product_name": false,
+      "en": "Air washer"
+    },
+    {
+      "id": 7236872,
+      "de": "Analoge Signalübertragung",
+      "is_product_name": false,
+      "en": "Analogue signal transmission"
+    },
+    {
+      "id": 7236858,
+      "de": "Luftreinigung",
+      "is_product_name": false,
+      "en": "air cleaning"
+    },
+    {
+      "id": 7236871,
+      "de": "Analoges Babyphone",
+      "is_product_name": false,
+      "en": "Analogue baby monitor"
+    },
+    {
+      "id": 7236862,
+      "de": "Luftbefeuchter",
+      "is_product_name": false,
+      "en": "Air humidifier"
+    },
+    {
+      "id": 7236876,
+      "de": "Anti-Cellulite Massage",
+      "is_product_name": false,
+      "en": "Anti-cellulite massage"
+    },
+    {
+      "id": 7236869,
+      "de": "Raumluft",
+      "is_product_name": false,
+      "en": "ambient air"
+    },
+    {
+      "id": 7236873,
+      "de": "Neigungsstufen",
+      "is_product_name": false,
+      "en": "angle settings"
+    },
+    {
+      "id": 7236877,
+      "de": "Linkslauf",
+      "is_product_name": false,
+      "en": "anti-clockwise rotation"
+    },
+    {
+      "id": 7236880,
+      "de": "App-gesteuertes Wärmeunterbett",
+      "is_product_name": false,
+      "en": "App-controlled heated underblanket"
+    },
+    {
+      "id": 7236875,
+      "de": "Anti-Aging Gesichtspflege",
+      "is_product_name": false,
+      "en": "Anti-ageing face care device"
+    },
+    {
+      "id": 7236866,
+      "de": "Luftwäsche",
+      "is_product_name": false,
+      "en": "air washing"
+    },
+    {
+      "id": 7236881,
+      "de": "App-gesteuertes Spann-Wärmeunterbett",
+      "is_product_name": false,
+      "en": "App-controlled heated underblanket - fitted"
+    },
+    {
+      "id": 7236870,
+      "de": "Umgebungstemperatur",
+      "is_product_name": false,
+      "en": "ambient temperature"
+    },
+    {
+      "id": 7236874,
+      "de": "Anti-Akne-Stift",
+      "is_product_name": false,
+      "en": "Anti-acne pen"
+    },
+    {
+      "id": 7236884,
+      "de": "Aroma Heizkissen",
+      "is_product_name": false,
+      "en": "aroma heat pad"
+    },
+    {
+      "id": 7236879,
+      "de": "App gesteuerter Luftreiniger",
+      "is_product_name": false,
+      "en": "App-controlled air purifier"
+    },
+    {
+      "id": 7236885,
+      "de": "Arrythmie",
+      "is_product_name": false,
+      "en": "arrythmia"
+    },
+    {
+      "id": 7236888,
+      "de": "Aufsätze",
+      "is_product_name": false,
+      "en": "attachments"
+    },
+    {
+      "id": 7236878,
+      "de": "Kalkfilter",
+      "is_product_name": false,
+      "en": "anti-limescale filter"
+    },
+    {
+      "id": 7236889,
+      "de": "Aufsätze für Diabetiker geeignet",
+      "is_product_name": false,
+      "en": "Attachments suitable for diabetics"
+    },
+    {
+      "id": 7236883,
+      "de": "Aroma Diffuser",
+      "is_product_name": false,
+      "en": "Aroma diffuser"
+    },
+    {
+      "id": 7236882,
+      "de": "Achsel",
+      "is_product_name": false,
+      "en": "armpit"
+    },
+    {
+      "id": 7236892,
+      "de": "Automatischer Trainingszonenvorschlag",
+      "is_product_name": false,
+      "en": "Automatic training zone suggestion"
+    },
+    {
+      "id": 7236893,
+      "de": "Automatische Videoüberwachung",
+      "is_product_name": false,
+      "en": "Automatic video monitoring"
+    },
+    {
+      "id": 7236896,
+      "de": "Babykost",
+      "is_product_name": false,
+      "en": "Baby food"
+    },
+    {
+      "id": 7236886,
+      "de": "Sportlermodus",
+      "is_product_name": false,
+      "en": "athlete mode"
+    },
+    {
+      "id": 7236897,
+      "de": "Babykost- und Flaschenwärmer",
+      "is_product_name": false,
+      "en": "Baby food and bottle warmer"
+    },
+    {
+      "id": 7236887,
+      "de": "Vernebler",
+      "is_product_name": false,
+      "en": "Atomiser"
+    },
+    {
+      "id": 7236890,
+      "de": "Abschaltautomatik",
+      "is_product_name": false,
+      "en": "automatic switch-off"
+    },
+    {
+      "id": 7236900,
+      "de": "Babyphone",
+      "is_product_name": false,
+      "en": "Baby monitor"
+    },
+    {
+      "id": 7236901,
+      "de": "Babywaage",
+      "is_product_name": false,
+      "en": "Baby scale"
+    },
+    {
+      "id": 7236894,
+      "de": "Durchschnittlicher Blutzucker-Wert",
+      "is_product_name": false,
+      "en": "Average blood glucose value"
+    },
+    {
+      "id": 7236891,
+      "de": "automatische Abschaltung",
+      "is_product_name": false,
+      "en": "automatic switch-off"
+    },
+    {
+      "id": 7236904,
+      "de": "Rücken-/Nacken-Heizkissen",
+      "is_product_name": false,
+      "en": "Back & neck heat pad"
+    },
+    {
+      "id": 7236898,
+      "de": "Babykostwärmer",
+      "is_product_name": false,
+      "en": "baby food warmer"
+    },
+    {
+      "id": 7236895,
+      "de": "Durchschnittswert",
+      "is_product_name": false,
+      "en": "average value"
+    },
+    {
+      "id": 7236902,
+      "de": "Babyeinheit",
+      "is_product_name": false,
+      "en": "Baby unit"
+    },
+    {
+      "id": 7236905,
+      "de": "Rücken-Gürtel mit TENS-Gerät",
+      "is_product_name": false,
+      "en": "Back belt with TENS device"
+    },
+    {
+      "id": 7236899,
+      "de": "Babymaske",
+      "is_product_name": false,
+      "en": "Baby mask"
+    },
+    {
+      "id": 7236908,
+      "de": "Rückenstütze",
+      "is_product_name": false,
+      "en": "back rest"
+    },
+    {
+      "id": 7236906,
+      "de": "Rückenmassage",
+      "is_product_name": false,
+      "en": "back massage"
+    },
+    {
+      "id": 7236912,
+      "de": "Inkl. Batterien",
+      "is_product_name": false,
+      "en": "batteries included"
+    },
+    {
+      "id": 7236910,
+      "de": "Hintergrundbeleuchtung",
+      "is_product_name": false,
+      "en": "backlighting"
+    },
+    {
+      "id": 7236909,
+      "de": "Haltungstrainer",
+      "is_product_name": false,
+      "en": "Back Trainer"
+    },
+    {
+      "id": 7236914,
+      "de": "Batteriefach",
+      "is_product_name": false,
+      "en": "battery compartment"
+    },
+    {
+      "id": 7236916,
+      "de": "Batteriestandsanzeige",
+      "is_product_name": false,
+      "en": "battery level indicator"
+    },
+    {
+      "id": 7236903,
+      "de": "Baby Care Monitor",
+      "is_product_name": false,
+      "en": "Babycare monitor"
+    },
+    {
+      "id": 7236920,
+      "de": "Akku-Heizkissen",
+      "is_product_name": false,
+      "en": "Battery-operated heating pad"
+    },
+    {
+      "id": 7236918,
+      "de": "Batteriekontrollanzeige",
+      "is_product_name": false,
+      "en": "Battery status display"
+    },
+    {
+      "id": 7236913,
+      "de": "Batterie",
+      "is_product_name": false,
+      "en": "battery"
+    },
+    {
+      "id": 7236922,
+      "de": "Bart- und Haartrimmer",
+      "is_product_name": false,
+      "en": "beard and hair trimmer"
+    },
+    {
+      "id": 7236907,
+      "de": "Rückenlehne",
+      "is_product_name": false,
+      "en": "back rest"
+    },
+    {
+      "id": 7236911,
+      "de": "Badethermometer",
+      "is_product_name": false,
+      "en": "bath thermometer"
+    },
+    {
+      "id": 7236917,
+      "de": "Batterie-Nachkaufset Typ 13/PR48",
+      "is_product_name": true,
+      "en": "Battery replacement set type 13/PR48"
+    },
+    {
+      "id": 7236924,
+      "de": "Bartstyler",
+      "is_product_name": false,
+      "en": "Beard Trimmer"
+    },
+    {
+      "id": 7236924,
+      "de": "Barttrimmer",
+      "is_product_name": false,
+      "en": "Beard styler"
+    },
+    {
+      "id": 7236926,
+      "de": "Gürtelclip",
+      "is_product_name": false,
+      "en": "belt clip"
+    },
+    {
+      "id": 7236915,
+      "de": "Akkuzustand",
+      "is_product_name": false,
+      "en": "battery level"
+    },
+    {
+      "id": 7236930,
+      "de": "Blutzuckermessgerät",
+      "is_product_name": false,
+      "en": "Blood glucose monitor"
+    },
+    {
+      "id": 7236921,
+      "de": "Akku-Shaver-Set",
+      "is_product_name": false,
+      "en": "battery-operated shaver set"
+    },
+    {
+      "id": 7236919,
+      "de": "Akku- Bart- und Nasentrimmer",
+      "is_product_name": false,
+      "en": "battery-operated beard and nose hair trimmer"
+    },
+    {
+      "id": 7236934,
+      "de": "Blutdruckmessung",
+      "is_product_name": false,
+      "en": "blood pressure measurement"
+    },
+    {
+      "id": 7236928,
+      "de": "Blutzucker",
+      "is_product_name": false,
+      "en": "blood glucose"
+    },
+    {
+      "id": 7236925,
+      "de": "Gurt",
+      "is_product_name": false,
+      "en": "belt"
+    },
+    {
+      "id": 7236923,
+      "de": "Bart- und Nasenhaartrimmer",
+      "is_product_name": false,
+      "en": "beard and nose hair trimmer"
+    },
+    {
+      "id": 7236929,
+      "de": "Blutzuckermessbereich",
+      "is_product_name": false,
+      "en": "Blood glucose measurement range"
+    },
+    {
+      "id": 7236938,
+      "de": "Blutdruckwert",
+      "is_product_name": false,
+      "en": "blood pressure value"
+    },
+    {
+      "id": 7236932,
+      "de": "GL 60 Bluetooth® – Blutzuckermessgerät",
+      "is_product_name": true,
+      "en": "Blood Glucose Monitor GL 60 Bluetooth®"
+    },
+    {
+      "id": 7236933,
+      "de": "Ruheblutdruck",
+      "is_product_name": false,
+      "en": "blood pressure at rest"
+    },
+    {
+      "id": 7236936,
+      "de": "Blutdruckmessgerät mit EKG Funktion",
+      "is_product_name": false,
+      "en": "Blood pressure monitor with ECG function"
+    },
+    {
+      "id": 7236942,
+      "de": "FC 55 Pureo Complete Cleansing – Körperbürste",
+      "is_product_name": true,
+      "en": "Body Brush FC 55 Pureo Complete Cleansing"
+    },
+    {
+      "id": 7236927,
+      "de": "Gürtelclip und Aufhängefunktion",
+      "is_product_name": false,
+      "en": "belt clip and hanger feature"
+    },
+    {
+      "id": 7236937,
+      "de": "Internet-Blutdruckmessgerät",
+      "is_product_name": false,
+      "en": "blood pressure monitor with WiFi"
+    },
+    {
+      "id": 7236946,
+      "de": "Body Groomer",
+      "is_product_name": false,
+      "en": "Body groomer"
+    },
+    {
+      "id": 7236931,
+      "de": "Glucose-Messgerät",
+      "is_product_name": false,
+      "en": "Blood glucose monitor"
+    },
+    {
+      "id": 7236940,
+      "de": "BMI-Berechnung",
+      "is_product_name": false,
+      "en": "BMI calculation"
+    },
+    {
+      "id": 7236941,
+      "de": "BMI-Einstufung",
+      "is_product_name": false,
+      "en": "BMI classification"
+    },
+    {
+      "id": 7236944,
+      "de": "Körperfettanteil",
+      "is_product_name": false,
+      "en": "Body fat percentage"
+    },
+    {
+      "id": 7236950,
+      "de": "Knochenmasse",
+      "is_product_name": false,
+      "en": "bone mass"
+    },
+    {
+      "id": 7236935,
+      "de": "Blutdruckmessgerät",
+      "is_product_name": false,
+      "en": "Blood pressure monitor"
+    },
+    {
+      "id": 7236945,
+      "de": "Körperfettwert",
+      "is_product_name": false,
+      "en": "Body fat value"
+    },
+    {
+      "id": 7236948,
+      "de": "Körperwasser und Muskelanteil",
+      "is_product_name": false,
+      "en": "body water and muscle content"
+    },
+    {
+      "id": 7236954,
+      "de": "atmungsaktiv",
+      "is_product_name": false,
+      "en": "breathable"
+    },
+    {
+      "id": 7236949,
+      "de": "Körperwasseranteil",
+      "is_product_name": false,
+      "en": "Body water content"
+    },
+    {
+      "id": 7236952,
+      "de": "Fläschenwärmer",
+      "is_product_name": false,
+      "en": "bottle warmer"
+    },
+    {
+      "id": 7236953,
+      "de": "Unterkiefertimer",
+      "is_product_name": false,
+      "en": "bottom jaw timer"
+    },
+    {
+      "id": 7236958,
+      "de": "Kabelaufrollung",
+      "is_product_name": false,
+      "en": "Cable winder"
+    },
+    {
+      "id": 7236956,
+      "de": "HdO",
+      "is_product_name": false,
+      "en": "BTE"
+    },
+    {
+      "id": 7236939,
+      "de": "Blutmengenkontrolle",
+      "is_product_name": false,
+      "en": "Blood volume check"
+    },
+    {
+      "id": 7236957,
+      "de": "Sprudelmassage",
+      "is_product_name": false,
+      "en": "bubble massage"
+    },
+    {
+      "id": 7236961,
+      "de": "Ermittlung von Gewicht",
+      "is_product_name": false,
+      "en": "calculation of weight"
+    },
+    {
+      "id": 7236962,
+      "de": "Kalibrierfunktion",
+      "is_product_name": false,
+      "en": "Calibration function"
+    },
+    {
+      "id": 7236943,
+      "de": "Körperfett",
+      "is_product_name": false,
+      "en": "body fat"
+    },
+    {
+      "id": 7236960,
+      "de": "Ermittlung von Körpergewicht",
+      "is_product_name": false,
+      "en": "Calculation of body weight"
+    },
+    {
+      "id": 7236965,
+      "de": "Tragkraft 150 kg",
+      "is_product_name": false,
+      "en": "Capacity 150 kg"
+    },
+    {
+      "id": 7236947,
+      "de": "Körpertemperatur",
+      "is_product_name": false,
+      "en": "body temperature"
+    },
+    {
+      "id": 7236969,
+      "de": "Tragegriff",
+      "is_product_name": false,
+      "en": "Carrying handle"
+    },
+    {
+      "id": 7236964,
+      "de": "Kalorienbedarf",
+      "is_product_name": false,
+      "en": "calorie requirement"
+    },
+    {
+      "id": 7236966,
+      "de": "Kfz-Adapter",
+      "is_product_name": false,
+      "en": "car adapter"
+    },
+    {
+      "id": 7236951,
+      "de": "Flaschengitter",
+      "is_product_name": false,
+      "en": "bottle grid"
+    },
+    {
+      "id": 7236973,
+      "de": "Geprüfte Teststreifen-Qualität",
+      "is_product_name": false,
+      "en": "Certified test strip quality"
+    },
+    {
+      "id": 7236968,
+      "de": "Herzrhythmusstörungs-Indikator",
+      "is_product_name": false,
+      "en": "cardiac arrhythmia indicator"
+    },
+    {
+      "id": 7236955,
+      "de": "Bürstenkopf",
+      "is_product_name": false,
+      "en": "brush head"
+    },
+    {
+      "id": 7236970,
+      "de": "Vorsicht",
+      "is_product_name": false,
+      "en": "Caution"
+    },
+    {
+      "id": 7236977,
+      "de": "Kinderwaage",
+      "is_product_name": false,
+      "en": "Child scale"
+    },
+    {
+      "id": 7236972,
+      "de": "Cellulite Massagegerät",
+      "is_product_name": false,
+      "en": "cellulite massager"
+    },
+    {
+      "id": 7236959,
+      "de": "Durchschnittswertberechnung",
+      "is_product_name": false,
+      "en": "calculating the average value"
+    },
+    {
+      "id": 7236976,
+      "de": "Brustgurt",
+      "is_product_name": false,
+      "en": "Chest strap"
+    },
+    {
+      "id": 7236963,
+      "de": "Kalorienverbrauch",
+      "is_product_name": false,
+      "en": "Calorie consumption"
+    },
+    {
+      "id": 7236981,
+      "de": "Reinigungspinsel",
+      "is_product_name": false,
+      "en": "cleaning brush"
+    },
+    {
+      "id": 7236967,
+      "de": "Herzrhythmusstörungen",
+      "is_product_name": false,
+      "en": "cardiac arrhythmia"
+    },
+    {
+      "id": 7236985,
+      "de": "Hautklar-Stift",
+      "is_product_name": false,
+      "en": "Clear skin pen"
+    },
+    {
+      "id": 7236974,
+      "de": "Tafelwaage",
+      "is_product_name": false,
+      "en": "Chalk board scale"
+    },
+    {
+      "id": 7236971,
+      "de": "Cellulite Massage",
+      "is_product_name": false,
+      "en": "Cellulite massager"
+    },
+    {
+      "id": 7236980,
+      "de": "Reinigung und Pflege",
+      "is_product_name": false,
+      "en": "Cleaning and maintenance"
+    },
+    {
+      "id": 7236989,
+      "de": "Kalt/Warm-Massagegerät",
+      "is_product_name": false,
+      "en": "Cold/warm massage device"
+    },
+    {
+      "id": 7236978,
+      "de": "Einstufung",
+      "is_product_name": false,
+      "en": "classification"
+    },
+    {
+      "id": 7236975,
+      "de": "Ladestation",
+      "is_product_name": false,
+      "en": "charger"
+    },
+    {
+      "id": 7236982,
+      "de": "Putzintervalle",
+      "is_product_name": false,
+      "en": "cleaning intervals"
+    },
+    {
+      "id": 7236993,
+      "de": "Komfort-Wärmeunterbett",
+      "is_product_name": false,
+      "en": "Comfort heated underblanket"
+    },
+    {
+      "id": 7236979,
+      "de": "Sanitiser",
+      "is_product_name": false,
+      "en": "cleaner"
+    },
+    {
+      "id": 7236984,
+      "de": "Reinigungslösung",
+      "is_product_name": false,
+      "en": "cleaning solution"
+    },
+    {
+      "id": 7236986,
+      "de": "Fieberthermometer",
+      "is_product_name": false,
+      "en": "clinical thermometer"
+    },
+    {
+      "id": 7236983,
+      "de": "Reinigungsmittel",
+      "is_product_name": false,
+      "en": "cleaning products"
+    },
+    {
+      "id": 7236988,
+      "de": "Kaltverdunstung",
+      "is_product_name": false,
+      "en": "cold evaporation"
+    },
+    {
+      "id": 7236987,
+      "de": "Saphirscheibe, grob",
+      "is_product_name": false,
+      "en": "Coarse-Grain Sapphire Wheel"
+    },
+    {
+      "id": 7236992,
+      "de": "Komfort-Luftreiniger",
+      "is_product_name": false,
+      "en": "Comfort air purifier"
+    },
+    {
+      "id": 7236997,
+      "de": "Begleiter",
+      "is_product_name": false,
+      "en": "companion"
+    },
+    {
+      "id": 7237001,
+      "de": "Kontinuierliche Chargenkontrolle",
+      "is_product_name": false,
+      "en": "Continuous batch control"
+    },
+    {
+      "id": 7236990,
+      "de": "farbiger Körperfett-Interpretation",
+      "is_product_name": false,
+      "en": "Colour-coded body fat interpretation"
+    },
+    {
+      "id": 7236991,
+      "de": "Komfort-Luftentfeuchter",
+      "is_product_name": false,
+      "en": "Comfort air dehumidifier"
+    },
+    {
+      "id": 7237005,
+      "de": "Schalter",
+      "is_product_name": false,
+      "en": "control"
+    },
+    {
+      "id": 7236994,
+      "de": "Kompakt-Luftentfeuchter",
+      "is_product_name": false,
+      "en": "Compact air dehumidifier"
+    },
+    {
+      "id": 7237009,
+      "de": "Kabelaufwicklung",
+      "is_product_name": false,
+      "en": "cord winder"
+    },
+    {
+      "id": 7236996,
+      "de": "HC 35 Ocean – Kompakthaartrockner",
+      "is_product_name": true,
+      "en": "Compact Hair Dryer HC 35 Ocean"
+    },
+    {
+      "id": 7237013,
+      "de": "angenehm",
+      "is_product_name": false,
+      "en": "cosy"
+    },
+    {
+      "id": 7237017,
+      "de": "Manschette",
+      "is_product_name": false,
+      "en": "cuff"
+    },
+    {
+      "id": 7237000,
+      "de": "Kontakt-Messtechnik",
+      "is_product_name": false,
+      "en": "Contact-measurement technology"
+    },
+    {
+      "id": 7236995,
+      "de": "HC 35 – Kompakthaartrockner",
+      "is_product_name": true,
+      "en": "Compact Hair Dryer HC 35"
+    },
+    {
+      "id": 7236998,
+      "de": "Druckluftschlauch",
+      "is_product_name": false,
+      "en": "Compressed air hose"
+    },
+    {
+      "id": 7237021,
+      "de": "Manschettengröße",
+      "is_product_name": false,
+      "en": "Cuff size"
+    },
+    {
+      "id": 7236999,
+      "de": "Kompressor-Drucklufttechnologie",
+      "is_product_name": false,
+      "en": "Compressed-air technology"
+    },
+    {
+      "id": 7237004,
+      "de": "stufenlose Lautstärkenregulierung",
+      "is_product_name": false,
+      "en": "Continuously adjustable volume control"
+    },
+    {
+      "id": 7237025,
+      "de": "Gefahr",
+      "is_product_name": false,
+      "en": "Danger"
+    },
+    {
+      "id": 7237008,
+      "de": "Kontrolllösung",
+      "is_product_name": false,
+      "en": "Control solution"
+    },
+    {
+      "id": 7237003,
+      "de": "stufenlos regulierbar",
+      "is_product_name": false,
+      "en": "Continuously adjustable"
+    },
+    {
+      "id": 7237002,
+      "de": "Dauerstufe",
+      "is_product_name": false,
+      "en": "continuous function"
+    },
+    {
+      "id": 7237007,
+      "de": "Kontrollmaterial",
+      "is_product_name": false,
+      "en": "Control material"
+    },
+    {
+      "id": 7237006,
+      "de": "Bedientaste",
+      "is_product_name": false,
+      "en": "control button"
+    },
+    {
+      "id": 7237012,
+      "de": "wohltuend",
+      "is_product_name": false,
+      "en": "cosy"
+    },
+    {
+      "id": 7237016,
+      "de": "Creme-Wachspatrone",
+      "is_product_name": false,
+      "en": "Cream wax cartridge"
+    },
+    {
+      "id": 7237011,
+      "de": "Mobiler Wärmegürtel",
+      "is_product_name": false,
+      "en": "Cordless heat belt"
+    },
+    {
+      "id": 7237010,
+      "de": "Akku-Haarglätter",
+      "is_product_name": false,
+      "en": "Cordless hair straightener"
+    },
+    {
+      "id": 7237029,
+      "de": "TL 85 – Tageslichtlampe",
+      "is_product_name": true,
+      "en": "Daylight Therapy Lamp TL 85"
+    },
+    {
+      "id": 7237020,
+      "de": "Manschettenhalter",
+      "is_product_name": false,
+      "en": "Cuff holder"
+    },
+    {
+      "id": 7237033,
+      "de": "Deluxe-Massagesessel",
+      "is_product_name": false,
+      "en": "Deluxe massage chair"
+    },
+    {
+      "id": 7237024,
+      "de": "Zylinderfräser",
+      "is_product_name": false,
+      "en": "Cylindrical cutter"
+    },
+    {
+      "id": 7237015,
+      "de": "Anti-Schmerz",
+      "is_product_name": false,
+      "en": "Counteracts pain"
+    },
+    {
+      "id": 7237014,
+      "de": "Countdown-Timer",
+      "is_product_name": false,
+      "en": "countdown timer"
+    },
+    {
+      "id": 7237028,
+      "de": "Tageslichtlampe",
+      "is_product_name": false,
+      "en": "Daylight therapy lamp"
+    },
+    {
+      "id": 7237037,
+      "de": "Design-Küchenwaage",
+      "is_product_name": false,
+      "en": "designer kitchen scale"
+    },
+    {
+      "id": 7237019,
+      "de": "Manschette für Oberarmumfang",
+      "is_product_name": false,
+      "en": "cuff for upper arm circumferences"
+    },
+    {
+      "id": 7237018,
+      "de": "Manschettenumfang",
+      "is_product_name": false,
+      "en": "cuff circumference"
+    },
+    {
+      "id": 7237023,
+      "de": "individualisierbare Programme",
+      "is_product_name": false,
+      "en": "customisable programs"
+    },
+    {
+      "id": 7237022,
+      "de": "Lockenstab",
+      "is_product_name": false,
+      "en": "Curling tongs"
+    },
+    {
+      "id": 7237027,
+      "de": "Datum und Uhrzeit",
+      "is_product_name": false,
+      "en": "date and time"
+    },
+    {
+      "id": 7237032,
+      "de": "Backvergnügen leicht gemacht",
+      "is_product_name": false,
+      "en": "Delightful baking made easy"
+    },
+    {
+      "id": 7237041,
+      "de": "ermittelte Temperatur",
+      "is_product_name": false,
+      "en": "determined temperature"
+    },
+    {
+      "id": 7237031,
+      "de": "Leergewicht",
+      "is_product_name": false,
+      "en": "deadweight"
+    },
+    {
+      "id": 7237045,
+      "de": "Diagnosewaage",
+      "is_product_name": false,
+      "en": "Diagnostic bathroom scale"
+    },
+    {
+      "id": 7237026,
+      "de": "Datenübertragung",
+      "is_product_name": false,
+      "en": "data transfer"
+    },
+    {
+      "id": 7237035,
+      "de": "Design-Diagnosewaage",
+      "is_product_name": false,
+      "en": "Design diagnostic scale"
+    },
+    {
+      "id": 7237036,
+      "de": "Design - Personenwaage",
+      "is_product_name": false,
+      "en": "Design personal scale"
+    },
+    {
+      "id": 7237030,
+      "de": "TL 95 – Tageslichtlampe",
+      "is_product_name": true,
+      "en": "Daylight Therapy Lamp TL 95"
+    },
+    {
+      "id": 7237039,
+      "de": "Design Solarwaage",
+      "is_product_name": false,
+      "en": "designer solar scale"
+    },
+    {
+      "id": 7237049,
+      "de": "Diät-Küchenwaage",
+      "is_product_name": false,
+      "en": "diet kitchen scale"
+    },
+    {
+      "id": 7237034,
+      "de": "Zahnersatz",
+      "is_product_name": false,
+      "en": "dentures"
+    },
+    {
+      "id": 7237040,
+      "de": "abnehmbare Zuleitung",
+      "is_product_name": false,
+      "en": "Detachable power cord"
+    },
+    {
+      "id": 7237043,
+      "de": "Gerätereiniger",
+      "is_product_name": false,
+      "en": "Device cleaner"
+    },
+    {
+      "id": 7237038,
+      "de": "Designwaage",
+      "is_product_name": false,
+      "en": "designer scale"
+    },
+    {
+      "id": 7237044,
+      "de": "Gerätebeschreibung",
+      "is_product_name": false,
+      "en": "Device description"
+    },
+    {
+      "id": 7237042,
+      "de": "Gerät",
+      "is_product_name": false,
+      "en": "device"
+    },
+    {
+      "id": 7237053,
+      "de": "Digitales Fieberthermometer",
+      "is_product_name": false,
+      "en": "Digital clinical thermometer"
+    },
+    {
+      "id": 7237047,
+      "de": "BF 980 WIFI / Bluetooth® – Diagnosewaage",
+      "is_product_name": true,
+      "en": "Diagnostic Bathroom Scale BF 980 WIFI / Bluetooth®"
+    },
+    {
+      "id": 7237057,
+      "de": "Displaygröße",
+      "is_product_name": false,
+      "en": "display size"
+    },
+    {
+      "id": 7237046,
+      "de": "BF 880 WIFI / Bluetooth® – Diagnosewaage",
+      "is_product_name": true,
+      "en": "Diagnostic Bathroom Scale BF 880 WIFI / Bluetooth®"
+    },
+    {
+      "id": 7237051,
+      "de": "Diätwaage",
+      "is_product_name": false,
+      "en": "diet scale"
+    },
+    {
+      "id": 7237061,
+      "de": "Hausstaub",
+      "is_product_name": false,
+      "en": "domestic dust"
+    },
+    {
+      "id": 7237050,
+      "de": "Diätcomputer",
+      "is_product_name": false,
+      "en": "Diet scale"
+    },
+    {
+      "id": 7237055,
+      "de": "spülmaschinentauglich",
+      "is_product_name": false,
+      "en": "dishwasher-safe"
+    },
+    {
+      "id": 7237055,
+      "de": "spülmaschinengeeignet",
+      "is_product_name": false,
+      "en": "dishwasher-safe to a limited extent"
+    },
+    {
+      "id": 7237048,
+      "de": "USB-Diagnosewaage",
+      "is_product_name": false,
+      "en": "Diagnostic bathroom scale with USB"
+    },
+    {
+      "id": 7237065,
+      "de": "Treiber und Software separat erhältlich",
+      "is_product_name": false,
+      "en": "drivers and software available separately"
+    },
+    {
+      "id": 7237059,
+      "de": "Entsorgung",
+      "is_product_name": false,
+      "en": "Disposal"
+    },
+    {
+      "id": 7237069,
+      "de": "Cerumenfilter",
+      "is_product_name": false,
+      "en": "earwax guard"
+    },
+    {
+      "id": 7237054,
+      "de": "Digital TENS/EMS",
+      "is_product_name": false,
+      "en": "Digital TENS/EMS device"
+    },
+    {
+      "id": 7237073,
+      "de": "Einfache Handhabung",
+      "is_product_name": false,
+      "en": "easy to use"
+    },
+    {
+      "id": 7237052,
+      "de": "Zifferngröße",
+      "is_product_name": false,
+      "en": "digit size"
+    },
+    {
+      "id": 7237077,
+      "de": "gut lesbares LCD-Display",
+      "is_product_name": false,
+      "en": "easy-to-read LCD"
+    },
+    {
+      "id": 7237056,
+      "de": "Displayanzeige",
+      "is_product_name": false,
+      "en": "display"
+    },
+    {
+      "id": 7237081,
+      "de": "Elektrisches Nagelpflegeset",
+      "is_product_name": false,
+      "en": "Electric nail care set"
+    },
+    {
+      "id": 7237058,
+      "de": "Anzeige von °C und °F",
+      "is_product_name": false,
+      "en": "displays measurements in °C and °F"
+    },
+    {
+      "id": 7237063,
+      "de": "Trockenprodukt",
+      "is_product_name": false,
+      "en": "dried product"
+    },
+    {
+      "id": 7237060,
+      "de": "Doctor´s function",
+      "is_product_name": false,
+      "en": "Doctor´s function"
+    },
+    {
+      "id": 7237067,
+      "de": "Ohr und Umgebungstemperatur",
+      "is_product_name": false,
+      "en": "ear and ambient temperature"
+    },
+    {
+      "id": 7237064,
+      "de": "Abtropfschale",
+      "is_product_name": false,
+      "en": "drip tray"
+    },
+    {
+      "id": 7237062,
+      "de": "Haushaltswaage",
+      "is_product_name": false,
+      "en": "Domestic scale"
+    },
+    {
+      "id": 7237071,
+      "de": "leicht ablesbares Display",
+      "is_product_name": false,
+      "en": "easy-to-read display"
+    },
+    {
+      "id": 7237071,
+      "de": "gut lesbares Display",
+      "is_product_name": false,
+      "en": "Easy to read display"
+    },
+    {
+      "id": 7237085,
+      "de": "Nachkaufset Elektroden",
+      "is_product_name": false,
+      "en": "Electrode replacement set"
+    },
+    {
+      "id": 7237068,
+      "de": "Ohrthermometer",
+      "is_product_name": false,
+      "en": "Ear thermometer"
+    },
+    {
+      "id": 7237075,
+      "de": "Kostheber",
+      "is_product_name": false,
+      "en": "Easy-lift holder"
+    },
+    {
+      "id": 7237066,
+      "de": "Messdauer",
+      "is_product_name": false,
+      "en": "Duration of measurement"
+    },
+    {
+      "id": 7237079,
+      "de": "Elektrische Doppelmilchpumpe",
+      "is_product_name": false,
+      "en": "Electric dual breast pump"
+    },
+    {
+      "id": 7237070,
+      "de": "Einfache Bedienung mit Handschalter",
+      "is_product_name": false,
+      "en": "Easy operation with manual control switch"
+    },
+    {
+      "id": 7237089,
+      "de": "Elektroden klein",
+      "is_product_name": false,
+      "en": "electrodes small"
+    },
+    {
+      "id": 7237072,
+      "de": "einfache Bedienung",
+      "is_product_name": false,
+      "en": "easy to use"
+    },
+    {
+      "id": 7237074,
+      "de": "Heizkissen Easyfix",
+      "is_product_name": false,
+      "en": "Easyfix heating pad"
+    },
+    {
+      "id": 7237093,
+      "de": "EMS-Durchblutungsstimulator",
+      "is_product_name": false,
+      "en": "EMS circulation stimulator"
+    },
+    {
+      "id": 7237083,
+      "de": "elektrische Zahnbürstenköpfe",
+      "is_product_name": false,
+      "en": "electric toothbrush heads"
+    },
+    {
+      "id": 7237076,
+      "de": "Gut ablesbares LCD-Display",
+      "is_product_name": false,
+      "en": "easy-to-read LCD"
+    },
+    {
+      "id": 7237078,
+      "de": "Elektrische Milchpumpe",
+      "is_product_name": false,
+      "en": "Electric breast pump"
+    },
+    {
+      "id": 7237087,
+      "de": "Elektroden groß",
+      "is_product_name": false,
+      "en": "electrodes big"
+    },
+    {
+      "id": 7237080,
+      "de": "Elektrischer Haarschneider",
+      "is_product_name": false,
+      "en": "electric hair clipper"
+    },
+    {
+      "id": 7237097,
+      "de": "energiesparend",
+      "is_product_name": false,
+      "en": "energy-saving"
+    },
+    {
+      "id": 7237091,
+      "de": "Elektrostimulationsgerät",
+      "is_product_name": false,
+      "en": "electrostimulation device"
+    },
+    {
+      "id": 7237082,
+      "de": "Elektrische Zahnbürste",
+      "is_product_name": false,
+      "en": "Electric toothbrush"
+    },
+    {
+      "id": 7237084,
+      "de": "Elektrische Muskelstimulation",
+      "is_product_name": false,
+      "en": "Electrical muscle stimulation"
+    },
+    {
+      "id": 7237101,
+      "de": "Ergonomische Form",
+      "is_product_name": false,
+      "en": "ergonomically shaped"
+    },
+    {
+      "id": 7237095,
+      "de": "EMS-Pad (Nacken)",
+      "is_product_name": false,
+      "en": "EMS pad (neck)"
+    },
+    {
+      "id": 7237088,
+      "de": "Elektroden aus gebürstetem Edelstahl",
+      "is_product_name": false,
+      "en": "electrodes made of brushed stainless steel"
+    },
+    {
+      "id": 7237105,
+      "de": "Peelingaufsatz",
+      "is_product_name": false,
+      "en": "Exfoliation attachment"
+    },
+    {
+      "id": 7237109,
+      "de": "Gesichtsrasierer",
+      "is_product_name": false,
+      "en": "Facial hair remover"
+    },
+    {
+      "id": 7237092,
+      "de": "Notfallarmband",
+      "is_product_name": false,
+      "en": "Emergency wristband"
+    },
+    {
+      "id": 7237086,
+      "de": "Elektrodenset",
+      "is_product_name": false,
+      "en": "Electrode set"
+    },
+    {
+      "id": 7237099,
+      "de": "HL 76 – Epilierer",
+      "is_product_name": true,
+      "en": "Epilator HL 76"
+    },
+    {
+      "id": 7237103,
+      "de": "Verdunstungsleistung",
+      "is_product_name": false,
+      "en": "Evaporation output"
+    },
+    {
+      "id": 7237113,
+      "de": "Familienwaage",
+      "is_product_name": false,
+      "en": "family scale"
+    },
+    {
+      "id": 7237096,
+      "de": "EMS-Pad (Sixpack)",
+      "is_product_name": false,
+      "en": "EMS pad (sixpack)"
+    },
+    {
+      "id": 7237090,
+      "de": "elektronische Temperaturregelung",
+      "is_product_name": false,
+      "en": "Electronic temperature regulation"
+    },
+    {
+      "id": 7237107,
+      "de": "Umfangreiches Zubehör",
+      "is_product_name": false,
+      "en": "Extensive accessories"
+    },
+    {
+      "id": 7237111,
+      "de": "Gesichtssauna",
+      "is_product_name": false,
+      "en": "Facial sauna"
+    },
+    {
+      "id": 7237094,
+      "de": "EMS Muskelstimulationsgerät",
+      "is_product_name": false,
+      "en": "EMS muscle stimulation device"
+    },
+    {
+      "id": 7237117,
+      "de": "Schnellheizung",
+      "is_product_name": false,
+      "en": "fast heating"
+    },
+    {
+      "id": 7237100,
+      "de": "Epilierer Wet & Dry",
+      "is_product_name": false,
+      "en": "Epilator Wet & Dry"
+    },
+    {
+      "id": 7237115,
+      "de": "Faszien-Massagegerät",
+      "is_product_name": false,
+      "en": "Fascia massager"
+    },
+    {
+      "id": 7237098,
+      "de": "Epilieraufsatz",
+      "is_product_name": false,
+      "en": "Epilator attachment"
+    },
+    {
+      "id": 7237121,
+      "de": "Füllstand",
+      "is_product_name": false,
+      "en": "fill level"
+    },
+    {
+      "id": 7237104,
+      "de": "hervorragende Klangqualität",
+      "is_product_name": false,
+      "en": "excellent sound quality"
+    },
+    {
+      "id": 7237102,
+      "de": "Fehlermeldung",
+      "is_product_name": false,
+      "en": "error message"
+    },
+    {
+      "id": 7237125,
+      "de": "Fingersensor",
+      "is_product_name": false,
+      "en": "finger sensor"
+    },
+    {
+      "id": 7237119,
+      "de": "FC 95 Premium Set",
+      "is_product_name": true,
+      "en": "FC 95 Premium Set"
+    },
+    {
+      "id": 7237108,
+      "de": "Gesichtsbürste",
+      "is_product_name": false,
+      "en": "Facial brush"
+    },
+    {
+      "id": 7237106,
+      "de": "Verlängerungsband",
+      "is_product_name": false,
+      "en": "extension strap"
+    },
+    {
+      "id": 7237129,
+      "de": "Flache Bauhöhe",
+      "is_product_name": false,
+      "en": "Flat design height"
+    },
+    {
+      "id": 7237110,
+      "de": "HL 16 – Gesichtsrasierer",
+      "is_product_name": true,
+      "en": "Facial Hair Remover HL 16"
+    },
+    {
+      "id": 7237114,
+      "de": "Ventilator",
+      "is_product_name": false,
+      "en": "fan"
+    },
+    {
+      "id": 7237133,
+      "de": "Flexibles Digital-Thermometer",
+      "is_product_name": false,
+      "en": "Flexible digital thermometer"
+    },
+    {
+      "id": 7237123,
+      "de": "Saphirscheibe, fein",
+      "is_product_name": false,
+      "en": "Fine-Grain Sapphire Wheel"
+    },
+    {
+      "id": 7237112,
+      "de": "Gesichtsbehandlung",
+      "is_product_name": false,
+      "en": "facial treatment"
+    },
+    {
+      "id": 7237116,
+      "de": "fascia releaZer® und deep releaZer®",
+      "is_product_name": true,
+      "en": "fascia releaZer® and deep releaZer®"
+    },
+    {
+      "id": 7237127,
+      "de": "Fixierung",
+      "is_product_name": false,
+      "en": "fixation"
+    },
+    {
+      "id": 7237118,
+      "de": "Fettverbrennung",
+      "is_product_name": false,
+      "en": "fat burn"
+    },
+    {
+      "id": 7237120,
+      "de": "Filzkegel",
+      "is_product_name": false,
+      "en": "Felt Cone"
+    },
+    {
+      "id": 7237137,
+      "de": "Folienrasierer",
+      "is_product_name": false,
+      "en": "Foil shaver"
+    },
+    {
+      "id": 7237131,
+      "de": "Teddyfutter",
+      "is_product_name": false,
+      "en": "fleece lining"
+    },
+    {
+      "id": 7237122,
+      "de": "Filtermatten",
+      "is_product_name": false,
+      "en": "filter mats"
+    },
+    {
+      "id": 7237135,
+      "de": "Flexible Messspitze",
+      "is_product_name": false,
+      "en": "flexible measuring tip"
+    },
+    {
+      "id": 7237126,
+      "de": "Unterbett mit Spannfunktion",
+      "is_product_name": false,
+      "en": "Fitted electric underblanket"
+    },
+    {
+      "id": 7237124,
+      "de": "Fingerpulsoximeter",
+      "is_product_name": false,
+      "en": "Finger pulse oximeter"
+    },
+    {
+      "id": 7237130,
+      "de": "Vlies",
+      "is_product_name": false,
+      "en": "fleece"
+    },
+    {
+      "id": 7237139,
+      "de": "Fußmassage",
+      "is_product_name": false,
+      "en": "Foot massage"
+    },
+    {
+      "id": 7237141,
+      "de": "Fußreflexzonenmassage",
+      "is_product_name": false,
+      "en": "Foot reflexology"
+    },
+    {
+      "id": 7237145,
+      "de": "FB 60 – Fußsprudelbad",
+      "is_product_name": true,
+      "en": "Foot Spa FB 60"
+    },
+    {
+      "id": 7237134,
+      "de": "schmiegsame Wärme",
+      "is_product_name": false,
+      "en": "flexible heating"
+    },
+    {
+      "id": 7237143,
+      "de": "Relax-Fußbad",
+      "is_product_name": false,
+      "en": "Foot Spa"
+    },
+    {
+      "id": 7237138,
+      "de": "Fußbad",
+      "is_product_name": false,
+      "en": "Foot bath"
+    },
+    {
+      "id": 7237149,
+      "de": "für Aroma Heizkissen HK65",
+      "is_product_name": true,
+      "en": "for aromatic heating pad HK65"
+    },
+    {
+      "id": 7237128,
+      "de": "Flammenfräser",
+      "is_product_name": false,
+      "en": "Flame-Shape Cutter"
+    },
+    {
+      "id": 7237153,
+      "de": "FT 09/1 weiß / blau / FT 09/1 Display",
+      "is_product_name": true,
+      "en": "FT 09/1 White / Blue | FT 09/1 Display"
+    },
+    {
+      "id": 7237147,
+      "de": "Fußwärmer",
+      "is_product_name": false,
+      "en": "Foot warmer"
+    },
+    {
+      "id": 7237157,
+      "de": "g Einteilung",
+      "is_product_name": false,
+      "en": "g graduation"
+    },
+    {
+      "id": 7237132,
+      "de": "flauschiger Stoff",
+      "is_product_name": false,
+      "en": "fleecy material"
+    },
+    {
+      "id": 7237142,
+      "de": "Massageunterstütztes Fußbett",
+      "is_product_name": false,
+      "en": "Foot rest with massage nodules"
+    },
+    {
+      "id": 7237161,
+      "de": "Glassockel",
+      "is_product_name": false,
+      "en": "glass base"
+    },
+    {
+      "id": 7237136,
+      "de": "Flexibel einstellbar",
+      "is_product_name": false,
+      "en": "Flexibly adjustable"
+    },
+    {
+      "id": 7237146,
+      "de": "Aroma-Fußbad",
+      "is_product_name": false,
+      "en": "Foot Spa with aromatherapy"
+    },
+    {
+      "id": 7237165,
+      "de": "Foto-Glaswaage",
+      "is_product_name": false,
+      "en": "glass photo scale"
+    },
+    {
+      "id": 7237151,
+      "de": "Stirn-Kontaktthermometer",
+      "is_product_name": false,
+      "en": "Forehead contact thermometer"
+    },
+    {
+      "id": 7237140,
+      "de": "Fußmassagegerät",
+      "is_product_name": false,
+      "en": "Foot massager"
+    },
+    {
+      "id": 7237155,
+      "de": "Funktionsstufen",
+      "is_product_name": false,
+      "en": "function levels"
+    },
+    {
+      "id": 7237150,
+      "de": "Für Ihre individuelle Entspannungszeit Zuhause",
+      "is_product_name": false,
+      "en": "For your relaxation at home"
+    },
+    {
+      "id": 7237169,
+      "de": "Einteilung",
+      "is_product_name": false,
+      "en": "graduation"
+    },
+    {
+      "id": 7237154,
+      "de": "spülmaschinenfest",
+      "is_product_name": false,
+      "en": "fully dishwasher-safe"
+    },
+    {
+      "id": 7237158,
+      "de": "SANFTE THERAPIE",
+      "is_product_name": false,
+      "en": "gentle therapy"
+    },
+    {
+      "id": 7237159,
+      "de": "Sanfte Vibrationsmassage",
+      "is_product_name": false,
+      "en": "Gentle vibration massage"
+    },
+    {
+      "id": 7237144,
+      "de": "Fußsprudelbad",
+      "is_product_name": false,
+      "en": "Foot Spa"
+    },
+    {
+      "id": 7237162,
+      "de": "Glaswaage",
+      "is_product_name": false,
+      "en": "Glass bathroom scale"
+    },
+    {
+      "id": 7237173,
+      "de": "Garantie / Service",
+      "is_product_name": false,
+      "en": "Guarantee / Service"
+    },
+    {
+      "id": 7237163,
+      "de": "Glas-Diagnosewaage",
+      "is_product_name": false,
+      "en": "glass diagnostic scale"
+    },
+    {
+      "id": 7237148,
+      "de": "Fußwärmer mit Massage",
+      "is_product_name": false,
+      "en": "foot warmer with massage"
+    },
+    {
+      "id": 7237166,
+      "de": "Uhren-Glaswaage",
+      "is_product_name": false,
+      "en": "glass scale with clock"
+    },
+    {
+      "id": 7237167,
+      "de": "Glas-Wiegefläche (Glaswiegefläche)",
+      "is_product_name": false,
+      "en": "glass weighing surface"
+    },
+    {
+      "id": 7237177,
+      "de": "HA 70 Paar Digitale Hörhilfen",
+      "is_product_name": true,
+      "en": "HA 70 Pair Digital Hearing Amplifiers"
+    },
+    {
+      "id": 7237181,
+      "de": "Haarschneidegerät",
+      "is_product_name": false,
+      "en": "hair clipper"
+    },
+    {
+      "id": 7237152,
+      "de": "Stirnthermometer",
+      "is_product_name": false,
+      "en": "Forehead thermometer"
+    },
+    {
+      "id": 7237171,
+      "de": "GS 120 Kompakt",
+      "is_product_name": true,
+      "en": "GS 120 Kompakt"
+    },
+    {
+      "id": 7237170,
+      "de": "Einteilung 100g",
+      "is_product_name": false,
+      "en": "graduation 100g"
+    },
+    {
+      "id": 7237175,
+      "de": "HA 50 Hörhilfe",
+      "is_product_name": true,
+      "en": "HA 20 Hearing Amplifier"
+    },
+    {
+      "id": 7237179,
+      "de": "HA 85 Paar Digitale Hörhilfen",
+      "is_product_name": true,
+      "en": "HA 85 Pair Digital Hearing Amplifiers"
+    },
+    {
+      "id": 7237185,
+      "de": "Haarreduzierung",
+      "is_product_name": false,
+      "en": "Hair reduction"
+    },
+    {
+      "id": 7237174,
+      "de": "HA 20 Hörhilfe",
+      "is_product_name": true,
+      "en": "HA 20 Hearing Amplifier"
+    },
+    {
+      "id": 7237183,
+      "de": "Haarschneider",
+      "is_product_name": false,
+      "en": "Hair clipper"
+    },
+    {
+      "id": 7237156,
+      "de": "g für Körpergewicht",
+      "is_product_name": false,
+      "en": "g for body weight"
+    },
+    {
+      "id": 7237189,
+      "de": "Glättungsbürste",
+      "is_product_name": false,
+      "en": "Hair straightening brush"
+    },
+    {
+      "id": 7237178,
+      "de": "HA 80 Paar Digitale Hörhilfen",
+      "is_product_name": true,
+      "en": "HA 80 Pair Digital Hearing Amplifiers"
+    },
+    {
+      "id": 7237160,
+      "de": "PC-Kit (GL 40)",
+      "is_product_name": true,
+      "en": "GL40 PC kit"
+    },
+    {
+      "id": 7237182,
+      "de": "Haarschneidemaschine",
+      "is_product_name": false,
+      "en": "hair clipper"
+    },
+    {
+      "id": 7237187,
+      "de": "Haarglätter",
+      "is_product_name": false,
+      "en": "Hair straightener"
+    },
+    {
+      "id": 7237193,
+      "de": "Praktischer Aufhänger",
+      "is_product_name": false,
+      "en": "Handy hook"
+    },
+    {
+      "id": 7237164,
+      "de": "Glas-Küchenwaage",
+      "is_product_name": false,
+      "en": "glass kitchen scale"
+    },
+    {
+      "id": 7237197,
+      "de": "Herzfrequenz",
+      "is_product_name": false,
+      "en": "heart rate"
+    },
+    {
+      "id": 7237186,
+      "de": "Haarentfernung",
+      "is_product_name": false,
+      "en": "hair removal"
+    },
+    {
+      "id": 7237201,
+      "de": "Pulsuhr als Designklassiker",
+      "is_product_name": false,
+      "en": "Heart rate monitor as a design classic"
+    },
+    {
+      "id": 7237190,
+      "de": "Haarstyling-Set",
+      "is_product_name": false,
+      "en": "hairstyling set"
+    },
+    {
+      "id": 7237191,
+      "de": "Handschalter",
+      "is_product_name": false,
+      "en": "hand switch"
+    },
+    {
+      "id": 7237205,
+      "de": "Pulsuhr mit Brustgurt",
+      "is_product_name": false,
+      "en": "Heart rate monitor with chest strap"
+    },
+    {
+      "id": 7237168,
+      "de": "Po-Trainer",
+      "is_product_name": false,
+      "en": "Glute toning device"
+    },
+    {
+      "id": 7237195,
+      "de": "Hörhilfen",
+      "is_product_name": false,
+      "en": "Hearing amplifiers"
+    },
+    {
+      "id": 7237194,
+      "de": "Hörhilfe",
+      "is_product_name": false,
+      "en": "Hearing amplifier"
+    },
+    {
+      "id": 7237209,
+      "de": "Heizkissen",
+      "is_product_name": false,
+      "en": "Heat pad"
+    },
+    {
+      "id": 7237172,
+      "de": "Garantie",
+      "is_product_name": false,
+      "en": "guarantee"
+    },
+    {
+      "id": 7237176,
+      "de": "HA 60 Paar Digitale Hörhilfen",
+      "is_product_name": true,
+      "en": "HA 60 Pair Digital Hearing Amplifiers"
+    },
+    {
+      "id": 7237199,
+      "de": "Pulsuhr",
+      "is_product_name": false,
+      "en": "Heart rate monitor"
+    },
+    {
+      "id": 7237180,
+      "de": "Hämodynamische Stabilität",
+      "is_product_name": false,
+      "en": "haemodynamic stability"
+    },
+    {
+      "id": 7237213,
+      "de": "Wärme-Cape",
+      "is_product_name": false,
+      "en": "Heated cape"
+    },
+    {
+      "id": 7237198,
+      "de": "Pulsmesser",
+      "is_product_name": false,
+      "en": "heart rate monitor"
+    },
+    {
+      "id": 7237184,
+      "de": "Haartrockner",
+      "is_product_name": false,
+      "en": "Hair dryer"
+    },
+    {
+      "id": 7237203,
+      "de": "Pulsuhr inkl. Blauem und weißem Wechselarmband",
+      "is_product_name": false,
+      "en": "Heart rate monitor incl. blue and white interchangeable wristband"
+    },
+    {
+      "id": 7237207,
+      "de": "Pulsuhr ohne Brustgurt",
+      "is_product_name": false,
+      "en": "Heart rate monitor without chest strap"
+    },
+    {
+      "id": 7237217,
+      "de": "HD 75 Ocean – Wärmezudecke",
+      "is_product_name": true,
+      "en": "Heated Overblanket HD 75 Ocean"
+    },
+    {
+      "id": 7237202,
+      "de": "Pulsuhr für Sie und Ihn",
+      "is_product_name": false,
+      "en": "Heart rate monitor for him and her"
+    },
+    {
+      "id": 7237188,
+      "de": "HS 50 Ocean – Haarglätter",
+      "is_product_name": true,
+      "en": "Hair Straightener HS 50 Ocean"
+    },
+    {
+      "id": 7237221,
+      "de": "Sitz-Heizkissen mit Powerbank",
+      "is_product_name": false,
+      "en": "Heated seat pad with powerbank"
+    },
+    {
+      "id": 7237206,
+      "de": "Pulsuhr mit Edelstahlapplikation",
+      "is_product_name": false,
+      "en": "Heart rate monitor with stainless steel application"
+    },
+    {
+      "id": 7237192,
+      "de": "Handtaschen Set",
+      "is_product_name": false,
+      "en": "Handbag set"
+    },
+    {
+      "id": 7237210,
+      "de": "beheizbar",
+      "is_product_name": false,
+      "en": "heatable"
+    },
+    {
+      "id": 7237211,
+      "de": "Heizkissen mit Rückenstütze",
+      "is_product_name": false,
+      "en": "Heated Back Rest"
+    },
+    {
+      "id": 7237214,
+      "de": "Sofa-Heizkissen",
+      "is_product_name": false,
+      "en": "Heated cushion"
+    },
+    {
+      "id": 7237225,
+      "de": "Heizungskörper",
+      "is_product_name": false,
+      "en": "heaters"
+    },
+    {
+      "id": 7237229,
+      "de": "hohe Verneblungsleistung",
+      "is_product_name": false,
+      "en": "High nebulisation performance"
+    },
+    {
+      "id": 7237196,
+      "de": "Hörhilfe",
+      "is_product_name": false,
+      "en": "Hearing amplifier"
+    },
+    {
+      "id": 7237215,
+      "de": "Wärmezudecke",
+      "is_product_name": false,
+      "en": "Heated overblanket"
+    },
+    {
+      "id": 7237233,
+      "de": "Honig Creme Wachskartusche",
+      "is_product_name": false,
+      "en": "Honey cream wax cartridge"
+    },
+    {
+      "id": 7237218,
+      "de": "Heizkörper",
+      "is_product_name": false,
+      "en": "heating element"
+    },
+    {
+      "id": 7237237,
+      "de": "Warmluftbürste",
+      "is_product_name": false,
+      "en": "Hot air brush"
+    },
+    {
+      "id": 7237222,
+      "de": "Wärmeunterbett",
+      "is_product_name": false,
+      "en": "Heated underblanket"
+    },
+    {
+      "id": 7237219,
+      "de": "Heizteppich",
+      "is_product_name": false,
+      "en": "Heated rug"
+    },
+    {
+      "id": 7237200,
+      "de": "Herzfrequenz Pulsuhr",
+      "is_product_name": false,
+      "en": "heart rate monitor"
+    },
+    {
+      "id": 7237241,
+      "de": "Befeuchtungsscheiben",
+      "is_product_name": false,
+      "en": "humidification discs"
+    },
+    {
+      "id": 7237245,
+      "de": "Hygienemittel",
+      "is_product_name": false,
+      "en": "Hygiene agent"
+    },
+    {
+      "id": 7237226,
+      "de": "Wärmegerät",
+      "is_product_name": false,
+      "en": "Heating device"
+    },
+    {
+      "id": 7237223,
+      "de": "Doppel-Wärmeunterbett",
+      "is_product_name": false,
+      "en": "Heated underblanket - Double Bed"
+    },
+    {
+      "id": 7237204,
+      "de": "Pulsuhr mit Höhenmessung",
+      "is_product_name": false,
+      "en": "Heart rate monitor with altitude measurement"
+    },
+    {
+      "id": 7237230,
+      "de": "High-End Bedienelement",
+      "is_product_name": false,
+      "en": "High-end control element"
+    },
+    {
+      "id": 7237208,
+      "de": "Wärmefunktion",
+      "is_product_name": false,
+      "en": "heat function"
+    },
+    {
+      "id": 7237234,
+      "de": "Hong Creme Wachkartuschen",
+      "is_product_name": false,
+      "en": "Honey cream wax cartridges"
+    },
+    {
+      "id": 7237249,
+      "de": "Idealgewicht",
+      "is_product_name": false,
+      "en": "ideal weight"
+    },
+    {
+      "id": 7237212,
+      "de": "Wärmegürtel mit Powerbank",
+      "is_product_name": false,
+      "en": "Heated belt with powerbank"
+    },
+    {
+      "id": 7237227,
+      "de": "Körpergröße",
+      "is_product_name": false,
+      "en": "height"
+    },
+    {
+      "id": 7237238,
+      "de": "Hot Air Styler",
+      "is_product_name": false,
+      "en": "Hot Air Styler"
+    },
+    {
+      "id": 7237253,
+      "de": "Beleuchtete Funktionsanzeige",
+      "is_product_name": false,
+      "en": "Illuminated function display"
+    },
+    {
+      "id": 7237231,
+      "de": "hochwertige Aufsätze",
+      "is_product_name": false,
+      "en": "high-quality attachments"
+    },
+    {
+      "id": 7237242,
+      "de": "Befeuchtungsleistung",
+      "is_product_name": false,
+      "en": "humidification output"
+    },
+    {
+      "id": 7237257,
+      "de": "In Bärenoptik",
+      "is_product_name": false,
+      "en": "In a bear design"
+    },
+    {
+      "id": 7237235,
+      "de": "Honig-Wachspatronen",
+      "is_product_name": false,
+      "en": "Honey wax cartridges"
+    },
+    {
+      "id": 7237216,
+      "de": "HD 75 Cosy Dark Grey – Wärmezudecke",
+      "is_product_name": true,
+      "en": "Heated Overblanket HD 75 Cosy Dark Grey"
+    },
+    {
+      "id": 7237246,
+      "de": "hygienische Kunststoff-Schutzhülle",
+      "is_product_name": false,
+      "en": "Hygienic plastic protective cover"
+    },
+    {
+      "id": 7237261,
+      "de": "Inklusive Messlatte",
+      "is_product_name": false,
+      "en": "Including stadiometer"
+    },
+    {
+      "id": 7237239,
+      "de": "Befeuchtung",
+      "is_product_name": false,
+      "en": "humidification"
+    },
+    {
+      "id": 7237250,
+      "de": "Beleuchteter Kosmetikspiegel",
+      "is_product_name": false,
+      "en": "Illuminated cosmetics mirror"
+    },
+    {
+      "id": 7237220,
+      "de": "Wärme im Sitz",
+      "is_product_name": false,
+      "en": "heated seat"
+    },
+    {
+      "id": 7237265,
+      "de": "Individueller Trainingsbereich und Alarm",
+      "is_product_name": false,
+      "en": "Individual training range and alarm"
+    },
+    {
+      "id": 7237243,
+      "de": "Luftfeuchtigkeitsregler",
+      "is_product_name": false,
+      "en": "Humidity controller"
+    },
+    {
+      "id": 7237269,
+      "de": "Infrarot-Wärmestrahler",
+      "is_product_name": false,
+      "en": "Infrared heat lamp"
+    },
+    {
+      "id": 7237254,
+      "de": "Beleuchteter Taschenspiegel",
+      "is_product_name": false,
+      "en": "illuminated pocket mirror"
+    },
+    {
+      "id": 7237224,
+      "de": "Spann-Wärmeunterbett",
+      "is_product_name": false,
+      "en": "Heated underblanket - fitted"
+    },
+    {
+      "id": 7237247,
+      "de": "Hypertonie",
+      "is_product_name": false,
+      "en": "Hypertension"
+    },
+    {
+      "id": 7237258,
+      "de": "In Tigerentenform",
+      "is_product_name": false,
+      "en": "In the form of Tigerente (tigerduck)"
+    },
+    {
+      "id": 7237273,
+      "de": "Infrarot-Messtechnik",
+      "is_product_name": false,
+      "en": "Infrared measurement"
+    },
+    {
+      "id": 7237251,
+      "de": "Beleuchtetes Display",
+      "is_product_name": false,
+      "en": "illuminated display"
+    },
+    {
+      "id": 7237277,
+      "de": "Inbetriebnahme",
+      "is_product_name": false,
+      "en": "Initial use"
+    },
+    {
+      "id": 7237262,
+      "de": "Meldung bei Anwendungsfehlern",
+      "is_product_name": false,
+      "en": "Incorrect usage message"
+    },
+    {
+      "id": 7237228,
+      "de": "Bluthochdruck",
+      "is_product_name": false,
+      "en": "high blood pressure"
+    },
+    {
+      "id": 7237266,
+      "de": "Inflation-Technology",
+      "is_product_name": false,
+      "en": "Inflation technology"
+    },
+    {
+      "id": 7237255,
+      "de": "Beleuchtete Temperaturstufen",
+      "is_product_name": false,
+      "en": "Illuminated temperature settings"
+    },
+    {
+      "id": 7237270,
+      "de": "Infrarotlampe",
+      "is_product_name": false,
+      "en": "Infrared lamp"
+    },
+    {
+      "id": 7237232,
+      "de": "Honig Creme Wachs",
+      "is_product_name": false,
+      "en": "Honey cream wax"
+    },
+    {
+      "id": 7237259,
+      "de": "Lieferumfang",
+      "is_product_name": false,
+      "en": "Included in delivery"
+    },
+    {
+      "id": 7237236,
+      "de": "Klettverschlussband",
+      "is_product_name": false,
+      "en": "hook-and-loop fastening band"
+    },
+    {
+      "id": 7237263,
+      "de": "Indikator und Arrhythmie-Erkennung",
+      "is_product_name": false,
+      "en": "indicator and cardiac arrhythmia detection"
+    },
+    {
+      "id": 7237281,
+      "de": "Express-Fieberthermometer",
+      "is_product_name": false,
+      "en": "instant clinical thermometer"
+    },
+    {
+      "id": 7237274,
+      "de": "Infrarot-Nachtsichtfunktion",
+      "is_product_name": false,
+      "en": "infrared night vision function"
+    },
+    {
+      "id": 7237267,
+      "de": "Infrarotwärme",
+      "is_product_name": false,
+      "en": "Infrared heat"
+    },
+    {
+      "id": 7237285,
+      "de": "Intensitätsstufen",
+      "is_product_name": false,
+      "en": "intensity levels"
+    },
+    {
+      "id": 7237278,
+      "de": "Innovative Ultraschalltechnologie",
+      "is_product_name": false,
+      "en": "Innovative ultrasound technology"
+    },
+    {
+      "id": 7237271,
+      "de": "Infrarotlicht",
+      "is_product_name": false,
+      "en": "infrared light"
+    },
+    {
+      "id": 7237240,
+      "de": "Befeuchterscheiben",
+      "is_product_name": false,
+      "en": "humidification discs"
+    },
+    {
+      "id": 7237289,
+      "de": "Gegensprechfunktion",
+      "is_product_name": false,
+      "en": "Intercom function"
+    },
+    {
+      "id": 7237282,
+      "de": "Express-Thermometer",
+      "is_product_name": false,
+      "en": "Instant thermometer"
+    },
+    {
+      "id": 7237275,
+      "de": "Infrarot-Klopf-Massagegerät",
+      "is_product_name": false,
+      "en": "Infrared tapping massager"
+    },
+    {
+      "id": 7237244,
+      "de": "Trinkmanager",
+      "is_product_name": false,
+      "en": "Hydration manager"
+    },
+    {
+      "id": 7237293,
+      "de": "Ionen-Gesichtssauna",
+      "is_product_name": false,
+      "en": "Ionic facial sauna"
+    },
+    {
+      "id": 7237286,
+      "de": "Intensiv-Infrarotlicht",
+      "is_product_name": false,
+      "en": "Intensive infrared light"
+    },
+    {
+      "id": 7237248,
+      "de": "Anti-Allergie-Unterbett",
+      "is_product_name": false,
+      "en": "Hypoallergenic underblanket"
+    },
+    {
+      "id": 7237297,
+      "de": "kg Tragkraft",
+      "is_product_name": false,
+      "en": "kg capacity"
+    },
+    {
+      "id": 7237290,
+      "de": "Störungsfreie Übertragung und 100% Privatsphäre",
+      "is_product_name": false,
+      "en": "Interference-free transmission and 100% privacy"
+    },
+    {
+      "id": 7237294,
+      "de": "IdO",
+      "is_product_name": false,
+      "en": "ITE"
+    },
+    {
+      "id": 7237279,
+      "de": "BR 10 – Insektenstichheiler",
+      "is_product_name": true,
+      "en": "Insect Bite Healer BR 10"
+    },
+    {
+      "id": 7237301,
+      "de": "Lady Akku-shaver-Set",
+      "is_product_name": false,
+      "en": "ladies' battery-operated shaver set"
+    },
+    {
+      "id": 7237283,
+      "de": "Gebrauchsanleitung",
+      "is_product_name": false,
+      "en": "Instructions for use"
+    },
+    {
+      "id": 7237252,
+      "de": "Displaybeleuchtung",
+      "is_product_name": false,
+      "en": "illuminated display"
+    },
+    {
+      "id": 7237298,
+      "de": "Küchenwaage",
+      "is_product_name": false,
+      "en": "Kitchen scale"
+    },
+    {
+      "id": 7237305,
+      "de": "Damenrasierer",
+      "is_product_name": false,
+      "en": "Lady shaver"
+    },
+    {
+      "id": 7237256,
+      "de": "beleuchtete Pinzette",
+      "is_product_name": false,
+      "en": "Illuminated tweezers"
+    },
+    {
+      "id": 7237287,
+      "de": "auswechselbare Massageaufsätze",
+      "is_product_name": false,
+      "en": "interchangeable massage attachments"
+    },
+    {
+      "id": 7237302,
+      "de": "Damen Akku-Rasierer",
+      "is_product_name": false,
+      "en": "ladies' rechargeable shaver"
+    },
+    {
+      "id": 7237291,
+      "de": "Ionen Technologie",
+      "is_product_name": false,
+      "en": "Ion technology"
+    },
+    {
+      "id": 7237309,
+      "de": "LED",
+      "is_product_name": false,
+      "en": "LED"
+    },
+    {
+      "id": 7237260,
+      "de": "Lieferumfang",
+      "is_product_name": false,
+      "en": "Included in delivery"
+    },
+    {
+      "id": 7237313,
+      "de": "Lichtdusche",
+      "is_product_name": false,
+      "en": "Light box"
+    },
+    {
+      "id": 7237295,
+      "de": "Gelenkprobleme",
+      "is_product_name": false,
+      "en": "joint problems"
+    },
+    {
+      "id": 7237299,
+      "de": "Knie- und Ellenbogen TENS",
+      "is_product_name": false,
+      "en": "Knee and elbow TENS device"
+    },
+    {
+      "id": 7237306,
+      "de": "Stechhilfe + AST Kappe",
+      "is_product_name": false,
+      "en": "Lancing device + AST cap"
+    },
+    {
+      "id": 7237317,
+      "de": "Kofferwaage",
+      "is_product_name": false,
+      "en": "Luggage scale"
+    },
+    {
+      "id": 7237264,
+      "de": "Kontrollleuchte",
+      "is_product_name": false,
+      "en": "indicator lamp"
+    },
+    {
+      "id": 7237303,
+      "de": "Lady shaver",
+      "is_product_name": false,
+      "en": "ladies' shaver"
+    },
+    {
+      "id": 7237310,
+      "de": "LED-Anzeige",
+      "is_product_name": false,
+      "en": "LED display"
+    },
+    {
+      "id": 7237268,
+      "de": "Infrarot-Wärmefunktion",
+      "is_product_name": false,
+      "en": "Infrared heat function"
+    },
+    {
+      "id": 7237314,
+      "de": "Dauerhafte Haarentfernung",
+      "is_product_name": false,
+      "en": "Long-lasting hair removal"
+    },
+    {
+      "id": 7237321,
+      "de": "Magnetverschluss",
+      "is_product_name": false,
+      "en": "magnetic fastening"
+    },
+    {
+      "id": 7237272,
+      "de": "Infrarot-Massagegerät",
+      "is_product_name": false,
+      "en": "Infrared massager"
+    },
+    {
+      "id": 7237307,
+      "de": "Haarentfernungslaser",
+      "is_product_name": false,
+      "en": "Laser hair removal device"
+    },
+    {
+      "id": 7237325,
+      "de": "Netzteilanschluss",
+      "is_product_name": false,
+      "en": "mains adapter connector"
+    },
+    {
+      "id": 7237329,
+      "de": "Netzbetrieb",
+      "is_product_name": false,
+      "en": "mains operation"
+    },
+    {
+      "id": 7237318,
+      "de": "Luxus-Wärmeunterbett",
+      "is_product_name": false,
+      "en": "Luxury electric underblanket"
+    },
+    {
+      "id": 7237333,
+      "de": "Maniküre-/Pediküreset",
+      "is_product_name": false,
+      "en": "Manicure/pedicure set"
+    },
+    {
+      "id": 7237276,
+      "de": "Infrarot-Signalübertragung",
+      "is_product_name": false,
+      "en": "infrared signal transmission"
+    },
+    {
+      "id": 7237311,
+      "de": "LED-Licht",
+      "is_product_name": false,
+      "en": "LED light"
+    },
+    {
+      "id": 7237280,
+      "de": "BR 90 – Insektenstichheiler",
+      "is_product_name": true,
+      "en": "Insect Bite Healer BR 90"
+    },
+    {
+      "id": 7237315,
+      "de": "Batteriewechselanzeige",
+      "is_product_name": false,
+      "en": "low battery indicator"
+    },
+    {
+      "id": 7237284,
+      "de": "Bestimmungsgemäßer Gebrauch",
+      "is_product_name": false,
+      "en": "Intended Purpose"
+    },
+    {
+      "id": 7237322,
+      "de": "Magnet-Heizkissen",
+      "is_product_name": false,
+      "en": "Magnetic heat pad"
+    },
+    {
+      "id": 7237337,
+      "de": "Massageaufsatz",
+      "is_product_name": false,
+      "en": "massage attachment"
+    },
+    {
+      "id": 7237319,
+      "de": "maschinenwaschbar",
+      "is_product_name": false,
+      "en": "machine-washable"
+    },
+    {
+      "id": 7237341,
+      "de": "Massageintensität",
+      "is_product_name": false,
+      "en": "massage intensity"
+    },
+    {
+      "id": 7237323,
+      "de": "Magnetunterlage",
+      "is_product_name": false,
+      "en": "Magnetic Pad"
+    },
+    {
+      "id": 7237345,
+      "de": "Massageroller",
+      "is_product_name": false,
+      "en": "Massage roller"
+    },
+    {
+      "id": 7237326,
+      "de": "Steckernetzteil",
+      "is_product_name": false,
+      "en": "mains adapter plug"
+    },
+    {
+      "id": 7237349,
+      "de": "Meßwert",
+      "is_product_name": false,
+      "en": "measured values"
+    },
+    {
+      "id": 7237349,
+      "de": "Messwert",
+      "is_product_name": false
+    },
+    {
+      "id": 7237330,
+      "de": "Netzstecker",
+      "is_product_name": false,
+      "en": "Mains plug"
+    },
+    {
+      "id": 7237288,
+      "de": "Wechselarmband",
+      "is_product_name": false,
+      "en": "interchangeable wristband"
+    },
+    {
+      "id": 7237353,
+      "de": "Sekundenschnelle Messung",
+      "is_product_name": false,
+      "en": "Measurement in seconds"
+    },
+    {
+      "id": 7237334,
+      "de": "MP 84 – Maniküre-/Pediküreset",
+      "is_product_name": true,
+      "en": "Manicure/Pedicure Set MP 84"
+    },
+    {
+      "id": 7237327,
+      "de": "Netzteilbuchse",
+      "is_product_name": false,
+      "en": "mains adapter socket"
+    },
+    {
+      "id": 7237292,
+      "de": "Ionen-Haarbürste",
+      "is_product_name": false,
+      "en": "Ionic detangling brush"
+    },
+    {
+      "id": 7237357,
+      "de": "Messbecher",
+      "is_product_name": false,
+      "en": "measuring jug"
+    },
+    {
+      "id": 7237338,
+      "de": "Massagefüße",
+      "is_product_name": false,
+      "en": "massage feet"
+    },
+    {
+      "id": 7237331,
+      "de": "Maniküre",
+      "is_product_name": false,
+      "en": "Manicure"
+    },
+    {
+      "id": 7237342,
+      "de": "Massage Matte",
+      "is_product_name": false,
+      "en": "massage mat"
+    },
+    {
+      "id": 7237361,
+      "de": "Mechanische Personenwaage",
+      "is_product_name": false,
+      "en": "Mechanical personal bathroom scale"
+    },
+    {
+      "id": 7237335,
+      "de": "Maniküre-/Pedikürestation",
+      "is_product_name": false,
+      "en": "Manicure/pedicure station"
+    },
+    {
+      "id": 7237346,
+      "de": "Massage-Sitzauflage",
+      "is_product_name": false,
+      "en": "Massage seat cover"
+    },
+    {
+      "id": 7237296,
+      "de": "Entrastungstaste",
+      "is_product_name": false,
+      "en": "keylock button"
+    },
+    {
+      "id": 7237350,
+      "de": "Messvorgang",
+      "is_product_name": false,
+      "en": "measurement"
+    },
+    {
+      "id": 7237354,
+      "de": "Messbereich",
+      "is_product_name": false,
+      "en": "measurement range"
+    },
+    {
+      "id": 7237300,
+      "de": "Labormessgenauigkeit",
+      "is_product_name": false,
+      "en": "Laboratory precision measurement"
+    },
+    {
+      "id": 7237365,
+      "de": "Speichertaste",
+      "is_product_name": false,
+      "en": "Memory button"
+    },
+    {
+      "id": 7237339,
+      "de": "Massagefunktion",
+      "is_product_name": false,
+      "en": "massage function"
+    },
+    {
+      "id": 7237358,
+      "de": "Messbecherwaage",
+      "is_product_name": false,
+      "en": "Measuring jug scale"
+    },
+    {
+      "id": 7237304,
+      "de": "Damen-Rasierer-Set",
+      "is_product_name": false,
+      "en": "ladies' shaver set"
+    },
+    {
+      "id": 7237343,
+      "de": "Massagemechanismus",
+      "is_product_name": false,
+      "en": "Massage mechanism"
+    },
+    {
+      "id": 7237369,
+      "de": "Speicherplätze",
+      "is_product_name": false,
+      "en": "memory spaces"
+    },
+    {
+      "id": 7237347,
+      "de": "Massagestufen",
+      "is_product_name": false,
+      "en": "massage settings"
+    },
+    {
+      "id": 7237373,
+      "de": "MG 320 HD-3-in-1",
+      "is_product_name": true,
+      "en": "MG 320 HD 3-in-1"
+    },
+    {
+      "id": 7237351,
+      "de": "Messergebnis",
+      "is_product_name": false,
+      "en": "measurement"
+    },
+    {
+      "id": 7237377,
+      "de": "Mikrowellen-Dampfsterilisator",
+      "is_product_name": false,
+      "en": "Microwave steam steriliser"
+    },
+    {
+      "id": 7237308,
+      "de": "LCD",
+      "is_product_name": false,
+      "en": "LCD"
+    },
+    {
+      "id": 7237362,
+      "de": "Medizinprodukt",
+      "is_product_name": false,
+      "en": "medical device"
+    },
+    {
+      "id": 7237381,
+      "de": "Nachkaufset Mini-Pad",
+      "is_product_name": false,
+      "en": "Mini TENS replacement set"
+    },
+    {
+      "id": 7237355,
+      "de": "Messung mit Fingersensor",
+      "is_product_name": false,
+      "en": "Measurement via finger sensor"
+    },
+    {
+      "id": 7237312,
+      "de": "Venen Trainer",
+      "is_product_name": false,
+      "en": "Leg compression massager"
+    },
+    {
+      "id": 7237359,
+      "de": "Mechanische Back- und Küchenwaage",
+      "is_product_name": false,
+      "en": "Mechanical baking and kitchen scale"
+    },
+    {
+      "id": 7237366,
+      "de": "Speicherplatz",
+      "is_product_name": false,
+      "en": "memory space"
+    },
+    {
+      "id": 7237370,
+      "de": "MG 16 grün / rot",
+      "is_product_name": true,
+      "en": "MG 16 Green / Red"
+    },
+    {
+      "id": 7237385,
+      "de": "Rührschüsselwaage",
+      "is_product_name": false,
+      "en": "Mixing bowl scale"
+    },
+    {
+      "id": 7237374,
+      "de": "Mikrodermabrasion",
+      "is_product_name": false,
+      "en": "Microdermabrasion"
+    },
+    {
+      "id": 7237316,
+      "de": "Unterkörpermessung",
+      "is_product_name": false,
+      "en": "lower body measurement"
+    },
+    {
+      "id": 7237363,
+      "de": "MM 15 – Medizinische Gesichtsmaske",
+      "is_product_name": true,
+      "en": "Medical Face Mask MM 15"
+    },
+    {
+      "id": 7237320,
+      "de": "Bezug maschinenwaschbar",
+      "is_product_name": false,
+      "en": "machine-washable cover"
+    },
+    {
+      "id": 7237367,
+      "de": "Speicherort",
+      "is_product_name": false,
+      "en": "memory space"
+    },
+    {
+      "id": 7237389,
+      "de": "Feucht-Heizkissen",
+      "is_product_name": false,
+      "en": "Moist heating pad"
+    },
+    {
+      "id": 7237324,
+      "de": "Netzteil",
+      "is_product_name": false,
+      "en": "mains adapter"
+    },
+    {
+      "id": 7237371,
+      "de": "MG 260 HD-2-in-1",
+      "is_product_name": true,
+      "en": "MG 260 HD 2-in-1"
+    },
+    {
+      "id": 7237378,
+      "de": "Mini-Luftbefeuchter",
+      "is_product_name": false,
+      "en": "Mini air humidifier"
+    },
+    {
+      "id": 7237393,
+      "de": "Multifunktionswaage",
+      "is_product_name": false,
+      "en": "mulit-purpose scale"
+    },
+    {
+      "id": 7237328,
+      "de": "Netzkabel",
+      "is_product_name": false,
+      "en": "mains cable"
+    },
+    {
+      "id": 7237375,
+      "de": "Microfleece",
+      "is_product_name": false,
+      "en": "microfleece"
+    },
+    {
+      "id": 7237332,
+      "de": "Maniküre Stift",
+      "is_product_name": false,
+      "en": "Manicure pen"
+    },
+    {
+      "id": 7237379,
+      "de": "Mini-Massagegerät",
+      "is_product_name": false,
+      "en": "Mini massager"
+    },
+    {
+      "id": 7237336,
+      "de": "Manuelle Milchpumpe",
+      "is_product_name": false,
+      "en": "Manual breast pump"
+    },
+    {
+      "id": 7237382,
+      "de": "Durchmesser Spiegelfläche",
+      "is_product_name": false,
+      "en": "Mirror diameter"
+    },
+    {
+      "id": 7237397,
+      "de": "Muskelmasse",
+      "is_product_name": false,
+      "en": "muscle mass"
+    },
+    {
+      "id": 7237386,
+      "de": "Mobiles EKG-Gerät",
+      "is_product_name": false,
+      "en": "Mobile ECG device"
+    },
+    {
+      "id": 7237401,
+      "de": "Muskeltraining",
+      "is_product_name": false,
+      "en": "Muscle training"
+    },
+    {
+      "id": 7237383,
+      "de": "Spiegeleffekt",
+      "is_product_name": false,
+      "en": "mirror effect"
+    },
+    {
+      "id": 7237340,
+      "de": "Massagekopf",
+      "is_product_name": false,
+      "en": "massage heads"
+    },
+    {
+      "id": 7237387,
+      "de": "Moderne Sensortasten",
+      "is_product_name": false,
+      "en": "Modern touch key operation"
+    },
+    {
+      "id": 7237405,
+      "de": "Vernebler Stopper",
+      "is_product_name": false,
+      "en": "Nebulisation stopper"
+    },
+    {
+      "id": 7237344,
+      "de": "Massagezonen",
+      "is_product_name": false,
+      "en": "massage regions"
+    },
+    {
+      "id": 7237391,
+      "de": "Motorleistung",
+      "is_product_name": false,
+      "en": "Motor output"
+    },
+    {
+      "id": 7237390,
+      "de": "Mutter- und Kindwaage",
+      "is_product_name": false,
+      "en": "Mother and baby scale"
+    },
+    {
+      "id": 7237348,
+      "de": "Massage-Fußwärmer",
+      "is_product_name": false,
+      "en": "Massaging foot warmer"
+    },
+    {
+      "id": 7237395,
+      "de": "Multifunktionsheizkissen",
+      "is_product_name": false,
+      "en": "Multifunctional heat pad"
+    },
+    {
+      "id": 7237394,
+      "de": "Multifunktions-Thermometer",
+      "is_product_name": false,
+      "en": "Multi functional thermometer"
+    },
+    {
+      "id": 7237409,
+      "de": "Nackenkissen",
+      "is_product_name": false,
+      "en": "neck cushion"
+    },
+    {
+      "id": 7237413,
+      "de": "Nerven- und Muskelstimulator",
+      "is_product_name": false,
+      "en": "Nerve and muscle stimulator"
+    },
+    {
+      "id": 7237352,
+      "de": "Messgenauigkeit",
+      "is_product_name": false,
+      "en": "Measurement accuracy"
+    },
+    {
+      "id": 7237399,
+      "de": "Muskelstimulation",
+      "is_product_name": false,
+      "en": "Muscle stimulation"
+    },
+    {
+      "id": 7237398,
+      "de": "Muskelanteil",
+      "is_product_name": false,
+      "en": "muscle percentage"
+    },
+    {
+      "id": 7237356,
+      "de": "Messgerät",
+      "is_product_name": false,
+      "en": "measuring device"
+    },
+    {
+      "id": 7237403,
+      "de": "Nasensauger",
+      "is_product_name": false,
+      "en": "Nasal aspirator"
+    },
+    {
+      "id": 7237402,
+      "de": "Nadelfräser",
+      "is_product_name": false,
+      "en": "Needle-shaped cutter"
+    },
+    {
+      "id": 7237417,
+      "de": "Quecksilberfrei",
+      "is_product_name": false,
+      "en": "No mercury"
+    },
+    {
+      "id": 7237360,
+      "de": "Mechanische Küchenwaage",
+      "is_product_name": false,
+      "en": "mechanical kitchen scale"
+    },
+    {
+      "id": 7237364,
+      "de": "Speicher",
+      "is_product_name": false,
+      "en": "memory"
+    },
+    {
+      "id": 7237421,
+      "de": "Kontaktloses Thermometer",
+      "is_product_name": false,
+      "en": "Non-contact thermometer"
+    },
+    {
+      "id": 7237368,
+      "de": "Memoryplätze",
+      "is_product_name": false,
+      "en": "memory spaces"
+    },
+    {
+      "id": 7237407,
+      "de": "IH 24 Kids – Inhalator",
+      "is_product_name": true,
+      "en": "Nebuliser IH 24 Kids"
+    },
+    {
+      "id": 7237406,
+      "de": "Inhalator",
+      "is_product_name": false,
+      "en": "Nebuliser"
+    },
+    {
+      "id": 7237372,
+      "de": "MG 295 - HD 3D",
+      "is_product_name": true,
+      "en": "MG 295 HD 3D"
+    },
+    {
+      "id": 7237411,
+      "de": "Nacken-Massagegerät",
+      "is_product_name": false,
+      "en": "Neck massager"
+    },
+    {
+      "id": 7237425,
+      "de": "Nährwert-Analysewaage",
+      "is_product_name": false,
+      "en": "Nutritional analysis scale"
+    },
+    {
+      "id": 7237376,
+      "de": "Micro-Flauschfaser",
+      "is_product_name": false,
+      "en": "microfleece fibres"
+    },
+    {
+      "id": 7237380,
+      "de": "Mini-Pad",
+      "is_product_name": false,
+      "en": "Mini TENS"
+    },
+    {
+      "id": 7237410,
+      "de": "Nackenmassage",
+      "is_product_name": false,
+      "en": "neck massage"
+    },
+    {
+      "id": 7237415,
+      "de": "Tigerenten Nachtlicht",
+      "is_product_name": false,
+      "en": "Night light in the form of Tigerente (tigerduck)"
+    },
+    {
+      "id": 7237414,
+      "de": "NFC Adapter für GL 50",
+      "is_product_name": true,
+      "en": "NFC adapter for GL 50"
+    },
+    {
+      "id": 7237429,
+      "de": "Online Gewichtscoach",
+      "is_product_name": false,
+      "en": "Online weight coach"
+    },
+    {
+      "id": 7237419,
+      "de": "Berührungsfrei",
+      "is_product_name": false,
+      "en": "Non-contact"
+    },
+    {
+      "id": 7237384,
+      "de": "verspiegelter Innenraum",
+      "is_product_name": false,
+      "en": "Mirrored interior"
+    },
+    {
+      "id": 7359416,
+      "de": "MG 99 Massage Gun Compact",
+      "is_product_name": true
+    },
+    {
+      "id": 7376328,
+      "de": "UV/LED Nageltrockner",
+      "is_product_name": false
+    },
+    {
+      "id": 7901810,
+      "de": "Mutligroomer",
+      "is_product_name": false,
+      "en": "Multigroomer"
+    },
+    {
+      "id": 7237418,
+      "de": "Geräuschüberwachung",
+      "is_product_name": false,
+      "en": "Noise monitor"
+    },
+    {
+      "id": 7237423,
+      "de": "Rutschfeste Gummifüße",
+      "is_product_name": false,
+      "en": "Non-slip rubber feet"
+    },
+    {
+      "id": 7237422,
+      "de": "FT 100 – Kontaktloses Thermometer",
+      "is_product_name": true,
+      "en": "Non-Contact Thermometer FT 100"
+    },
+    {
+      "id": 7237427,
+      "de": "Objekttemperatur",
+      "is_product_name": false,
+      "en": "object temperature"
+    },
+    {
+      "id": 7237388,
+      "de": "Moderne Sensortastenbedienung",
+      "is_product_name": false,
+      "en": "Modern touch key operation"
+    },
+    {
+      "id": 10911614,
+      "de": "Leistungsumsatz",
+      "is_product_name": false,
+      "en": "active metabolic rate"
+    },
+    {
+      "id": 7237431,
+      "de": "Zuschaltbare Wärmefunktion",
+      "is_product_name": false,
+      "en": "Optional heat function"
+    },
+    {
+      "id": 7237426,
+      "de": "Adipositas Grad",
+      "is_product_name": false,
+      "en": "obesity rate"
+    },
+    {
+      "id": 7237392,
+      "de": "Schleimhäute",
+      "is_product_name": false,
+      "en": "mucous membranes"
+    },
+    {
+      "id": 7359419,
+      "de": "MG 185 ﻿﻿Massage Gun",
+      "is_product_name": true
+    },
+    {
+      "id": 7247268,
+      "de": "2-in-1 Dampfvernebler",
+      "is_product_name": false,
+      "en": "2-in-1 Steam Vaporiser"
+    },
+    {
+      "id": 7237396,
+      "de": "Multifunktionsstyler",
+      "is_product_name": false,
+      "en": "Multi-functional styler"
+    },
+    {
+      "id": 7237430,
+      "de": "Betriebstemperatur",
+      "is_product_name": false,
+      "en": "operating temperature"
+    },
+    {
+      "id": 12211630,
+      "de": "herausziehbare Klettverschlussenden",
+      "is_product_name": false,
+      "en": "extendible hook-and-loop fasteners"
+    },
+    {
+      "id": 12349377,
+      "de": "BM 53 – Oberarm-Blutdruckmessgerät",
+      "is_product_name": true,
+      "en": "Upper Arm Blood Pressure Monitor BM 53"
+    },
+    {
+      "id": 12349375,
+      "de": "App „beurer BabyCare“",
+      "is_product_name": false,
+      "en": "“beurer BabyCare” app"
+    },
+    {
+      "id": 12349381,
+      "de": "flach",
+      "is_product_name": false,
+      "en": "slim"
+    },
+    {
+      "id": 12349379,
+      "de": "Entspannungsmassage",
+      "is_product_name": false,
+      "en": "relaxing massage"
+    },
+    {
+      "id": 12349385,
+      "de": "per Touch",
+      "is_product_name": false,
+      "en": "with touch technology"
+    },
+    {
+      "id": 12349383,
+      "de": "High-End",
+      "is_product_name": false,
+      "en": "high-end"
+    },
+    {
+      "id": 12349389,
+      "de": "Marktführer in Deutschland",
+      "is_product_name": false,
+      "en": "German market leader"
+    },
+    {
+      "id": 7359417,
+      "de": "MG 180 Massage Gun",
+      "is_product_name": true
+    },
+    {
+      "id": 12349387,
+      "de": "Maniküre – Pediküre",
+      "is_product_name": false,
+      "en": "manicure & pedicure"
+    },
+    {
+      "id": 12349393,
+      "de": "Mückenstift",
+      "is_product_name": false,
+      "en": "bite healer"
+    },
+    {
+      "id": 7496109,
+      "de": "IPL Haarentfernungsgerät",
+      "is_product_name": false,
+      "en": "IPL hair removal device"
+    },
+    {
+      "id": 12349391,
+      "de": "Menstrual Relax Pads",
+      "is_product_name": false,
+      "en": "Menstrual Relax Period Pain Reliever"
+    },
+    {
+      "id": 12349397,
+      "de": "PO 13 Kids﻿– Pulsoximeter",
+      "is_product_name": true,
+      "en": "Pulse Oximeter PO 13 Kids"
+    },
+    {
+      "id": 12349395,
+      "de": "optimalen Kontrolle",
+      "is_product_name": false,
+      "en": "optimum monitoring"
+    },
+    {
+      "id": 12349401,
+      "de": "Regelschmerzen",
+      "is_product_name": false,
+      "en": "menstrual pain"
+    },
+    {
+      "id": 12349399,
+      "de": "PT 20 – Beckenboden-Trainingshilfen",
+      "is_product_name": true,
+      "en": "Pelvic Floor Training Aids PT 20"
+    },
+    {
+      "id": 12349405,
+      "de": "Smiley Indikation",
+      "is_product_name": false,
+      "en": "emoticon guidance"
+    },
+    {
+      "id": 12349403,
+      "de": "rosiger Teint",
+      "is_product_name": false,
+      "en": "brighter complexion"
+    },
+    {
+      "id": 12349409,
+      "de": "unfruchtbar",
+      "is_product_name": false,
+      "en": "non-fertile"
+    },
+    {
+      "id": 12349407,
+      "de": "stromsparend",
+      "is_product_name": false,
+      "en": "energy-efficient"
+    },
+    {
+      "id": 7237400,
+      "de": "Muskelstimulationsgerät",
+      "is_product_name": false,
+      "en": "Muscle stimulation device"
+    },
+    {
+      "id": 12349413,
+      "de": "Wärme steuern",
+      "is_product_name": false,
+      "en": "control the temperature"
+    },
+    {
+      "id": 12349411,
+      "de": "verschiedene Lichtfarben﻿",
+      "is_product_name": false,
+      "en": "coloured light settings"
+    },
+    {
+      "id": 12284167,
+      "de": "Bürstenloser Motor",
+      "is_product_name": false
+    },
+    {
+      "id": 12284165,
+      "de": "ALLES IM LOT",
+      "is_product_name": false
+    },
+    {
+      "id": 12284169,
+      "de": "Elektrodenkontaktgel",
+      "is_product_name": false
+    },
+    {
+      "id": 12284171,
+      "de": "für zwischendurch",
+      "is_product_name": false
+    },
+    {
+      "id": 12284175,
+      "de": "Klinisch validiert",
+      "is_product_name": false
+    },
+    {
+      "id": 12284179,
+      "de": "mit simpler Ein-Knopf-Bedienung",
+      "is_product_name": false
+    },
+    {
+      "id": 12284173,
+      "de": "Impulse für",
+      "is_product_name": false
+    },
+    {
+      "id": 12284183,
+      "de": "Transportverriegelung",
+      "is_product_name": false
+    },
+    {
+      "id": 12284177,
+      "de": "Magnetischeladeplatte",
+      "is_product_name": false
+    },
+    {
+      "id": 12284202,
+      "de": "RIC-Hörhilfen Single",
+      "is_product_name": false
+    },
+    {
+      "id": 12285031,
+      "de": "Elektrodenkontaktspray",
+      "is_product_name": false
+    },
+    {
+      "id": 12284181,
+      "de": "Punktmatrixdesign",
+      "is_product_name": false
+    },
+    {
+      "id": 12284200,
+      "de": "HealthManager",
+      "is_product_name": false
+    },
+    {
+      "id": 12349376,
+      "de": "App „beurer HealthManager Pro“",
+      "is_product_name": false,
+      "en": "“beurer HealthManager Pro” app"
+    },
+    {
+      "id": 12284206,
+      "de": "gute Lesbarkeit",
+      "is_product_name": false
+    },
+    {
+      "id": 12349380,
+      "de": "filtern",
+      "is_product_name": false,
+      "en": "remove"
+    },
+    {
+      "id": 12284210,
+      "de": "Saphirkegel, fein",
+      "is_product_name": false
+    },
+    {
+      "id": 12349384,
+      "de": "HT 75 – Automatischer Lockenstab",
+      "is_product_name": true,
+      "en": "Automatic Hair Curler HT 75"
+    },
+    {
+      "id": 12284204,
+      "de": "Fußbäder",
+      "is_product_name": false
+    },
+    {
+      "id": 7237404,
+      "de": "Verneblungsleistung",
+      "is_product_name": false,
+      "en": "nebulisation performance"
+    },
+    {
+      "id": 12349388,
+      "de": "Manschette anlegen",
+      "is_product_name": false,
+      "en": "position the cuff"
+    },
+    {
+      "id": 12284208,
+      "de": "Beckenbodentraining",
+      "is_product_name": false
+    },
+    {
+      "id": 12349392,
+      "de": "MG 79 Massage Gun Sensitive – ﻿﻿Muskelmassagegerät",
+      "is_product_name": true,
+      "en": "Deep Tissue Massager MG 79 Massage Gun Sensitive"
+    },
+    {
+      "id": 12284227,
+      "de": "Giraffen-Design",
+      "is_product_name": false
+    },
+    {
+      "id": 12284212,
+      "de": "Power inside",
+      "is_product_name": false
+    },
+    {
+      "id": 12284231,
+      "de": "Design",
+      "is_product_name": false
+    },
+    {
+      "id": 12349396,
+      "de": "Persönliche Balance",
+      "is_product_name": false,
+      "en": "your own healthy balance"
+    },
+    {
+      "id": 12284229,
+      "de": "Kalkpads",
+      "is_product_name": false
+    },
+    {
+      "id": 12284235,
+      "de": "Dein Styling für noch mehr Wow",
+      "is_product_name": false
+    },
+    {
+      "id": 12349400,
+      "de": "Reduzierung﻿﻿ von Cellulite",
+      "is_product_name": false,
+      "en": "smoother skin"
+    },
+    {
+      "id": 12284233,
+      "de": "Ausführungen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284239,
+      "de": "praktische Koffer",
+      "is_product_name": false
+    },
+    {
+      "id": 7237408,
+      "de": "Nacken- und Schulter-Massagegerät",
+      "is_product_name": false,
+      "en": "Neck and shoulder massager"
+    },
+    {
+      "id": 12349404,
+      "de": "Schwangere",
+      "is_product_name": false,
+      "en": "during pregnancy"
+    },
+    {
+      "id": 12284237,
+      "de": "Egal, ob feines",
+      "is_product_name": false
+    },
+    {
+      "id": 12284243,
+      "de": "Beige",
+      "is_product_name": false
+    },
+    {
+      "id": 12349408,
+      "de": "TB 30 – Elektrische Zahnbürste",
+      "is_product_name": true,
+      "en": "Electric Toothbrush TB 30"
+    },
+    {
+      "id": 12284241,
+      "de": "aller gespeicherten Messwerte",
+      "is_product_name": false
+    },
+    {
+      "id": 12284247,
+      "de": "bietet mit",
+      "is_product_name": false
+    },
+    {
+      "id": 12349412,
+      "de": "wahlweise mit Melodien",
+      "is_product_name": false,
+      "en": "optional soothing melodies"
+    },
+    {
+      "id": 12284245,
+      "de": "best﻿ ﻿mögliche Muskelentspannung",
+      "is_product_name": false
+    },
+    {
+      "id": 12284251,
+      "de": "Erhalte",
+      "is_product_name": false
+    },
+    {
+      "id": 12284166,
+      "de": "bestechen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284249,
+      "de": "Dimmfunktion",
+      "is_product_name": false
+    },
+    {
+      "id": 12284255,
+      "de": "gesunde Zähne",
+      "is_product_name": false
+    },
+    {
+      "id": 12284170,
+      "de": "EM 89 Heat – Digital TENS/EMS mit Wärmefunktion",
+      "is_product_name": true,
+      "en": "Digital TENS/EMS Device With Heat Function EM 89 Heat"
+    },
+    {
+      "id": 12284253,
+      "de": "Fliesenstruktur",
+      "is_product_name": false
+    },
+    {
+      "id": 12284259,
+      "de": "Heizdraht",
+      "is_product_name": false
+    },
+    {
+      "id": 12284257,
+      "de": "gezielt",
+      "is_product_name": false
+    },
+    {
+      "id": 12284263,
+      "de": "IH 47 - Inhalator",
+      "is_product_name": true
+    },
+    {
+      "id": 12284174,
+      "de": "Inhalation",
+      "is_product_name": false
+    },
+    {
+      "id": 12284261,
+      "de": "HK 123 XXL Cosy Green Panet",
+      "is_product_name": true
+    },
+    {
+      "id": 12284267,
+      "de": "Inklusive",
+      "is_product_name": false
+    },
+    {
+      "id": 12284178,
+      "de": "MG 18 Mini-Massagegerät",
+      "is_product_name": true,
+      "en": "Mini Massager MG 18"
+    },
+    {
+      "id": 12284271,
+      "de": "Kopfteil",
+      "is_product_name": false
+    },
+    {
+      "id": 12284275,
+      "de": "MACH MIT",
+      "is_product_name": false
+    },
+    {
+      "id": 12284265,
+      "de": "Inhalators",
+      "is_product_name": false
+    },
+    {
+      "id": 12284182,
+      "de": "Rückschaltautomatik",
+      "is_product_name": false
+    },
+    {
+      "id": 12284279,
+      "de": "Multigroomer",
+      "is_product_name": false
+    },
+    {
+      "id": 12284269,
+      "de": "Klang",
+      "is_product_name": false
+    },
+    {
+      "id": 12284201,
+      "de": "BM 28",
+      "is_product_name": true
+    },
+    {
+      "id": 12284283,
+      "de": "Round",
+      "is_product_name": false
+    },
+    {
+      "id": 12284273,
+      "de": "Linderung",
+      "is_product_name": false
+    },
+    {
+      "id": 12284205,
+      "de": "Deep Roll",
+      "is_product_name": false
+    },
+    {
+      "id": 12284287,
+      "de": "startest du erfrischt",
+      "is_product_name": false
+    },
+    {
+      "id": 12284277,
+      "de": "Messwerte",
+      "is_product_name": false
+    },
+    {
+      "id": 12284209,
+      "de": "MassageknöpfeSchalter",
+      "is_product_name": false
+    },
+    {
+      "id": 12284291,
+      "de": "USB",
+      "is_product_name": false
+    },
+    {
+      "id": 12284281,
+      "de": "Regeneration",
+      "is_product_name": false
+    },
+    {
+      "id": 7237412,
+      "de": "Nadel",
+      "is_product_name": false,
+      "en": "Needle"
+    },
+    {
+      "id": 12284213,
+      "de": "Muskelmassagegerät",
+      "is_product_name": false
+    },
+    {
+      "id": 12284295,
+      "de": "Ruhepuls",
+      "is_product_name": false
+    },
+    {
+      "id": 12284285,
+      "de": "Schalltechnologie",
+      "is_product_name": false
+    },
+    {
+      "id": 12284230,
+      "de": "Dot-Matrix-Look",
+      "is_product_name": false
+    },
+    {
+      "id": 12284299,
+      "de": "PO 13 Kids ﻿1﻿﻿2﻿– Pulsoximeter",
+      "is_product_name": true
+    },
+    {
+      "id": 12284289,
+      "de": "Superflausch",
+      "is_product_name": false
+    },
+    {
+      "id": 12284234,
+      "de": "Haartrockner, die in jedem Format überzeugen.",
+      "is_product_name": false
+    },
+    {
+      "id": 12284303,
+      "de": "HD 75 Nordic Grey Green Planet – Wärmezudecke",
+      "is_product_name": true
+    },
+    {
+      "id": 12284293,
+      "de": "Zubehör",
+      "is_product_name": false
+    },
+    {
+      "id": 12284238,
+      "de": "Effektives Glätten",
+      "is_product_name": false
+    },
+    {
+      "id": 12284307,
+      "de": "TB 50 Protection Pro – ﻿Elektrische Zahnbürste",
+      "is_product_name": true,
+      "en": "Electric Toothbrush TB 50 Protection Pro"
+    },
+    {
+      "id": 12284297,
+      "de": "Indium Tin Oxide",
+      "is_product_name": false
+    },
+    {
+      "id": 12284242,
+      "de": "ätherischen Ölen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284311,
+      "de": "MP 62 Maniküre-/Pediküreaufsätze",
+      "is_product_name": true
+    },
+    {
+      "id": 12284301,
+      "de": "TL 35 – Tageslichtlampe",
+      "is_product_name": true
+    },
+    {
+      "id": 12284246,
+      "de": "Beurer Inhalator",
+      "is_product_name": false
+    },
+    {
+      "id": 12284317,
+      "de": "Abwurfmechanismus",
+      "is_product_name": false
+    },
+    {
+      "id": 12284305,
+      "de": "MG 139 – ﻿Akku-Massagekissen mit Wärmefunktion",
+      "is_product_name": true
+    },
+    {
+      "id": 12284250,
+      "de": "durch die direkte Beschallung",
+      "is_product_name": false
+    },
+    {
+      "id": 12284321,
+      "de": "beach waves",
+      "is_product_name": false
+    },
+    {
+      "id": 12284309,
+      "de": "MP 52 Maniküre-/Pediküreaufsätze",
+      "is_product_name": true
+    },
+    {
+      "id": 12284254,
+      "de": "fördert die ﻿﻿Massagefunktion﻿",
+      "is_product_name": false
+    },
+    {
+      "id": 12284325,
+      "de": "BM 64 Oberarm-Blutdruckmessgerät",
+      "is_product_name": true
+    },
+    {
+      "id": 12284313,
+      "de": "MP 100 Maniküre-/Pediküreaufsätze",
+      "is_product_name": true
+    },
+    {
+      "id": 12284258,
+      "de": "Hausapotheke",
+      "is_product_name": false
+    },
+    {
+      "id": 12284329,
+      "de": "HT 75 Automatischer Lockenstab",
+      "is_product_name": true
+    },
+    {
+      "id": 12284319,
+      "de": "App",
+      "is_product_name": false
+    },
+    {
+      "id": 12284262,
+      "de": "IH 16 - Inhalator",
+      "is_product_name": true
+    },
+    {
+      "id": 7237416,
+      "de": "Nachtlicht",
+      "is_product_name": false,
+      "en": "Night vision"
+    },
+    {
+      "id": 12284333,
+      "de": "Kompressor-Druckluft-Technologie",
+      "is_product_name": false
+    },
+    {
+      "id": 12284323,
+      "de": "BM 53 Oberarm-Blutdruckmessgerät",
+      "is_product_name": true
+    },
+    {
+      "id": 12284266,
+      "de": "Inhalats",
+      "is_product_name": false
+    },
+    {
+      "id": 12284337,
+      "de": "Made in Germany",
+      "is_product_name": false
+    },
+    {
+      "id": 12284327,
+      "de": "GL 60 ﻿﻿Bluetooth﻿®﻿﻿﻿– Blutzuckermessgerät",
+      "is_product_name": true
+    },
+    {
+      "id": 12284270,
+      "de": "Kondenswasser",
+      "is_product_name": false
+    },
+    {
+      "id": 12284341,
+      "de": "MG 24 Massagegerät mit Wärmefunktion",
+      "is_product_name": true,
+      "en": "Massager With Heat Function MG 24"
+    },
+    {
+      "id": 12284331,
+      "de": "Kaltverdunstungstechnologie",
+      "is_product_name": false
+    },
+    {
+      "id": 12284274,
+      "de": "Low setting",
+      "is_product_name": false
+    },
+    {
+      "id": 12284335,
+      "de": "LB 200 / 300 Ersatzfilter",
+      "is_product_name": true
+    },
+    {
+      "id": 12284278,
+      "de": "Morgen- und Abendblutdruck der letzen 7 Tage",
+      "is_product_name": false
+    },
+    {
+      "id": 12284345,
+      "de": "recyceltem Material",
+      "is_product_name": false
+    },
+    {
+      "id": 12284339,
+      "de": "MG 139 Beige",
+      "is_product_name": true
+    },
+    {
+      "id": 12284282,
+      "de": "rolle",
+      "is_product_name": false
+    },
+    {
+      "id": 12284349,
+      "de": "TB 50 Protection Pro ﻿Elektrische Zahnbürste",
+      "is_product_name": true
+    },
+    {
+      "id": 12284343,
+      "de": "PO 13 Kids – Pulsoximeter",
+      "is_product_name": true
+    },
+    {
+      "id": 12284286,
+      "de": "sicherung",
+      "is_product_name": false
+    },
+    {
+      "id": 12284353,
+      "de": "USB-C Verbindung",
+      "is_product_name": false
+    },
+    {
+      "id": 12284347,
+      "de": "Schieber für Teststreifenabwurf",
+      "is_product_name": false
+    },
+    {
+      "id": 12284290,
+      "de": "Tätig ﻿keiten",
+      "is_product_name": false
+    },
+    {
+      "id": 12284357,
+      "de": "6 l",
+      "is_product_name": false
+    },
+    {
+      "id": 12284351,
+      "de": "UB 30 Kompact",
+      "is_product_name": true
+    },
+    {
+      "id": 12284294,
+      "de": "Termo-higrometreler",
+      "is_product_name": false
+    },
+    {
+      "id": 12284361,
+      "de": "EM 59 Heat Gel-Pads",
+      "is_product_name": true
+    },
+    {
+      "id": 12284298,
+      "de": "aufsetzen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284365,
+      "de": "HA 20 Single",
+      "is_product_name": true
+    },
+    {
+      "id": 12284355,
+      "de": "Variabel einstellbarer Standfuß",
+      "is_product_name": false
+    },
+    {
+      "id": 12284302,
+      "de": "IL 60 – Infrarot-Wärmestrahler",
+      "is_product_name": true
+    },
+    {
+      "id": 12284369,
+      "de": "IH 58 / IH 60 Year Pack",
+      "is_product_name": true
+    },
+    {
+      "id": 12284359,
+      "de": "EM 50 Gel-Pads",
+      "is_product_name": true
+    },
+    {
+      "id": 12284306,
+      "de": "LB 300 Plus – Luftbefeuchter",
+      "is_product_name": true,
+      "en": "Air Humidifier LB 300 Plus"
+    },
+    {
+      "id": 12284373,
+      "de": "kuschelig",
+      "is_product_name": false
+    },
+    {
+      "id": 12284363,
+      "de": "Epilierer",
+      "is_product_name": false
+    },
+    {
+      "id": 12284377,
+      "de": "MG 195 Hot & Cold Massage Gun – Muskelmassagegerät",
+      "is_product_name": true
+    },
+    {
+      "id": 12284367,
+      "de": "Hallo Balou!",
+      "is_product_name": false
+    },
+    {
+      "id": 12284310,
+      "de": "MP 42 / MP 44 Maniküre-/Pediküreaufsätze",
+      "is_product_name": true
+    },
+    {
+      "id": 12284371,
+      "de": "komfortable",
+      "is_product_name": false
+    },
+    {
+      "id": 7237420,
+      "de": "Kontaktloser Schlafsensor",
+      "is_product_name": false,
+      "en": "Non-contact sleep sensor"
+    },
+    {
+      "id": 12284316,
+      "de": "4-fache Ionenauslass",
+      "is_product_name": false
+    },
+    {
+      "id": 12284381,
+      "de": "Oberfläche",
+      "is_product_name": false
+    },
+    {
+      "id": 12284375,
+      "de": "Massage Gun Compact",
+      "is_product_name": false
+    },
+    {
+      "id": 12284320,
+      "de": "Automatikfunktion",
+      "is_product_name": false
+    },
+    {
+      "id": 12284385,
+      "de": "TENS/EMS",
+      "is_product_name": false
+    },
+    {
+      "id": 12284379,
+      "de": "Nagelstudio",
+      "is_product_name": false
+    },
+    {
+      "id": 12284324,
+      "de": "BM 59 Blutdruckmessgerät",
+      "is_product_name": true
+    },
+    {
+      "id": 12284389,
+      "de": "Wake up+Charge",
+      "is_product_name": false
+    },
+    {
+      "id": 12284383,
+      "de": "Schlaf-Wach",
+      "is_product_name": false
+    },
+    {
+      "id": 12284328,
+      "de": "HC 100 Excellence﻿ Haartrockner",
+      "is_product_name": true
+    },
+    {
+      "id": 10796967,
+      "de": "Qualität",
+      "is_product_name": false
+    },
+    {
+      "id": 12284387,
+      "de": "Verschiedene Aufsätze",
+      "is_product_name": false
+    },
+    {
+      "id": 12284332,
+      "de": "kapillares Vollblut",
+      "is_product_name": false
+    },
+    {
+      "id": 10796971,
+      "de": "Umsatz",
+      "is_product_name": false
+    },
+    {
+      "id": 10796985,
+      "de": "Haushaltsprodukte",
+      "is_product_name": false
+    },
+    {
+      "id": 12284336,
+      "de": "LB 300 Plus Luftbefeuchter",
+      "is_product_name": true
+    },
+    {
+      "id": 10796975,
+      "de": "Diagnostik",
+      "is_product_name": false
+    },
+    {
+      "id": 10796969,
+      "de": "Mitarbeiterinnen und Mitarbeitern",
+      "is_product_name": false
+    },
+    {
+      "id": 7237424,
+      "de": "Hinweis",
+      "is_product_name": false,
+      "en": "Notice"
+    },
+    {
+      "id": 12284340,
+      "de": "MG 139 Mint",
+      "is_product_name": true
+    },
+    {
+      "id": 10796979,
+      "de": "Nachhaltigkeit",
+      "is_product_name": false
+    },
+    {
+      "id": 10796973,
+      "de": "Firmenkultur",
+      "is_product_name": false
+    },
+    {
+      "id": 12284344,
+      "de": "Premium Cuff",
+      "is_product_name": false
+    },
+    {
+      "id": 10796983,
+      "de": "Kosmetikstudio",
+      "is_product_name": false
+    },
+    {
+      "id": 10796977,
+      "de": "vielseitige",
+      "is_product_name": false
+    },
+    {
+      "id": 12284348,
+      "de": "TB 30 Elektrische Zahnbürste",
+      "is_product_name": true
+    },
+    {
+      "id": 10831753,
+      "de": "Hörgerät",
+      "is_product_name": false
+    },
+    {
+      "id": 10796981,
+      "de": "maßgeschneiderte Lösungen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284352,
+      "de": "Ultraschall-Befeuchtungstechnologie",
+      "is_product_name": false
+    },
+    {
+      "id": 10831758,
+      "de": "Gel-Pad",
+      "is_product_name": false
+    },
+    {
+      "id": 11371232,
+      "de": "Innenkissen",
+      "is_product_name": false,
+      "en": "inner cushion"
+    },
+    {
+      "id": 12284356,
+      "de": "Cosy",
+      "is_product_name": false
+    },
+    {
+      "id": 10374652,
+      "de": "Elektrische Decke",
+      "is_product_name": false,
+      "en": "Electric blanket"
+    },
+    {
+      "id": 12284360,
+      "de": "EM 59 Heat / EM 89 Heat Gel-Pads",
+      "is_product_name": true
+    },
+    {
+      "id": 12284364,
+      "de": "Gepäcks",
+      "is_product_name": false
+    },
+    {
+      "id": 8914166,
+      "de": "Gesundheit",
+      "is_product_name": false,
+      "en": "Health"
+    },
+    {
+      "id": 10831755,
+      "de": "Wärme",
+      "is_product_name": false
+    },
+    {
+      "id": 12284368,
+      "de": "Hot & Cold",
+      "is_product_name": false
+    },
+    {
+      "id": 10831769,
+      "de": "Wärmebett",
+      "is_product_name": false,
+      "en": "heated bed"
+    },
+    {
+      "id": 12284372,
+      "de": "Küchenhelfern",
+      "is_product_name": false
+    },
+    {
+      "id": 12284376,
+      "de": "MG 10 ﻿Massageball",
+      "is_product_name": true
+    },
+    {
+      "id": 12284380,
+      "de": "nutzerfreundliche",
+      "is_product_name": false
+    },
+    {
+      "id": 12284384,
+      "de": "Single",
+      "is_product_name": false
+    },
+    {
+      "id": 12284388,
+      "de": "Waagen",
+      "is_product_name": false
+    },
+    {
+      "id": 8914182,
+      "de": "Baby",
+      "is_product_name": false,
+      "en": "Baby"
+    },
+    {
+      "id": 10796986,
+      "de": "Milchpumpen",
+      "is_product_name": false
+    },
+    {
+      "id": 10796970,
+      "de": "Umsatzwachstum",
+      "is_product_name": false
+    },
+    {
+      "id": 10234308,
+      "de": "moderner, weicher Cordstoff",
+      "is_product_name": false,
+      "en": "trendy corded velvet"
+    },
+    {
+      "id": 10796974,
+      "de": "Prävention",
+      "is_product_name": false
+    },
+    {
+      "id": 8914180,
+      "de": "Schönheit",
+      "is_product_name": false,
+      "en": "Beauty"
+    },
+    {
+      "id": 10796978,
+      "de": "nachhaltig",
+      "is_product_name": false
+    },
+    {
+      "id": 10796982,
+      "de": "Langzeittests",
+      "is_product_name": false
+    },
+    {
+      "id": 10311870,
+      "de": "Objekttemperaturmessung",
+      "is_product_name": false
+    },
+    {
+      "id": 10765712,
+      "de": "Nagelfräser",
+      "is_product_name": false,
+      "en": "nail cutter"
+    },
+    {
+      "id": 7237428,
+      "de": "Bürostuhl",
+      "is_product_name": false,
+      "en": "Office chair"
+    },
+    {
+      "id": 10831757,
+      "de": "WIFI",
+      "is_product_name": false
+    },
+    {
+      "id": 10374651,
+      "de": "Wärmedecke",
+      "is_product_name": false,
+      "en": "Heated blanket"
+    },
+    {
+      "id": 9872824,
+      "de": "Sprache aus",
+      "is_product_name": false
+    },
+    {
+      "id": 10409826,
+      "de": "Insektenstift",
+      "is_product_name": false
+    },
+    {
+      "id": 12673025,
+      "de": "optimale Lesbarkeit",
+      "is_product_name": false
+    },
+    {
+      "id": 8914188,
+      "de": "Körperpflege",
+      "is_product_name": false,
+      "en": "Personal Care"
+    },
+    {
+      "id": 8914181,
+      "de": "Fitness",
+      "is_product_name": false,
+      "en": "Fitness"
+    },
+    {
+      "id": 7359410,
+      "de": "Läusekamm",
+      "is_product_name": false
+    },
+    {
+      "id": 7359420,
+      "de": "Massage Gun",
+      "is_product_name": false
+    },
+    {
+      "id": 10311872,
+      "de": "Ohrtemperaturmessung",
+      "is_product_name": false
+    },
+    {
+      "id": 10311869,
+      "de": "Stirntemperaturmessung",
+      "is_product_name": false
+    },
+    {
+      "id": 7718367,
+      "de": "Automatischer Lockenstab",
+      "is_product_name": false,
+      "en": "Automatic hair curler"
+    },
+    {
+      "id": 9886721,
+      "de": "Pause",
+      "is_product_name": false
+    },
+    {
+      "id": 9474715,
+      "de": "Zweckbestimmung",
+      "is_product_name": false,
+      "en": "Intended use"
+    },
+    {
+      "id": 9886722,
+      "de": "Schläge pro Minute",
+      "is_product_name": false
+    },
+    {
+      "id": 12696699,
+      "de": "Buddy Massagegerät",
+      "is_product_name": false,
+      "en": "Buddy Massager"
+    },
+    {
+      "id": 12673024,
+      "de": "beste Lesbarkeit",
+      "is_product_name": false
+    },
+    {
+      "id": 12696701,
+      "de": "Polly Waage",
+      "is_product_name": false,
+      "en": "Polly Multifunctional Pet Scale"
+    },
+    {
+      "id": 11414921,
+      "de": "elektrische Schallzahnbürste",
+      "is_product_name": false,
+      "en": "electric sonic toothbrush"
+    },
+    {
+      "id": 12349374,
+      "de": "Alltag",
+      "is_product_name": false,
+      "en": "everyday routine"
+    },
+    {
+      "id": 12349378,
+      "de": "BM 64 – Oberarm-Blutdruckmessgerät",
+      "is_product_name": true,
+      "en": "Upper Arm Blood Pressure Monitor BM 64"
+    },
+    {
+      "id": 12349382,
+      "de": "GL 44/50/50 evo Einzeltestsstreifen",
+      "is_product_name": true,
+      "en": "GL 44/50/50 Evo Single Test Strips"
+    },
+    {
+      "id": 12349386,
+      "de": "LB 200 & LB 300 Plus Luftbefeuchter",
+      "is_product_name": true,
+      "en": "Air Humidifiers LB 200 & LB 300 Plus"
+    },
+    {
+      "id": 12349390,
+      "de": "Marktführer in Europa",
+      "is_product_name": false,
+      "en": "European market leader"
+    },
+    {
+      "id": 12349394,
+      "de": "Notfallprodukt",
+      "is_product_name": false,
+      "en": "emergency aid"
+    },
+    {
+      "id": 12349398,
+      "de": "Produkte speziell für Kinder",
+      "is_product_name": false,
+      "en": "child-friendly designs"
+    },
+    {
+      "id": 12349402,
+      "de": "Reizstrombehandlung",
+      "is_product_name": false,
+      "en": "electrostimulation"
+    },
+    {
+      "id": 12349406,
+      "de": "wie frisch vom Salon",
+      "is_product_name": false,
+      "en": "salon-worthy"
+    },
+    {
+      "id": 12349410,
+      "de": "unverzichtbares Hilfsmittel",
+      "is_product_name": false,
+      "en": "essential tool"
+    },
+    {
+      "id": 12284164,
+      "de": "Alarmfunktion",
+      "is_product_name": false
+    },
+    {
+      "id": 12284168,
+      "de": "einfache Anwendung",
+      "is_product_name": false
+    },
+    {
+      "id": 12284172,
+      "de": "Health Manager",
+      "is_product_name": false
+    },
+    {
+      "id": 12284176,
+      "de": "Luft und Aroma",
+      "is_product_name": false
+    },
+    {
+      "id": 12284180,
+      "de": "Produktsortiment Waagen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284199,
+      "de": "Lesbarkeit",
+      "is_product_name": false
+    },
+    {
+      "id": 12284203,
+      "de": "Beckenboden-Trainingshilfen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284207,
+      "de": "PO 13 Kids﻿– Kinder Pulsoximeter",
+      "is_product_name": true
+    },
+    {
+      "id": 12284211,
+      "de": "CM 51 - Cellulite-Massage",
+      "is_product_name": true
+    },
+    {
+      "id": 12284228,
+      "de": "Beurer-Design",
+      "is_product_name": false
+    },
+    {
+      "id": 12284232,
+      "de": "Einfach wiegen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284236,
+      "de": "Egal ob",
+      "is_product_name": false
+    },
+    {
+      "id": 12284240,
+      "de": "a better way to brush",
+      "is_product_name": false
+    },
+    {
+      "id": 12284244,
+      "de": "besonderes Anliegen, ﻿einen Beitrag",
+      "is_product_name": false
+    },
+    {
+      "id": 12284248,
+      "de": "deine Lösung für",
+      "is_product_name": false
+    },
+    {
+      "id": 12284252,
+      "de": "fangreichen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284256,
+      "de": "gewährleistet das BSS",
+      "is_product_name": false
+    },
+    {
+      "id": 12284260,
+      "de": "High setting",
+      "is_product_name": false
+    },
+    {
+      "id": 12284264,
+      "de": "Inhalatoren",
+      "is_product_name": false
+    },
+    {
+      "id": 12284268,
+      "de": "Insekten ﻿stiche",
+      "is_product_name": false
+    },
+    {
+      "id": 12284272,
+      "de": "Lichttherapie",
+      "is_product_name": false
+    },
+    {
+      "id": 12284276,
+      "de": "MenCare Shave",
+      "is_product_name": false
+    },
+    {
+      "id": 12284280,
+      "de": "Regelschmerz Pad",
+      "is_product_name": false,
+      "en": "period pain reliever"
+    },
+    {
+      "id": 12284284,
+      "de": "Rutschfeste, abriebsichere",
+      "is_product_name": false
+    },
+    {
+      "id": 12284288,
+      "de": "style beyond limits",
+      "is_product_name": false
+    },
+    {
+      "id": 12284292,
+      "de": "VITAL",
+      "is_product_name": false
+    },
+    {
+      "id": 12284296,
+      "de": "Duft",
+      "is_product_name": false
+    },
+    {
+      "id": 12284300,
+      "de": "IH 21 / 24 Kids / 26 / 26 Kids / 28 Pro Nasendusche",
+      "is_product_name": true
+    },
+    {
+      "id": 12284304,
+      "de": "Schmiegsame Wärme - Fußwärmer",
+      "is_product_name": false
+    },
+    {
+      "id": 12284308,
+      "de": "MP 41 Maniküre-/Pediküreaufsätze",
+      "is_product_name": true
+    },
+    {
+      "id": 12284308,
+      "de": "MP 41 Maniküre-/Pediküreaufsätz",
+      "is_product_name": true
+    },
+    {
+      "id": 12284312,
+      "de": "MP 64 / MP 84 Maniküre-/Pediküreaufsätze",
+      "is_product_name": true
+    },
+    {
+      "id": 12284318,
+      "de": "Ampelsignal",
+      "is_product_name": false
+    },
+    {
+      "id": 12284322,
+      "de": "Blutdruck",
+      "is_product_name": false
+    },
+    {
+      "id": 12284326,
+      "de": "FC 55 Pureo Complete Cleansing Körperbürste",
+      "is_product_name": true
+    },
+    {
+      "id": 12284330,
+      "de": "IL 60 Infrarot-Wärmestrahler",
+      "is_product_name": true
+    },
+    {
+      "id": 12284334,
+      "de": "LA 35 Aroma Diffuser",
+      "is_product_name": true,
+      "en": "Aroma Diffuser LA 35"
+    },
+    {
+      "id": 12284338,
+      "de": "Mermaid Waves",
+      "is_product_name": false
+    },
+    {
+      "id": 12284342,
+      "de": "MG 79 Massage Gun Sensitive Muskelmassagegerät",
+      "is_product_name": true
+    },
+    {
+      "id": 12284346,
+      "de": "RIC-Hörhilfe Single",
+      "is_product_name": false
+    },
+    {
+      "id": 12284350,
+      "de": "TL 35 Tageslichtlampe",
+      "is_product_name": true
+    },
+    {
+      "id": 12284354,
+      "de": "USB-Ladestation",
+      "is_product_name": false
+    },
+    {
+      "id": 12284358,
+      "de": "Einfach tief durchatmen",
+      "is_product_name": false
+    },
+    {
+      "id": 12284362,
+      "de": "EM 89 Heat – ﻿1﻿﻿2﻿Digital TENS/EMS mit Wärmefunktion",
+      "is_product_name": true
+    },
+    {
+      "id": 12284366,
+      "de": "HA 55 Pair",
+      "is_product_name": true
+    },
+    {
+      "id": 12284370,
+      "de": "Inhalt",
+      "is_product_name": false
+    },
+    {
+      "id": 12284374,
+      "de": "leistungsstarke Akku",
+      "is_product_name": false
+    },
+    {
+      "id": 12284378,
+      "de": "MG 79 Massage Gun Sensitive",
+      "is_product_name": true
+    },
+    {
+      "id": 12284382,
+      "de": "paarweise rotierend ﻿oder rollend",
+      "is_product_name": false
+    },
+    {
+      "id": 12284386,
+      "de": "Unauffällige Unterstützung",
+      "is_product_name": false
+    },
+    {
+      "id": 12284390,
+      "de": "wohltuende Massage",
+      "is_product_name": false
+    },
+    {
+      "id": 10796968,
+      "de": "Hauptsitz",
+      "is_product_name": false
+    },
+    {
+      "id": 10796972,
+      "de": "Produktentwicklung",
+      "is_product_name": false
+    },
+    {
+      "id": 10796976,
+      "de": "Therapie",
+      "is_product_name": false
+    },
+    {
+      "id": 10796980,
+      "de": "kommende Generationen",
+      "is_product_name": false
+    },
+    {
+      "id": 10796984,
+      "de": "Selbstbewusstsein",
+      "is_product_name": false
+    },
+    {
+      "id": 10831754,
+      "de": "deep releaZer®",
+      "is_product_name": true
+    },
+    {
+      "id": 10831766,
+      "de": "Heizmatte",
+      "is_product_name": false,
+      "en": "Heated Pet Mat"
+    },
+    {
+      "id": 10374653,
+      "de": "Heizdecke",
+      "is_product_name": false,
+      "en": "Heated blanket"
+    },
+    {
+      "id": 8914168,
+      "de": "Wohlbefinden",
+      "is_product_name": false,
+      "en": "Wellbeing"
+    },
+    {
+      "id": 8914185,
+      "de": "Haushalt",
+      "is_product_name": false,
+      "en": "Home"
+    },
+    {
+      "id": 10311871,
+      "de": "Raumtemperaturmessung",
+      "is_product_name": false
+    },
+    {
+      "id": 9886720,
+      "de": "Sprache aus",
+      "is_product_name": false
+    },
+    {
+      "id": 12696698,
+      "de": "Fellschneider",
+      "is_product_name": false,
+      "en": "Fur Trimmer"
+    }
+  ]
+}

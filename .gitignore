@@ -1,0 +1,64 @@
+# Environment files (contain secrets)
+.env
+.env.beurer
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code local files
+.claude/
+
+# Windows artifacts
+nul
+
+# Generated reports (output files)
+reports/
+
+# Temporary/debug files
+*.log
+*.zip
+report_*.json
+items.json
+
+# Large binary source documents (keep extracts, not originals)
+*.pptx
+*.xlsx
+docs/CI_Beurer_*.pdf
+
+# Git worktrees (for isolated feature development)
+.worktrees/
+
+# Generated dashboards and test outputs
+*.html
+!styles/dashboard_template.html
+!dashboard/template/dashboard_template.html
+full_report_output.json
+
+# Vercel project metadata
+.vercel/
+
+# Dead directories
+eval/
+
+# Local settings
+settings.json
+.tokens
+gsc-credentials.json

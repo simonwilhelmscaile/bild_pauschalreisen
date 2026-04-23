@@ -1,0 +1,4 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "rm -rf .next/cache && npm run copy-template && next build"
+}

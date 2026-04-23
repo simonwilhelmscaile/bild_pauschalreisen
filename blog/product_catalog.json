@@ -1,0 +1,47 @@
+{
+  "products": {
+    "BC 21": {"url": null, "priority": null, "category": "blood_pressure", "type": "handgelenk", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BC 27": {"url": "/de/p/65904/", "priority": 2, "category": "blood_pressure", "type": "handgelenk", "has_bluetooth": false, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BC 28": {"url": null, "priority": null, "category": "blood_pressure", "type": "handgelenk", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BC 44": {"url": null, "priority": null, "category": "blood_pressure", "type": "handgelenk", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BC 51": {"url": null, "priority": null, "category": "blood_pressure", "type": "handgelenk", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BC 54": {"url": null, "priority": null, "category": "blood_pressure", "type": "handgelenk", "has_bluetooth": true, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BC 87": {"url": null, "priority": null, "category": "blood_pressure", "type": "handgelenk", "has_bluetooth": true, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 25": {"url": "/de/p/10384/", "priority": 1, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 27": {"url": "/de/p/65818/", "priority": 1, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 28": {"url": null, "priority": null, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 38": {"url": null, "priority": null, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 40": {"url": null, "priority": null, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 45": {"url": null, "priority": null, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 48": {"url": null, "priority": null, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 49": {"url": null, "priority": null, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 51": {"url": null, "priority": null, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 53": {"url": "/de/p/65459/", "priority": 2, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 54": {"url": "/de/p/65512/", "priority": 3, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": true, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 58": {"url": "/de/p/65516/", "priority": null, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": false, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 59": {"url": "/de/p/10227/", "priority": 3, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": true, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 64": {"url": "/de/p/65400/", "priority": 2, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": true, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null},
+    "BM 81": {"url": "/de/p/65511/", "priority": 1, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": true, "app_compatible": true, "has_heat": false, "has_ekg": false, "functions": ["blood_pressure"], "usage_restriction": null, "known_issues": []},
+    "BM 96": {"url": null, "priority": 3, "category": "blood_pressure", "type": "oberarm", "has_bluetooth": true, "app_compatible": true, "has_heat": false, "has_ekg": true, "functions": ["blood_pressure", "ekg"], "usage_restriction": null},
+    "EM 49": {"url": "/de/p/66205/", "priority": null, "category": "pain_tens", "type": "tens_ems", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["tens", "ems", "massage"], "programs": 64, "channels": 2, "usage_restriction": null},
+    "EM 50": {"url": "/de/p/64854/", "priority": 1, "category": "pain_tens", "type": "tens_ems", "has_bluetooth": false, "app_compatible": false, "has_heat": true, "has_ekg": false, "functions": ["tens"], "programs": 15, "channels": 1, "usage_restriction": "menstrual_only"},
+    "EM 55": {"url": "/de/p/10059/", "priority": 1, "category": "pain_tens", "type": "tens_ems", "has_bluetooth": false, "app_compatible": false, "has_heat": true, "has_ekg": false, "functions": ["tens"], "channels": 1, "usage_restriction": "menstrual_only"},
+    "EM 59": {"url": "/de/p/64663/", "priority": 1, "category": "pain_tens", "type": "tens_ems", "has_bluetooth": false, "app_compatible": false, "has_heat": true, "has_ekg": false, "functions": ["tens", "ems", "massage"], "programs": 64, "channels": 2, "electrodes": 4, "usage_restriction": null, "known_issues": []},
+    "EM 89": {"url": "/de/p/10277/", "priority": 1, "category": "pain_tens", "type": "tens_ems", "has_bluetooth": false, "app_compatible": false, "has_heat": true, "has_ekg": false, "functions": ["tens", "ems", "massage"], "programs": 64, "channels": 4, "electrodes": 8, "usage_restriction": null},
+    "IL 11": {"url": null, "priority": null, "category": "infrarot", "type": "infrarotlampe", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["infrarot"], "usage_restriction": null},
+    "IL 21": {"url": null, "priority": null, "category": "infrarot", "type": "infrarotlampe", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["infrarot"], "usage_restriction": null},
+    "IL 35": {"url": null, "priority": null, "category": "infrarot", "type": "infrarotlampe", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["infrarot"], "usage_restriction": null},
+    "IL 50": {"url": null, "priority": 1, "category": "infrarot", "type": "infrarotlampe", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["infrarot"], "usage_restriction": null},
+    "IL 60": {"url": null, "priority": 1, "category": "infrarot", "type": "infrarotlampe", "has_bluetooth": false, "app_compatible": false, "has_heat": false, "has_ekg": false, "functions": ["infrarot"], "usage_restriction": null}
+  },
+  "categories": {
+    "blood_pressure": "https://www.beurer.com/de/l/blutdruckmessgeraete/",
+    "pain_therapy": "https://www.beurer.com/de/l/tens-ems/",
+    "menstrual": "https://www.beurer.com/de/l/em-50-menstrual-relax-pad/"
+  },
+  "meta": {
+    "source": "beurer.com product pages",
+    "updated": "2026-04-08",
+    "note": "Feature data verified against beurer.com/de/p/ product pages. All BP monitors support HealthManager Pro (via Bluetooth or Scan & Save). No TENS/EMS/IR device supports HealthManager Pro."
+  }
+}

@@ -1,0 +1,140 @@
+name: Daily Social Listening Pipeline
+
+on:
+  schedule:
+    # Every day at 06:00 UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    # Allow manual triggers from GitHub UI
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create .env file
+        run: |
+          cat > .env <<EOF
+          BEURER_SUPABASE_URL=${{ secrets.BEURER_SUPABASE_URL }}
+          BEURER_SUPABASE_KEY=${{ secrets.BEURER_SUPABASE_KEY }}
+          FIRECRAWL_API_KEY=${{ secrets.FIRECRAWL_API_KEY }}
+          APIFY_API_TOKEN=${{ secrets.APIFY_API_TOKEN }}
+          GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
+          SERPER_API_KEY=${{ secrets.SERPER_API_KEY }}
+          EOF
+
+      - name: Start FastAPI server
+        run: |
+          python app.py &
+          echo "Waiting for server to start..."
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:8000/api/v1/social-listening/stats > /dev/null 2>&1; then
+              echo "Server is ready!"
+              break
+            fi
+            sleep 2
+          done
+
+      - name: Run crawlers (parallel groups)
+        run: |
+          BASE="http://localhost:8000/api/v1/social-listening"
+
+          crawl() {
+            local name="$1" payload="$2"
+            echo "=== Crawling $name ==="
+            curl -sf -X POST "$BASE/crawl" \
+              -H "Content-Type: application/json" \
+              -d "$payload" || echo "$name failed"
+          }
+
+          # Group 1: Firecrawl (sequential within group — shared API key)
+          (
+            crawl "gutefrage" '{"crawler":"gutefrage","max_pages":5,"weekly_mode":true}'
+            crawl "health_forums" '{"crawler":"health_forums","max_pages":3,"weekly_mode":true}'
+          ) > /tmp/crawl_firecrawl.log 2>&1 &
+
+          # Group 2-6: Apify crawlers (each in parallel)
+          crawl "reddit" '{"crawler":"reddit","max_pages":3,"weekly_mode":true}' > /tmp/crawl_reddit.log 2>&1 &
+          crawl "youtube" '{"crawler":"youtube","max_pages":2,"weekly_mode":true}' > /tmp/crawl_youtube.log 2>&1 &
+          crawl "amazon" '{"crawler":"amazon","max_pages":3,"weekly_mode":true}' > /tmp/crawl_amazon.log 2>&1 &
+          crawl "instagram" '{"crawler":"instagram","max_pages":2,"weekly_mode":true}' > /tmp/crawl_instagram.log 2>&1 &
+          crawl "twitter" '{"crawler":"twitter","max_pages":3,"weekly_mode":true}' > /tmp/crawl_twitter.log 2>&1 &
+
+          # Group 7: Serper (sequential within group — shared Serper API + Firecrawl for deep_crawl)
+          (
+            crawl "serper_discovery" '{"crawler":"serper_discovery","max_pages":15,"deep_crawl":true,"weekly_mode":true}'
+            crawl "serper_brand" '{"crawler":"serper_brand","max_pages":12,"deep_crawl":true,"weekly_mode":true}'
+          ) > /tmp/crawl_serper.log 2>&1 &
+
+          echo "Waiting for all crawler groups to finish..."
+          wait
+          echo ""
+          echo "=== Crawler Logs ==="
+          for log in /tmp/crawl_*.log; do [ -f "$log" ] && cat "$log"; done
+
+      - name: Run backfill pipeline (tiered)
+        run: |
+          BASE="http://localhost:8000/api/v1/social-listening/backfill"
+
+          # Pagination helper: loops a backfill endpoint until no more items to process
+          run_backfill() {
+            local name="$1" url="$2" max_loops="${3:-20}"
+            local i=0 last_id="" processed=999
+            echo "--- Backfill: $name ---"
+            while [ $i -lt $max_loops ] && [ $processed -gt 0 ]; do
+              i=$((i+1))
+              PARAMS="$url"
+              [ -n "$last_id" ] && PARAMS="${PARAMS}&after_id=${last_id}"
+              RESP=$(curl -sf -X POST "$PARAMS" 2>/dev/null) || { echo "  [$name] failed on loop $i"; break; }
+              processed=$(echo "$RESP" | python3 -c "import sys,json; s=json.load(sys.stdin).get('stats',{}); print(s.get('processed', s.get('classified',0)))" 2>/dev/null || echo 0)
+              new_last=$(echo "$RESP" | python3 -c "import sys,json; print(json.load(sys.stdin).get('stats',{}).get('last_id',''))" 2>/dev/null || echo "")
+              echo "  [$name] loop $i: processed=$processed"
+              [ -n "$new_last" ] && last_id="$new_last"
+            done
+            echo "  [$name] done after $i loops"
+          }
+
+          # ── Tier 0: Parallel deterministic (no LLM, no dependencies) ──
+          echo "=== Tier 0: Parallel deterministic backfills ==="
+          run_backfill "embeddings" "$BASE/embeddings?batch_size=100" > /tmp/bf_embed.log 2>&1 &
+          run_backfill "language-detection" "$BASE/language-detection?batch_size=100" 5 > /tmp/bf_lang.log 2>&1 &
+          (curl -sf -X POST "$BASE/sources" || echo "sources failed") > /tmp/bf_src.log 2>&1 &
+          run_backfill "engagement-scores" "$BASE/engagement-scores?batch_size=100" 5 > /tmp/bf_engage.log 2>&1 &
+          run_backfill "entities" "$BASE/entities?batch_size=100" 5 > /tmp/bf_entities.log 2>&1 &
+          run_backfill "dates" "$BASE/dates" 5 > /tmp/bf_dates.log 2>&1 &
+          wait
+          echo ""
+          echo "=== Tier 0 Logs ==="
+          for log in /tmp/bf_*.log; do [ -f "$log" ] && cat "$log"; done
+
+          # ── Tier 1: Sequential LLM (share Gemini 60 RPM limit) ──
+          echo ""
+          echo "=== Tier 1: Sequential LLM backfills ==="
+          run_backfill "classifications" "$BASE/classifications?batch_size=50"
+
+          echo "--- Purge: low-relevance items ---"
+          curl -sf -X POST "$BASE/purge-low-relevance?threshold=0.3&dry_run=false" || echo "purge failed"
+          sleep 5
+
+          run_backfill "journey-stages" "$BASE/journey-stages?batch_size=50"
+          sleep 5
+
+          run_backfill "deep-insights" "$BASE/deep-insights?batch_size=50"
+
+          # ── Tier 2: Post-LLM (needs entities from Tier 0 + classifications from Tier 1) ──
+          echo ""
+          echo "=== Tier 2: Entity sentiment ==="
+          run_backfill "entity-sentiment" "$BASE/entity-sentiment?batch_size=100"
