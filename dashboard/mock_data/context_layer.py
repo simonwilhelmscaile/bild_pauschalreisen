@@ -415,7 +415,7 @@ UPLOADED_DOCS = [
 # ═══════════════════════════════════════════════════════════════════════════
 # Node type → color/shape (visual legend)
 NODE_TYPES = {
-    "destination":   {"color": "#0528F2", "label": "Destination",       "shape": "dot"},
+    "destination":   {"color": "#2563EB", "label": "Destination",       "shape": "dot"},
     "topic":         {"color": "#FF6B6B", "label": "Thema",             "shape": "dot"},
     "product":       {"color": "#F59E0B", "label": "Produkt/Hotel",     "shape": "square"},
     "persona":       {"color": "#10B981", "label": "Persona",           "shape": "triangle"},
@@ -424,7 +424,7 @@ NODE_TYPES = {
     "social_signal": {"color": "#EC4899", "label": "Social-Signal",     "shape": "diamond"},
     "news":          {"color": "#0EA5E9", "label": "News",              "shape": "dot"},
     "competitor":    {"color": "#64748B", "label": "Wettbewerber",      "shape": "square"},
-    "article":       {"color": "#0528F2", "label": "Artikel (publiziert)","shape": "star"},
+    "article":       {"color": "#2563EB", "label": "Artikel (publiziert)","shape": "star"},
     "keyword":       {"color": "#94A3B8", "label": "Keyword",           "shape": "dot"},
     "author":        {"color": "#F97316", "label": "Autor",             "shape": "triangle"},
 }

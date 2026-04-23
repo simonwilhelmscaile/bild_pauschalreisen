@@ -34,7 +34,7 @@ DEFAULT_WEIGHTS = {
 
 
 DIMENSION_META = {
-    "search_demand":   {"label": "Search Demand",     "description": "Gewichtete Suchanfragen-Volumen (GSC + Ahrefs)", "color": "#0528F2"},
+    "search_demand":   {"label": "Search Demand",     "description": "Gewichtete Suchanfragen-Volumen (GSC + Ahrefs)", "color": "#2563EB"},
     "intent_quality":  {"label": "Intent-Qualität",   "description": "Transaktional > Kommerziell > Informativ",       "color": "#F59E0B"},
     "competitive_gap": {"label": "SERP-Lücke",        "description": "100 − Keyword-Difficulty, Top-10-Slot-Verfügbarkeit", "color": "#10B981"},
     "ai_visibility":   {"label": "AI-Visibility",     "description": "Peec-AI Citation-Potenzial + existierende Präsenz",    "color": "#7C3AED"},

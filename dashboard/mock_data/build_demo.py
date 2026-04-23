@@ -1969,14 +1969,14 @@ function renderPipelineTab() {
     // ── 5-Stage Flow Visual ──
     html += `<div class="card" style="margin-bottom:24px;"><div class="card-header">
         <h3>5-Stage Content Engine</h3>
-        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Klicken Sie auf eine Stage, um die aktiven Agenten und empfohlene Erweiterungen zu sehen.</p>
+        <p>Klicken Sie auf eine Stage, um die aktiven Agenten und empfohlene Erweiterungen zu sehen.</p>
     </div><div class="card-body" style="padding:20px 24px 28px;">
         <div id="pipeline-flow" style="display:grid;grid-template-columns:repeat(${stages.length}, 1fr);gap:8px;margin-bottom:16px;">`;
     stages.forEach((s, i) => {
-        html += `<button class="pipeline-stage-btn" data-stage="${_esc(s.id)}" style="background:var(--beurer-magenta-subtle);border:1px solid var(--gray-200);border-left:3px solid var(--beurer-magenta);padding:14px 16px;border-radius:var(--radius-sm);cursor:pointer;text-align:left;transition:all 0.15s;">
+        html += `<button class="pipeline-stage-btn" data-stage="${_esc(s.id)}" style="background:var(--beurer-magenta-subtle);border: 1px solid var(--border);border-left:3px solid var(--beurer-magenta);padding:14px 16px;border-radius:var(--radius-sm);cursor:pointer;text-align:left;transition:all 0.15s;">
             <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--beurer-magenta);margin-bottom:4px;">Stage ${i+1}</div>
             <div style="font-size:13px;font-weight:700;color:var(--gray-900);line-height:1.3;margin-bottom:8px;">${_esc(s.name.replace(/^Stage \d+ — /, ''))}</div>
-            <div style="display:flex;gap:10px;font-size:10px;color:var(--gray-500);flex-wrap:wrap;">
+            <div style="display:flex;gap:12px;font-size:10px;color:var(--gray-500);flex-wrap:wrap;">
                 <span><svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 3h6"/></svg> ${s.avg_time_sec}s</span>
                 <span><svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ${pct(s.success_pct)}</span>
                 <span>${(s.agents||[]).length} Agenten</span>
@@ -1991,7 +1991,7 @@ function renderPipelineTab() {
     if (runs.length) {
         html += `<div class="card" style="margin-bottom:24px;"><div class="card-header">
             <h3>Laufende Generierungen</h3>
-            <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">${runs.length} Artikel aktuell in der Pipeline</p>
+            <p>${runs.length} Artikel aktuell in der Pipeline</p>
         </div><div class="card-body" style="padding:0;">
             <table style="width:100%;font-size:13px;">
                 <thead><tr style="background:#FAFAFA;">
@@ -2017,10 +2017,10 @@ function renderPipelineTab() {
     if (ab.length) {
         html += `<div class="card" style="margin-bottom:24px;"><div class="card-header">
             <h3>A/B Tests · Data-driven Headlines &amp; Intros</h3>
-            <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Systematische Optimierung jeder Komponente via CTR/Scroll/Read-Time</p>
+            <p>Systematische Optimierung jeder Komponente via CTR/Scroll/Read-Time</p>
         </div><div class="card-body" style="padding:20px 24px;">`;
         ab.forEach(test => {
-            html += `<div style="border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:16px 20px;margin-bottom:14px;">
+            html += `<div style="border: 1px solid var(--border);border-radius:var(--radius-sm);padding:16px 20px;margin-bottom:16px;">
                 <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
                     <div>
                         <div style="font-weight:600;font-size:13px;margin-bottom:4px;">${_esc(test.test_type)} · ${_esc(test.article_id)}</div>
@@ -2028,7 +2028,7 @@ function renderPipelineTab() {
                     </div>
                     <div style="background:${test.status === 'completed' ? 'var(--success-light)' : 'var(--warning-light)'};color:${test.status === 'completed' ? 'var(--success)' : 'var(--warning)'};padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;">${_esc(test.status)}</div>
                 </div>
-                <div style="display:grid;grid-template-columns:repeat(${test.variants.length}, 1fr);gap:10px;">`;
+                <div style="display:grid;grid-template-columns:repeat(${test.variants.length}, 1fr);gap:12px;">`;
             test.variants.forEach(v => {
                 const metric_key = Object.keys(v).find(k => !['label','text','winner'].includes(k));
                 const metric_val = metric_key ? v[metric_key] : '—';
@@ -2049,12 +2049,12 @@ function renderPipelineTab() {
     if (qc.length) {
         html += `<div class="card" style="margin-bottom:24px;"><div class="card-header">
             <h3>Quality Gates · automatisierte Prüfungen</h3>
-            <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Artikel dürfen erst in CMS, wenn alle Checks grün sind</p>
+            <p>Artikel dürfen erst in CMS, wenn alle Checks grün sind</p>
         </div><div class="card-body" style="padding:16px 24px;">
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;">`;
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;">`;
         qc.forEach(c => {
             const color = c.pass_rate >= 97 ? 'var(--success)' : c.pass_rate >= 92 ? 'var(--warning)' : 'var(--error)';
-            html += `<div style="padding:12px 14px;border:1px solid var(--gray-200);border-left:3px solid ${color};border-radius:var(--radius-sm);">
+            html += `<div style="padding:12px 14px;border: 1px solid var(--border);border-left:3px solid ${color};border-radius:var(--radius-sm);">
                 <div style="font-size:12px;color:var(--gray-700);margin-bottom:6px;">${_esc(c.check)}</div>
                 <div style="display:flex;justify-content:space-between;align-items:center;">
                     <div style="font-weight:700;font-size:16px;color:${color};">${c.pass_rate}%</div>
@@ -2115,8 +2115,8 @@ function renderStageDetail(stageId) {
     if (!s) { host.innerHTML = ''; return; }
     const _esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 
-    let html = `<div style="background:white;border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:20px 24px;margin-top:12px;">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
+    let html = `<div style="background:white;border: 1px solid var(--border);border-radius:var(--radius-sm);padding:20px 24px;margin-top:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
             <div>
                 <div style="font-weight:700;font-size:15px;margin-bottom:4px;">${_esc(s.name)}</div>
                 <div style="font-size:12px;color:var(--gray-500);line-height:1.5;">${_esc(s.description)}</div>
@@ -2130,7 +2130,7 @@ function renderStageDetail(stageId) {
         <div style="font-size:12px;font-weight:700;color:var(--gray-700);text-transform:uppercase;letter-spacing:0.04em;margin:18px 0 10px;">Aktive Agenten (${(s.agents||[]).length})</div>`;
 
     (s.agents || []).forEach(a => {
-        html += `<div style="border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:14px 18px;margin-bottom:10px;background:#FAFAFA;">
+        html += `<div style="border: 1px solid var(--border);border-radius:var(--radius-sm);padding:14px 18px;margin-bottom:12px;background:#FAFAFA;">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
                 <div style="flex:1;min-width:0;">
                     <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
@@ -2145,7 +2145,7 @@ function renderStageDetail(stageId) {
                         <span>Accuracy: <strong style="color:var(--gray-800);">${a.accuracy}%</strong></span>
                     </div>
                 </div>
-                <div style="display:flex;gap:6px;">
+                <div style="display:flex;gap:8px;">
                     <button style="background:white;border:1px solid var(--gray-300);padding:5px 10px;border-radius:var(--radius-sm);font-size:11px;cursor:pointer;">Prompt</button>
                     <button style="background:white;border:1px solid var(--gray-300);padding:5px 10px;border-radius:var(--radius-sm);font-size:11px;cursor:pointer;">Logs</button>
                     <button style="background:white;border:1px solid var(--gray-300);padding:5px 10px;border-radius:var(--radius-sm);font-size:11px;cursor:pointer;">A/B</button>
@@ -2158,7 +2158,7 @@ function renderStageDetail(stageId) {
     if ((s.recommended_agents || []).length) {
         html += `<div style="font-size:12px;font-weight:700;color:var(--gray-700);text-transform:uppercase;letter-spacing:0.04em;margin:22px 0 10px;">Empfohlene Agenten (${s.recommended_agents.length}) <span style="font-weight:400;color:var(--gray-500);text-transform:none;letter-spacing:0;">· aktivieren für data-driven improvements</span></div>`;
         s.recommended_agents.forEach(a => {
-            html += `<div style="border:1px dashed var(--beurer-magenta);border-radius:var(--radius-sm);padding:14px 18px;margin-bottom:10px;background:var(--beurer-magenta-subtle);">
+            html += `<div style="border:1px dashed var(--beurer-magenta);border-radius:var(--radius-sm);padding:14px 18px;margin-bottom:12px;background:var(--beurer-magenta-subtle);">
                 <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
                     <div style="flex:1;min-width:0;">
                         <div style="font-weight:700;font-size:13px;color:var(--beurer-magenta);margin-bottom:4px;">+ ${_esc(a.name)}</div>
@@ -2291,7 +2291,7 @@ function renderContextLayerTab() {
     // Connectors
     html += `<div class="card"><div class="card-header">
         <h3>Datenquellen · ${connConnected} verbunden, ${connTotal - connConnected} verfügbar</h3>
-        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Klicken Sie auf eine Quelle für Details.</p>
+        <p>Klicken Sie auf eine Quelle für Details.</p>
     </div><div class="card-body" style="padding:16px 20px;">`;
     catOrder.forEach(cat => {
         const items = byCat[cat] || [];
@@ -2306,8 +2306,8 @@ function renderContextLayerTab() {
             const stLabel = st === 'connected' ? '● Live' : st === 'syncing' ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.5 15a9 9 0 1 1-2.1-9.4L23 10"/></svg> Syncing' : '+ Verbinden';
             const lastSync = c.last_sync ? new Date(c.last_sync).toLocaleString('de-DE', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }) : '—';
             const records = c.records === 0 ? '—' : (typeof c.records === 'number' ? c.records.toLocaleString('de-DE') : c.records);
-            html += `<div style="border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:12px 14px;background:${st === 'connected' ? 'white' : 'var(--gray-50)'};cursor:pointer;transition:all 0.15s;" onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            html += `<div style="border: 1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;background:${st === 'connected' ? 'white' : 'var(--gray-50)'};cursor:pointer;transition:all 0.15s;" onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
                     <div style="width:28px;height:28px;border-radius:6px;background:${c.color};color:white;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;">${_ctxEsc(c.logo_initial)}</div>
                     <div style="font-weight:600;font-size:13px;line-height:1.2;min-width:0;flex:1;">${_ctxEsc(c.name)}</div>
                     <span style="color:${stColor};font-size:10px;font-weight:700;white-space:nowrap;">${stLabel}</span>
@@ -2324,21 +2324,21 @@ function renderContextLayerTab() {
     // Upload dropzone + uploaded docs
     html += `<div class="card"><div class="card-header">
         <h3>Kontext-Bibliothek</h3>
-        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Upload Brand-Guidelines, Playbooks, Termbase, Personas…</p>
+        <p>Upload Brand-Guidelines, Playbooks, Termbase, Personas…</p>
     </div><div class="card-body" style="padding:16px 20px;">
         <div style="border:2px dashed var(--beurer-magenta);border-radius:var(--radius-md);padding:24px 18px;text-align:center;background:var(--beurer-magenta-subtle);margin-bottom:16px;cursor:pointer;" onclick="alert('Demo: Datei-Upload würde hier Pipeline-Trigger auslösen')">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--beurer-magenta)" stroke-width="2" style="margin-bottom:10px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--beurer-magenta)" stroke-width="2" style="margin-bottom:12px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
             <div style="font-weight:700;font-size:13px;color:var(--beurer-magenta);margin-bottom:3px;">Datei hier ablegen oder klicken</div>
             <div style="font-size:11px;color:var(--gray-500);">PDF, DOCX, MD, JSON, XLSX, CSV · max 50 MB</div>
         </div>
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Uploaded (${docs.length})</div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:12px;">Uploaded (${docs.length})</div>
         <div style="max-height:520px;overflow-y:auto;">`;
     docs.forEach(d => {
         html += `<div style="padding:10px 12px;border:1px solid var(--gray-100);border-radius:var(--radius-sm);margin-bottom:6px;background:white;">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
                 <div style="flex:1;min-width:0;">
                     <div style="font-size:12px;font-weight:600;line-height:1.3;color:var(--gray-800);word-break:break-word;">${_ctxEsc(d.name)}</div>
-                    <div style="display:flex;gap:10px;margin-top:4px;font-size:10px;color:var(--gray-500);flex-wrap:wrap;">
+                    <div style="display:flex;gap:12px;margin-top:4px;font-size:10px;color:var(--gray-500);flex-wrap:wrap;">
                         <span style="background:var(--beurer-magenta-subtle);color:var(--beurer-magenta);padding:1px 6px;border-radius:99px;font-weight:700;">${_ctxEsc(d.type)}</span>
                         <span>${d.chunks} chunks</span>
                         <span>${(d.tokens_ingested/1000).toFixed(1)}k tok</span>
@@ -2355,16 +2355,16 @@ function renderContextLayerTab() {
     html += `<div class="card" style="margin-bottom:24px;"><div class="card-header" style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
         <div>
             <h3>Knowledge Graph · Wie Bild-Kontext vernetzt ist</h3>
-            <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Klicken Sie auf einen Knoten, um verbundene Artikel, Destinationen, Personen zu sehen. Je mehr Context Bild hochlädt, desto dichter der Graph.</p>
+            <p>Klicken Sie auf einen Knoten, um verbundene Artikel, Destinationen, Personen zu sehen. Je mehr Context Bild hochlädt, desto dichter der Graph.</p>
         </div>
         <div id="kg-legend" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
     </div><div class="card-body" style="padding:0;">
         <div style="display:grid;grid-template-columns:3fr 1fr;gap:0;border-top:1px solid var(--gray-200);">
             <div id="kg-graph" style="height:620px;border-right:1px solid var(--gray-200);position:relative;background:#FAFAFA;"></div>
             <div id="kg-side" style="padding:20px 22px;overflow-y:auto;max-height:620px;">
-                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Graph-Wachstum</div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:12px;">Graph-Wachstum</div>
                 <div id="kg-growth-chart" style="height:200px;margin-bottom:20px;"></div>
-                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Statistik</div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:12px;">Statistik</div>
                 <div style="font-size:12px;line-height:1.9;color:var(--gray-700);">
                     <div>Nodes total: <strong>${stats.total_nodes}</strong></div>
                     <div>Edges total: <strong>${stats.total_edges}</strong></div>
@@ -2382,22 +2382,22 @@ function renderContextLayerTab() {
     // ── Correlations ──
     html += `<div class="card" style="margin-bottom:24px;"><div class="card-header">
         <h3>Internal × External Korrelationen · Signale, die Content auslösen</h3>
-        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Bild-Support-Kanäle + PIM-Daten führen oft 2-7 Tage vor externen Trends — die Frühwarn-Stunde der Pipeline.</p>
+        <p>Bild-Support-Kanäle + PIM-Daten führen oft 2-7 Tage vor externen Trends — die Frühwarn-Stunde der Pipeline.</p>
     </div><div class="card-body" style="padding:16px 20px 20px;">`;
     corr.forEach(c => {
         const leadCol = c.lead_time_days >= 5 ? '#10B981' : c.lead_time_days >= 3 ? '#F59E0B' : '#EF4444';
         const corrScore = Math.round(c.correlation_coefficient * 100);
         const statusColor = c.action_status === 'published' ? 'var(--success)' : c.action_status === 'generating' ? 'var(--warning)' : 'var(--gray-500)';
         const statusLabel = c.action_status === 'published' ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> publiziert' : c.action_status === 'generating' ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/></svg> in Produktion' : c.action_status;
-        html += `<div style="border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:18px 20px;margin-bottom:14px;background:white;">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:14px;flex-wrap:wrap;">
+        html += `<div style="border: 1px solid var(--border);border-radius:var(--radius-sm);padding:18px 20px;margin-bottom:16px;background:white;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap;">
                 <div style="flex:1;min-width:280px;">
                     <div style="font-weight:700;font-size:14px;color:var(--gray-900);margin-bottom:4px;">${_ctxEsc(c.title)}</div>
                     <div style="font-size:12px;color:var(--gray-500);">Korrelationskoeffizient <strong style="color:var(--gray-800);">r = ${c.correlation_coefficient}</strong> · Lead-Time <strong style="color:${leadCol};">${c.lead_time_days} Tage</strong></div>
                 </div>
                 <div style="background:${statusColor};color:white;padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;white-space:nowrap;">${statusLabel}</div>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 32px 1fr;gap:14px;align-items:stretch;margin-bottom:14px;">
+            <div style="display:grid;grid-template-columns:1fr 32px 1fr;gap:16px;align-items:stretch;margin-bottom:16px;">
                 <div style="padding:14px 16px;background:var(--beurer-magenta-subtle);border-left:3px solid var(--beurer-magenta);border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
                     <div style="font-size:10px;font-weight:700;color:var(--beurer-magenta);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Internes Signal · ${_ctxEsc(c.internal_signal.source)}</div>
                     <div style="font-size:12px;color:var(--gray-700);margin-bottom:6px;line-height:1.4;">${_ctxEsc(c.internal_signal.metric)}</div>
@@ -2500,7 +2500,7 @@ function _renderGrowthChart(traj) {
     const labels = traj.map(p => (p.projected ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> ' : '') + p.uploaded_docs + ' docs');
     const nodesData = traj.map(p => p.nodes);
     const connectedData = traj.map(p => p.connected_pct);
-    const bgColors = traj.map(p => p.projected ? 'rgba(5, 40, 242, 0.15)' : 'rgba(5, 40, 242, 0.8)');
+    const bgColors = traj.map(p => p.projected ? 'rgba(37, 99, 235, 0.15)' : 'rgba(37, 99, 235, 0.8)');
     try {
         new Chart(canvas, {
             type: 'bar',
@@ -2559,7 +2559,7 @@ function renderContentScoringTab() {
     // Weights editor
     html += `<div class="card"><div class="card-header">
         <h3>Gewichtungen</h3>
-        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Wie Bild-Strategie in die Score-Formel einfließt.</p>
+        <p>Wie Bild-Strategie in die Score-Formel einfließt.</p>
     </div><div class="card-body" style="padding:16px 20px;">`;
     Object.entries(weights).forEach(([key, w]) => {
         const dim = dims[key] || {};
@@ -2580,9 +2580,9 @@ function renderContentScoringTab() {
     // 2x2 Impact × Effort quadrant
     html += `<div class="card"><div class="card-header">
         <h3>Impact × Effort Matrix</h3>
-        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Wo jeder Artikel liegt — Quick Wins, Strategic Bets, Fill-Ins, Thankless Tasks.</p>
+        <p>Wo jeder Artikel liegt — Quick Wins, Strategic Bets, Fill-Ins, Thankless Tasks.</p>
     </div><div class="card-body" style="padding:20px 24px;">
-        <div id="scoring-quadrant" style="position:relative;width:100%;height:420px;border:1px solid var(--gray-200);background:linear-gradient(135deg, rgba(16,185,129,0.05) 0%, rgba(16,185,129,0.1) 50%, rgba(239,68,68,0.05) 100%);"></div>
+        <div id="scoring-quadrant" style="position:relative;width:100%;height:420px;border: 1px solid var(--border);background:linear-gradient(135deg, rgba(16,185,129,0.05) 0%, rgba(16,185,129,0.1) 50%, rgba(239,68,68,0.05) 100%);"></div>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;font-size:11px;">`;
     ["quick_win","strategic_bet","fill_in","thankless"].forEach(k => {
         const q = quadLabels[k] || {};
@@ -2598,7 +2598,7 @@ function renderContentScoringTab() {
     // ── Scoring Table ──
     html += `<div class="card" style="margin-bottom:24px;"><div class="card-header">
         <h3>Ranked Scoring Matrix · Top ${topics.length} Themen</h3>
-        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Sortiert nach Composite Score. Klicken Sie auf einen Eintrag für Rationale &amp; Radar-Chart.</p>
+        <p>Sortiert nach Composite Score. Klicken Sie auf einen Eintrag für Rationale &amp; Radar-Chart.</p>
     </div><div class="card-body" style="padding:0;">
         <div style="overflow-x:auto;">
         <table style="width:100%;font-size:12px;border-collapse:collapse;">
@@ -2622,16 +2622,16 @@ function renderContentScoringTab() {
             <td style="padding:10px 8px;text-align:center;"><span style="color:${statusColor};font-size:14px;">${statusIcon}</span></td>`;
         Object.keys(dims).forEach(k => {
             const v = t.scores[k] || 0;
-            const col = dims[k].color;
+            // Single accent color across the row — stop the rainbow
             html += `<td style="padding:10px 6px;text-align:center;font-variant-numeric:tabular-nums;">
-                <div style="position:relative;height:22px;background:${col}10;border-radius:3px;overflow:hidden;">
-                    <div style="background:${col};height:100%;width:${v}%;"></div>
-                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;color:${v >= 60 ? '#fff' : col};">${v}</div>
+                <div style="position:relative;height:20px;background:var(--tint-blue-5);border-radius:3px;overflow:hidden;">
+                    <div style="background:var(--accent-blue);height:100%;width:${v}%;opacity:${0.25 + v/160};"></div>
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:10px;color:${v >= 55 ? '#fff' : 'var(--accent-blue)'};">${v}</div>
                 </div>
             </td>`;
         });
-        html += `<td style="padding:10px 10px;text-align:center;font-weight:800;font-size:14px;color:var(--beurer-magenta);">${t.composite}</td>
-            <td style="padding:10px 14px;"><span style="background:${decColor}15;color:${decColor};padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;white-space:nowrap;">${_ctxEsc(t.decision)}</span></td>
+        html += `<td style="padding:10px 10px;text-align:center;font-weight:700;font-size:14px;color:var(--accent-blue);">${t.composite}</td>
+            <td style="padding:10px 14px;"><span style="background:${decColor}15;color:${decColor};padding:3px 10px;border-radius:99px;font-size:10px;font-weight:600;white-space:nowrap;">${_ctxEsc(t.decision)}</span></td>
         </tr>`;
     });
     html += `</tbody></table></div></div></div>`;
@@ -2692,18 +2692,18 @@ function showScoringDetail(idx) {
 
     let html = `<div class="card"><div class="card-header">
         <h3>Warum ${t.decision.startsWith('SHIP') ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> schreiben' : t.decision.startsWith('HOLD') ? '⏸ parken' : t.decision.startsWith('KILL') ? '<svg style="width:1em;height:1em;vertical-align:-2px;display:inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> verwerfen' : '📋 backlog'}: "${_ctxEsc(t.title)}"</h3>
-        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Transparente Entscheidungs-Rationale · data-driven &amp; reviewbar</p>
+        <p>Transparente Entscheidungs-Rationale · data-driven &amp; reviewbar</p>
     </div><div class="card-body" style="padding:20px 24px;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-bottom:20px;">
             <!-- Radar chart -->
             <div>
-                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Score-Radar</div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:12px;">Score-Radar</div>
                 <div id="scoring-radar-wrap" style="height:300px;"></div>
             </div>
             <!-- Metadata grid -->
             <div>
-                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Business-Daten</div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:12px;">Business-Daten</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
                     <div style="padding:10px 12px;background:var(--gray-50);border-radius:var(--radius-sm);">
                         <div style="font-size:10px;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;">Search Volume</div>
                         <div style="font-size:18px;font-weight:800;color:var(--gray-900);">${_fmtNum(t.search_volume_monthly)}<span style="font-size:11px;color:var(--gray-500);font-weight:400;"> /Mon</span></div>
@@ -2721,7 +2721,7 @@ function showScoringDetail(idx) {
                         <div style="font-size:24px;font-weight:800;color:var(--beurer-magenta);">${t.composite}<span style="font-size:14px;opacity:0.6;">/100</span></div>
                     </div>
                 </div>
-                <div style="margin-top:14px;padding:14px 16px;background:white;border:1px solid var(--gray-200);border-radius:var(--radius-sm);">
+                <div style="margin-top:14px;padding:14px 16px;background:white;border: 1px solid var(--border);border-radius:var(--radius-sm);">
                     <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:6px;">Decision Rationale</div>
                     <div style="font-size:13px;color:var(--gray-700);line-height:1.55;">${_ctxEsc(t.rationale)}</div>
                 </div>
@@ -2746,9 +2746,9 @@ function showScoringDetail(idx) {
                     datasets: [{
                         label: 'Score',
                         data: dataArr,
-                        backgroundColor: 'rgba(5, 40, 242, 0.15)',
-                        borderColor: '#0528F2',
-                        pointBackgroundColor: '#0528F2',
+                        backgroundColor: 'rgba(37, 99, 235, 0.15)',
+                        borderColor: '#2563EB',
+                        pointBackgroundColor: '#2563EB',
                         pointRadius: 4,
                     }]
                 },
