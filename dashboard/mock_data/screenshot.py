@@ -8,7 +8,7 @@ OUT_DIR = Path(__file__).parent.parent.parent / "previews"
 OUT_DIR.mkdir(exist_ok=True)
 
 TABS = ["overview", "journey", "insights", "competitors", "alerts", "media",
-        "content", "pipeline", "qa", "news", "seo", "kundendienst"]
+        "context", "content", "pipeline", "scoring", "qa", "news", "seo", "kundendienst"]
 
 
 def main():
@@ -26,7 +26,8 @@ def main():
         for i, tab in enumerate(TABS, start=1):
             try:
                 page.evaluate(f"typeof activateSidebarTab === 'function' && activateSidebarTab('{tab}')")
-                page.wait_for_timeout(1500)
+                # Graph / chart tabs need more settle time
+                page.wait_for_timeout(3500 if tab in ("context", "scoring") else 1500)
                 page.screenshot(path=str(OUT_DIR / f"{i:02d}_{tab}.png"), full_page=True)
                 print(f"wrote {tab}")
             except Exception as e:

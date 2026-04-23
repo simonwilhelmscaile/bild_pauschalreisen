@@ -28,6 +28,8 @@ OUTPUT = HERE.parent.parent / "bild_pauschalreisen_demo.html"
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 from articles import all_articles  # noqa: E402
+from context_layer import CONNECTORS, UPLOADED_DOCS, build_graph, CORRELATIONS  # noqa: E402
+from scoring import build_scoring_data  # noqa: E402
 
 # ─── Bild Pauschalreisen domain model ────────────────────────────────────────
 # Category keys map onto the template's existing keys for visual compatibility:
@@ -1722,10 +1724,17 @@ def main():
         template = f.read()
 
     data = build_dashboard_data()
-    # Attach articles, GSC and pipeline data
+    # Attach articles, GSC, pipeline, context-layer & content-scoring data
     data["articles"] = all_articles()
     data["gsc"] = build_gsc_data()
     data["pipeline"] = build_pipeline_data()
+    data["context_layer"] = {
+        "connectors": CONNECTORS,
+        "uploaded_docs": UPLOADED_DOCS,
+        "knowledge_graph": build_graph(),
+        "correlations": CORRELATIONS,
+    }
+    data["content_scoring"] = build_scoring_data()
 
     data_json = json.dumps(data, ensure_ascii=False)
 
@@ -1751,11 +1760,14 @@ def main():
         raise RuntimeError("Could not find main script start — template shape changed")
     html = html.replace(marker, interceptor_script + marker, 1)
 
-    # Pipeline tab renderer + sidebar-nav injection goes AFTER the main script.
-    pipeline_script = f"<script>\n{_PIPELINE_TAB_SCRIPT}\n</script>\n"
+    # Pipeline tab + Context Layer tab + Content Scoring tab scripts go AFTER the main script.
+    post_script = (
+        f"<script>\n{_PIPELINE_TAB_SCRIPT}\n</script>\n"
+        f"<script>\n{_CONTEXT_SCORING_SCRIPT}\n</script>\n"
+    )
     needle = "</script>\n</body>"
     if needle in html:
-        html = html.replace(needle, "</script>\n" + pipeline_script + "</body>", 1)
+        html = html.replace(needle, "</script>\n" + post_script + "</body>", 1)
     else:
         raise RuntimeError("Could not find </script></body> — template shape changed")
 
@@ -2198,6 +2210,631 @@ function renderStageDetail(stageId) {
     }
     document.addEventListener('DOMContentLoaded', injectPipelineNav);
     if (document.readyState !== 'loading') injectPipelineNav();
+})();
+"""
+
+
+_CONTEXT_SCORING_SCRIPT = r"""
+/* ═══════════════════════════════════════════════════════════════════════════
+   CONTEXT LAYER TAB + CONTENT SCORING TAB
+   ═══════════════════════════════════════════════════════════════════════════
+   Context Layer:
+   - Connector grid (20+ CRM/PIM/CS/Analytics/Social connections)
+   - Context upload dropzone + document library
+   - Knowledge graph (vis-network force-directed, Obsidian-style)
+   - Internal × External correlation cards
+
+   Content Scoring:
+   - Weighted scoring matrix (7 dimensions per topic)
+   - Radar chart per selected topic
+   - 2x2 Impact × Effort quadrant
+   - "Why this article — not that one" rationale cards
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+// Small utility shared by both tabs
+function _ctxEsc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
+function _fmtNum(v) { if (v === null || v === undefined) return '—'; if (typeof v === 'number') return v.toLocaleString('de-DE'); return v; }
+
+// Load vis-network on demand (CDN)
+function _loadVisNetwork() {
+    if (window.vis && window.vis.Network) return Promise.resolve();
+    if (window.__visLoader) return window.__visLoader;
+    window.__visLoader = new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = 'https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js';
+        s.onload = () => resolve();
+        s.onerror = () => reject(new Error('vis-network failed to load'));
+        document.head.appendChild(s);
+    });
+    return window.__visLoader;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   CONTEXT LAYER TAB
+   ───────────────────────────────────────────────────────────────────────── */
+function renderContextLayerTab() {
+    const host = document.getElementById('tab-context');
+    if (!host) return;
+    const cl = (DASHBOARD_DATA && DASHBOARD_DATA.context_layer) || {};
+    const conn = cl.connectors || [];
+    const docs = cl.uploaded_docs || [];
+    const kg = cl.knowledge_graph || {};
+    const corr = cl.correlations || [];
+    const stats = kg.stats || {};
+
+    // Group connectors by category
+    const byCat = {};
+    conn.forEach(c => { (byCat[c.category] = byCat[c.category] || []).push(c); });
+    const catOrder = ["CRM", "Product Inventory", "Analytics", "Customer Service", "CMS", "Knowledge Base", "Ad Platforms", "Social", "Data Warehouse", "Digital Asset Management", "SEO Intelligence", "Customer Data Platform"];
+
+    let html = '<div class="section">';
+    html += `<div class="section-header"><div>
+        <div class="section-title">Context Layer · Connectors, Uploads &amp; Knowledge Graph</div>
+        <div class="section-subtitle">Der entscheidende Moat: je mehr Bild-Kontext einfließt, desto einzigartiger wird das Content-Engine-Ergebnis — und desto schwerer nachbaubar.</div>
+    </div></div>`;
+
+    // KPI strip
+    const connConnected = conn.filter(c => c.status === 'connected').length;
+    const connTotal = conn.length;
+    html += `<div class="kpi-grid" style="margin-bottom:24px;">
+        <div class="kpi-card"><div class="kpi-label">Connectors aktiv</div><div class="kpi-value">${connConnected}<span style="font-size:18px;opacity:0.5;"> / ${connTotal}</span></div><div class="kpi-delta up">&#9652; 2 neu (30d)</div></div>
+        <div class="kpi-card"><div class="kpi-label">Kontext-Dokumente</div><div class="kpi-value">${docs.length}</div><div class="kpi-delta up">&#9652; ${stats.tokens_ingested ? (stats.tokens_ingested/1000).toFixed(0) + 'k Tokens' : '—'}</div></div>
+        <div class="kpi-card accent"><div class="kpi-label">Knowledge-Graph Nodes</div><div class="kpi-value">${stats.total_nodes || 0}</div><div class="kpi-delta neutral" style="color:rgba(255,255,255,0.85)">${stats.total_edges || 0} Connections</div></div>
+        <div class="kpi-card"><div class="kpi-label">Connected-Rate</div><div class="kpi-value">${stats.connected_pct || 0}%</div><div class="kpi-delta up">&#9652; Ziel 90%</div></div>
+        <div class="kpi-card"><div class="kpi-label">Ø Degree</div><div class="kpi-value">${stats.avg_degree || 0}</div><div class="kpi-delta neutral">Connections/Node</div></div>
+        <div class="kpi-card"><div class="kpi-label">Internal × External Korrelationen</div><div class="kpi-value">${corr.length}</div><div class="kpi-delta up">&#9652; +3 diese Woche</div></div>
+    </div>`;
+
+    // ── 2-column: Connector grid + Upload dropzone ──
+    html += `<div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-bottom:24px;">`;
+
+    // Connectors
+    html += `<div class="card"><div class="card-header">
+        <h3>Datenquellen · ${connConnected} verbunden, ${connTotal - connConnected} verfügbar</h3>
+        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Klicken Sie auf eine Quelle für Details.</p>
+    </div><div class="card-body" style="padding:16px 20px;">`;
+    catOrder.forEach(cat => {
+        const items = byCat[cat] || [];
+        if (!items.length) return;
+        html += `<div style="margin-bottom:18px;">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:8px;">${_ctxEsc(cat)}</div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;">`;
+        items.forEach(c => {
+            const st = c.status;
+            const stClass = st === 'connected' ? 'success' : st === 'syncing' ? 'warning' : 'neutral';
+            const stColor = st === 'connected' ? 'var(--success)' : st === 'syncing' ? 'var(--warning)' : 'var(--gray-500)';
+            const stLabel = st === 'connected' ? '● Live' : st === 'syncing' ? '⟳ Syncing' : '+ Verbinden';
+            const lastSync = c.last_sync ? new Date(c.last_sync).toLocaleString('de-DE', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }) : '—';
+            const records = c.records === 0 ? '—' : (typeof c.records === 'number' ? c.records.toLocaleString('de-DE') : c.records);
+            html += `<div style="border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:12px 14px;background:${st === 'connected' ? 'white' : 'var(--gray-50)'};cursor:pointer;transition:all 0.15s;" onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                    <div style="width:28px;height:28px;border-radius:6px;background:${c.color};color:white;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;">${_ctxEsc(c.logo_initial)}</div>
+                    <div style="font-weight:600;font-size:13px;line-height:1.2;min-width:0;flex:1;">${_ctxEsc(c.name)}</div>
+                    <span style="color:${stColor};font-size:10px;font-weight:700;white-space:nowrap;">${stLabel}</span>
+                </div>
+                <div style="font-size:11px;color:var(--gray-500);line-height:1.4;">${_ctxEsc(c.records_label)}: <strong style="color:var(--gray-800);">${records}</strong></div>
+                <div style="font-size:10px;color:var(--gray-400);margin-top:3px;">${lastSync !== '—' ? 'Last sync: ' + lastSync : c.sync_frequency}</div>
+                <div style="font-size:11px;color:var(--gray-600);margin-top:8px;line-height:1.4;font-style:italic;">${_ctxEsc(c.why_it_matters)}</div>
+            </div>`;
+        });
+        html += `</div></div>`;
+    });
+    html += `</div></div>`;
+
+    // Upload dropzone + uploaded docs
+    html += `<div class="card"><div class="card-header">
+        <h3>Kontext-Bibliothek</h3>
+        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Upload Brand-Guidelines, Playbooks, Termbase, Personas…</p>
+    </div><div class="card-body" style="padding:16px 20px;">
+        <div style="border:2px dashed var(--beurer-magenta);border-radius:var(--radius-md);padding:24px 18px;text-align:center;background:var(--beurer-magenta-subtle);margin-bottom:16px;cursor:pointer;" onclick="alert('Demo: Datei-Upload würde hier Pipeline-Trigger auslösen')">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--beurer-magenta)" stroke-width="2" style="margin-bottom:10px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <div style="font-weight:700;font-size:13px;color:var(--beurer-magenta);margin-bottom:3px;">Datei hier ablegen oder klicken</div>
+            <div style="font-size:11px;color:var(--gray-500);">PDF, DOCX, MD, JSON, XLSX, CSV · max 50 MB</div>
+        </div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Uploaded (${docs.length})</div>
+        <div style="max-height:520px;overflow-y:auto;">`;
+    docs.forEach(d => {
+        html += `<div style="padding:10px 12px;border:1px solid var(--gray-100);border-radius:var(--radius-sm);margin-bottom:6px;background:white;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+                <div style="flex:1;min-width:0;">
+                    <div style="font-size:12px;font-weight:600;line-height:1.3;color:var(--gray-800);word-break:break-word;">${_ctxEsc(d.name)}</div>
+                    <div style="display:flex;gap:10px;margin-top:4px;font-size:10px;color:var(--gray-500);flex-wrap:wrap;">
+                        <span style="background:var(--beurer-magenta-subtle);color:var(--beurer-magenta);padding:1px 6px;border-radius:99px;font-weight:700;">${_ctxEsc(d.type)}</span>
+                        <span>${d.chunks} chunks</span>
+                        <span>${(d.tokens_ingested/1000).toFixed(1)}k tok</span>
+                    </div>
+                    <div style="font-size:10px;color:var(--gray-400);margin-top:3px;">von ${_ctxEsc(d.uploaded_by)} · ${d.used_in_generations}× verwendet</div>
+                </div>
+            </div>
+        </div>`;
+    });
+    html += `</div></div></div>`;
+    html += `</div>`;
+
+    // ── Knowledge Graph section ──
+    html += `<div class="card" style="margin-bottom:24px;"><div class="card-header" style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+        <div>
+            <h3>Knowledge Graph · Wie Bild-Kontext vernetzt ist</h3>
+            <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Klicken Sie auf einen Knoten, um verbundene Artikel, Destinationen, Personen zu sehen. Je mehr Context Bild hochlädt, desto dichter der Graph.</p>
+        </div>
+        <div id="kg-legend" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+    </div><div class="card-body" style="padding:0;">
+        <div style="display:grid;grid-template-columns:3fr 1fr;gap:0;border-top:1px solid var(--gray-200);">
+            <div id="kg-graph" style="height:620px;border-right:1px solid var(--gray-200);position:relative;background:#FAFAFA;"></div>
+            <div id="kg-side" style="padding:20px 22px;overflow-y:auto;max-height:620px;">
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Graph-Wachstum</div>
+                <div id="kg-growth-chart" style="height:200px;margin-bottom:20px;"></div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Statistik</div>
+                <div style="font-size:12px;line-height:1.9;color:var(--gray-700);">
+                    <div>Nodes total: <strong>${stats.total_nodes}</strong></div>
+                    <div>Edges total: <strong>${stats.total_edges}</strong></div>
+                    <div>Ø Degree: <strong>${stats.avg_degree}</strong></div>
+                    <div>Connected: <strong>${stats.connected_pct}%</strong></div>
+                </div>
+                <div style="margin-top:16px;padding:12px 14px;background:var(--beurer-magenta-subtle);border-radius:var(--radius-sm);border:1px dashed var(--beurer-magenta);">
+                    <div style="font-size:12px;font-weight:700;color:var(--beurer-magenta);margin-bottom:6px;">+ Mehr Kontext hochladen</div>
+                    <div style="font-size:11px;color:var(--gray-700);line-height:1.5;">Jedes weitere Bild-Dokument erhöht Connected-Rate um durchschnittlich <strong>3.2pp</strong> und Quality-Score um <strong>1.4 Punkte</strong>.</div>
+                </div>
+            </div>
+        </div>
+    </div></div>`;
+
+    // ── Correlations ──
+    html += `<div class="card" style="margin-bottom:24px;"><div class="card-header">
+        <h3>Internal × External Korrelationen · Signale, die Content auslösen</h3>
+        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Bild-Support-Kanäle + PIM-Daten führen oft 2-7 Tage vor externen Trends — die Frühwarn-Stunde der Pipeline.</p>
+    </div><div class="card-body" style="padding:16px 20px 20px;">`;
+    corr.forEach(c => {
+        const leadCol = c.lead_time_days >= 5 ? '#10B981' : c.lead_time_days >= 3 ? '#F59E0B' : '#EF4444';
+        const corrScore = Math.round(c.correlation_coefficient * 100);
+        const statusColor = c.action_status === 'published' ? 'var(--success)' : c.action_status === 'generating' ? 'var(--warning)' : 'var(--gray-500)';
+        const statusLabel = c.action_status === 'published' ? '✓ publiziert' : c.action_status === 'generating' ? '⚙ in Produktion' : c.action_status;
+        html += `<div style="border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:18px 20px;margin-bottom:14px;background:white;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:14px;flex-wrap:wrap;">
+                <div style="flex:1;min-width:280px;">
+                    <div style="font-weight:700;font-size:14px;color:var(--gray-900);margin-bottom:4px;">${_ctxEsc(c.title)}</div>
+                    <div style="font-size:12px;color:var(--gray-500);">Korrelationskoeffizient <strong style="color:var(--gray-800);">r = ${c.correlation_coefficient}</strong> · Lead-Time <strong style="color:${leadCol};">${c.lead_time_days} Tage</strong></div>
+                </div>
+                <div style="background:${statusColor};color:white;padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;white-space:nowrap;">${statusLabel}</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 32px 1fr;gap:14px;align-items:stretch;margin-bottom:14px;">
+                <div style="padding:14px 16px;background:var(--beurer-magenta-subtle);border-left:3px solid var(--beurer-magenta);border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
+                    <div style="font-size:10px;font-weight:700;color:var(--beurer-magenta);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Internes Signal · ${_ctxEsc(c.internal_signal.source)}</div>
+                    <div style="font-size:12px;color:var(--gray-700);margin-bottom:6px;line-height:1.4;">${_ctxEsc(c.internal_signal.metric)}</div>
+                    <div style="font-size:11px;color:var(--gray-600);">Baseline ${_fmtNum(c.internal_signal.baseline)} → Spike <strong style="color:var(--beurer-magenta);">${_fmtNum(c.internal_signal.spike)}</strong>${c.internal_signal.spike_pct != null ? ' (+' + c.internal_signal.spike_pct + '%)' : ''}</div>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:center;color:var(--gray-400);font-size:20px;">→</div>
+                <div style="padding:14px 16px;background:#EFF6FF;border-left:3px solid #3B82F6;border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
+                    <div style="font-size:10px;font-weight:700;color:#3B82F6;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Externes Signal · ${_ctxEsc(c.external_signal.source)}</div>
+                    <div style="font-size:12px;color:var(--gray-700);margin-bottom:6px;line-height:1.4;">${_ctxEsc(c.external_signal.metric)}</div>
+                    <div style="font-size:11px;color:var(--gray-600);">Baseline ${_fmtNum(c.external_signal.baseline)} → Spike <strong style="color:#3B82F6;">${_fmtNum(c.external_signal.spike)}</strong> (+${c.external_signal.spike_pct}%)</div>
+                </div>
+            </div>
+            <div style="font-size:12px;color:var(--gray-700);line-height:1.5;padding-top:10px;border-top:1px solid var(--gray-100);">
+                <div style="margin-bottom:4px;"><strong style="color:var(--gray-900);">Aktion:</strong> ${_ctxEsc(c.action_taken)}</div>
+                <div style="margin-bottom:4px;"><strong style="color:var(--gray-900);">Historisches Muster:</strong> ${_ctxEsc(c.historical_precedent)}</div>
+                <div><strong style="color:var(--gray-900);">Revenue-Implikation:</strong> ${_ctxEsc(c.revenue_implication)}</div>
+            </div>
+        </div>`;
+    });
+    html += `</div></div>`;
+
+    html += '</div>';
+    host.innerHTML = html;
+
+    // Render legend
+    const legendEl = document.getElementById('kg-legend');
+    if (legendEl && kg.node_types) {
+        const order = ["destination","topic","article","product","persona","internal_doc","cs_ticket","social_signal","news","competitor","keyword","author"];
+        legendEl.innerHTML = order.filter(k => kg.node_types[k]).map(k => {
+            const t = kg.node_types[k];
+            return `<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--gray-600);">
+                <span style="width:10px;height:10px;border-radius:50%;background:${t.color};display:inline-block;"></span>
+                ${_ctxEsc(t.label)}
+            </span>`;
+        }).join('');
+    }
+
+    // Render vis-network graph + growth chart
+    _renderKnowledgeGraph(kg);
+    _renderGrowthChart(kg.growth_trajectory || []);
+}
+
+function _renderKnowledgeGraph(kg) {
+    const el = document.getElementById('kg-graph');
+    if (!el) return;
+    const nodes = kg.nodes || [];
+    const edges = kg.edges || [];
+    const types = kg.node_types || {};
+    _loadVisNetwork().then(() => {
+        const visNodes = new vis.DataSet(nodes.map(n => {
+            const t = types[n.group] || {};
+            return {
+                id: n.id,
+                label: n.label,
+                group: n.group,
+                value: Math.max(4, Math.min(n.size || 8, 48)),
+                color: { background: t.color || '#94A3B8', border: t.color || '#94A3B8', highlight: { background: '#FFF', border: t.color || '#DD0000' } },
+                font: { size: 10, color: '#333', face: 'Inter, sans-serif', vadjust: -5 },
+                shape: t.shape || 'dot',
+                title: `<b>${n.label}</b><br/>Type: ${t.label || n.group}<br/>Connections: ${n.connections || 0}`,
+            };
+        }));
+        const visEdges = new vis.DataSet(edges.map((e, idx) => ({
+            id: 'e-' + idx,
+            from: e.from, to: e.to,
+            width: Math.min(Math.max(e.weight || 0.5, 0.3), 2.2),
+            color: { color: e.type === 'correlates' ? 'rgba(139,92,246,0.6)' : 'rgba(180,180,190,0.35)', highlight: '#DD0000' },
+            dashes: e.type === 'correlates' ? [4, 4] : false,
+        })));
+        const options = {
+            nodes: { borderWidth: 1, scaling: { min: 6, max: 32 } },
+            edges: { smooth: { type: 'dynamic' }, selectionWidth: 3 },
+            physics: {
+                enabled: true,
+                solver: 'forceAtlas2Based',
+                forceAtlas2Based: { gravitationalConstant: -60, centralGravity: 0.012, springLength: 80, springConstant: 0.08, damping: 0.55 },
+                stabilization: { enabled: true, iterations: 380, updateInterval: 20 },
+            },
+            interaction: { hover: true, tooltipDelay: 150, hideEdgesOnDrag: true },
+            layout: { improvedLayout: true },
+        };
+        try {
+            const net = new vis.Network(el, { nodes: visNodes, edges: visEdges }, options);
+            // Once stabilized, disable physics for responsiveness
+            net.once('stabilizationIterationsDone', () => net.setOptions({ physics: { enabled: false } }));
+        } catch (e) {
+            el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--gray-500);">Graph konnte nicht geladen werden.</div>';
+        }
+    }).catch(() => {
+        el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--gray-500);padding:24px;text-align:center;">Knowledge-Graph benötigt Internet-Zugang (vis-network CDN).<br/><br/>Im Offline-Modus ist der Graph nicht verfügbar.<br/>Stats bleiben trotzdem korrekt.</div>';
+    });
+}
+
+function _renderGrowthChart(traj) {
+    const el = document.getElementById('kg-growth-chart');
+    if (!el || typeof Chart === 'undefined' || !traj.length) return;
+    const canvas = document.createElement('canvas');
+    el.innerHTML = '';
+    el.appendChild(canvas);
+    const labels = traj.map(p => (p.projected ? '📈 ' : '') + p.uploaded_docs + ' docs');
+    const nodesData = traj.map(p => p.nodes);
+    const connectedData = traj.map(p => p.connected_pct);
+    const bgColors = traj.map(p => p.projected ? 'rgba(221,0,0,0.2)' : 'rgba(221,0,0,0.8)');
+    try {
+        new Chart(canvas, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    { label: 'Nodes', data: nodesData, backgroundColor: bgColors, yAxisID: 'y' },
+                    { label: 'Connected %', data: connectedData, type: 'line', borderColor: '#3B82F6', backgroundColor: 'rgba(59,130,246,0.15)', fill: false, tension: 0.3, yAxisID: 'y1', pointRadius: 3 },
+                ],
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { display: true, labels: { font: { size: 10 }, boxWidth: 10 } } },
+                scales: {
+                    x: { ticks: { font: { size: 9 } } },
+                    y: { position: 'left', ticks: { font: { size: 9 } }, title: { display: true, text: 'Nodes', font: { size: 10 } } },
+                    y1: { position: 'right', min: 0, max: 100, ticks: { font: { size: 9 }, callback: v => v + '%' }, grid: { drawOnChartArea: false }, title: { display: true, text: 'Connected', font: { size: 10 } } },
+                },
+            },
+        });
+    } catch (e) {}
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   CONTENT SCORING TAB
+   ───────────────────────────────────────────────────────────────────────── */
+function renderContentScoringTab() {
+    const host = document.getElementById('tab-scoring');
+    if (!host) return;
+    const cs = (DASHBOARD_DATA && DASHBOARD_DATA.content_scoring) || {};
+    const topics = cs.topics || [];
+    const weights = cs.weights || {};
+    const dims = cs.dimensions || {};
+    const quad = cs.quadrant || [];
+    const quadLabels = cs.quadrant_labels || {};
+    const stats = cs.stats || {};
+
+    let html = '<div class="section">';
+    html += `<div class="section-header"><div>
+        <div class="section-title">Content Scoring Matrix · Warum schreiben wir was?</div>
+        <div class="section-subtitle">McKinsey-Scorecard mit 7 gewichteten Dimensionen — data-driven Entscheidung für jedes Thema, transparent &amp; reviewbar.</div>
+    </div></div>`;
+
+    // Stats
+    html += `<div class="kpi-grid" style="margin-bottom:24px;">
+        <div class="kpi-card"><div class="kpi-label">Gescorte Themen</div><div class="kpi-value">${stats.total_scored || 0}</div><div class="kpi-delta neutral">gesamter Pipeline-Pool</div></div>
+        <div class="kpi-card"><div class="kpi-label">Publiziert</div><div class="kpi-value">${stats.shipped || 0}</div><div class="kpi-delta up">&#9652; ${stats.shipped || 0} von ${stats.total_scored || 0}</div></div>
+        <div class="kpi-card"><div class="kpi-label">In Produktion</div><div class="kpi-value">${stats.in_pipeline || 0}</div><div class="kpi-delta neutral">Stage 2-4</div></div>
+        <div class="kpi-card"><div class="kpi-label">Ø Composite Score</div><div class="kpi-value">${stats.avg_composite || 0}<span style="font-size:16px;opacity:0.6;">/100</span></div><div class="kpi-delta up">&#9652; +3.4 vs Q1</div></div>
+        <div class="kpi-card accent"><div class="kpi-label">Ship-Rate</div><div class="kpi-value">${Math.round((stats.shipped || 0) / Math.max(stats.total_scored, 1) * 100)}%</div><div class="kpi-delta neutral" style="color:rgba(255,255,255,0.85)">von Score → Publish</div></div>
+    </div>`;
+
+    // ── Weights editor + 2x2 quadrant ──
+    html += `<div style="display:grid;grid-template-columns:1fr 2fr;gap:20px;margin-bottom:24px;">`;
+
+    // Weights editor
+    html += `<div class="card"><div class="card-header">
+        <h3>Gewichtungen</h3>
+        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Wie Bild-Strategie in die Score-Formel einfließt.</p>
+    </div><div class="card-body" style="padding:16px 20px;">`;
+    Object.entries(weights).forEach(([key, w]) => {
+        const dim = dims[key] || {};
+        const pct = Math.round(w * 100);
+        html += `<div style="margin-bottom:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                <span style="font-size:12px;font-weight:600;color:var(--gray-800);">${_ctxEsc(dim.label || key)}</span>
+                <span style="font-size:12px;font-weight:700;color:${dim.color || 'var(--gray-700)'};">${pct}%</span>
+            </div>
+            <div style="background:var(--gray-100);height:6px;border-radius:3px;overflow:hidden;">
+                <div style="background:${dim.color || 'var(--gray-500)'};height:100%;width:${pct * 4}%;transition:width 0.3s;"></div>
+            </div>
+            <div style="font-size:10px;color:var(--gray-500);margin-top:3px;line-height:1.4;">${_ctxEsc(dim.description || '')}</div>
+        </div>`;
+    });
+    html += `</div></div>`;
+
+    // 2x2 Impact × Effort quadrant
+    html += `<div class="card"><div class="card-header">
+        <h3>Impact × Effort Matrix</h3>
+        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Wo jeder Artikel liegt — Quick Wins, Strategic Bets, Fill-Ins, Thankless Tasks.</p>
+    </div><div class="card-body" style="padding:20px 24px;">
+        <div id="scoring-quadrant" style="position:relative;width:100%;height:420px;border:1px solid var(--gray-200);background:linear-gradient(135deg, rgba(16,185,129,0.05) 0%, rgba(16,185,129,0.1) 50%, rgba(239,68,68,0.05) 100%);"></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;font-size:11px;">`;
+    ["quick_win","strategic_bet","fill_in","thankless"].forEach(k => {
+        const q = quadLabels[k] || {};
+        const count = quad.filter(t => t.quadrant === k).length;
+        html += `<div style="padding:8px 10px;background:${q.color}15;border-left:3px solid ${q.color};border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
+            <div style="font-weight:700;color:${q.color};font-size:11px;">${_ctxEsc(q.label)} (${count})</div>
+            <div style="font-size:10px;color:var(--gray-600);margin-top:2px;line-height:1.3;">${_ctxEsc(q.description)}</div>
+        </div>`;
+    });
+    html += `</div></div></div>`;
+    html += `</div>`;
+
+    // ── Scoring Table ──
+    html += `<div class="card" style="margin-bottom:24px;"><div class="card-header">
+        <h3>Ranked Scoring Matrix · Top ${topics.length} Themen</h3>
+        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Sortiert nach Composite Score. Klicken Sie auf einen Eintrag für Rationale &amp; Radar-Chart.</p>
+    </div><div class="card-body" style="padding:0;">
+        <div style="overflow-x:auto;">
+        <table style="width:100%;font-size:12px;border-collapse:collapse;">
+            <thead>
+                <tr style="background:#FAFAFA;">
+                    <th style="padding:10px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);position:sticky;left:0;background:#FAFAFA;">Thema</th>
+                    <th style="padding:10px 8px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);">Status</th>`;
+    Object.entries(dims).forEach(([k, d]) => {
+        html += `<th style="padding:10px 6px;text-align:center;font-size:9px;text-transform:uppercase;letter-spacing:0.04em;color:${d.color};writing-mode:horizontal-tb;white-space:nowrap;"><abbr title="${_ctxEsc(d.description)}" style="text-decoration:none;cursor:help;">${_ctxEsc(d.label).replace(' ', '-')}</abbr></th>`;
+    });
+    html += `<th style="padding:10px 10px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--beurer-magenta);font-weight:800;">Composite</th>
+                    <th style="padding:10px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);">Decision</th>
+                </tr>
+            </thead><tbody>`;
+    topics.forEach((t, idx) => {
+        const statusColor = t.status === 'published' ? '#10B981' : t.status === 'generating' ? '#F59E0B' : '#94A3B8';
+        const statusIcon = t.status === 'published' ? '✓' : t.status === 'generating' ? '⚙' : '○';
+        const decColor = t.decision.startsWith('SHIP') ? '#10B981' : t.decision.startsWith('HOLD') ? '#F59E0B' : t.decision.startsWith('KILL') ? '#EF4444' : '#64748B';
+        html += `<tr style="border-top:1px solid var(--gray-100);cursor:pointer;" onclick="showScoringDetail(${idx})" onmouseover="this.style.background='#FAFBFF'" onmouseout="this.style.background='white'">
+            <td style="padding:10px 14px;max-width:300px;font-weight:600;color:var(--gray-800);">${_ctxEsc(t.title)}<div style="font-size:10px;color:var(--gray-500);font-weight:400;margin-top:2px;">${_ctxEsc(t.destination || '')}</div></td>
+            <td style="padding:10px 8px;text-align:center;"><span style="color:${statusColor};font-size:14px;">${statusIcon}</span></td>`;
+        Object.keys(dims).forEach(k => {
+            const v = t.scores[k] || 0;
+            const col = dims[k].color;
+            html += `<td style="padding:10px 6px;text-align:center;font-variant-numeric:tabular-nums;">
+                <div style="position:relative;height:22px;background:${col}10;border-radius:3px;overflow:hidden;">
+                    <div style="background:${col};height:100%;width:${v}%;"></div>
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;color:${v >= 60 ? '#fff' : col};">${v}</div>
+                </div>
+            </td>`;
+        });
+        html += `<td style="padding:10px 10px;text-align:center;font-weight:800;font-size:14px;color:var(--beurer-magenta);">${t.composite}</td>
+            <td style="padding:10px 14px;"><span style="background:${decColor}15;color:${decColor};padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;white-space:nowrap;">${_ctxEsc(t.decision)}</span></td>
+        </tr>`;
+    });
+    html += `</tbody></table></div></div></div>`;
+
+    // Detail panel placeholder
+    html += `<div id="scoring-detail" style="margin-bottom:24px;"></div>`;
+
+    html += '</div>';
+    host.innerHTML = html;
+
+    // Render quadrant visualization
+    _renderQuadrant(quad, quadLabels);
+
+    // Default-open top topic detail
+    if (topics.length > 0) {
+        showScoringDetail(0);
+    }
+}
+
+function _renderQuadrant(quad, labels) {
+    const el = document.getElementById('scoring-quadrant');
+    if (!el) return;
+    const W = el.clientWidth || 600, H = 420;
+    let svg = `<svg width="${W}" height="${H}" style="display:block;">
+        <!-- axes -->
+        <line x1="${W/2}" y1="20" x2="${W/2}" y2="${H-40}" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 4"/>
+        <line x1="40" y1="${H/2}" x2="${W-20}" y2="${H/2}" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 4"/>
+        <!-- axis labels -->
+        <text x="${W/2}" y="${H-16}" text-anchor="middle" font-size="11" fill="#64748B" font-weight="700">→ Effort (hoch)</text>
+        <text x="40" y="${H/2-8}" text-anchor="start" font-size="11" fill="#64748B" font-weight="700" transform="rotate(-90 40 ${H/2-8})">→ Impact (hoch)</text>
+        <text x="50" y="34" font-size="11" fill="#10B981" font-weight="700">Quick Wins</text>
+        <text x="${W-20}" y="34" text-anchor="end" font-size="11" fill="#3B82F6" font-weight="700">Strategic Bets</text>
+        <text x="50" y="${H-46}" font-size="11" fill="#F59E0B" font-weight="700">Fill-Ins</text>
+        <text x="${W-20}" y="${H-46}" text-anchor="end" font-size="11" fill="#EF4444" font-weight="700">Thankless</text>`;
+    quad.forEach(q => {
+        const x = 50 + (q.effort / 100) * (W - 70);
+        const y = H - 50 - (q.impact / 100) * (H - 90);
+        const col = (labels[q.quadrant] || {}).color || '#64748B';
+        const r = 6 + q.composite / 16;
+        svg += `<g>
+            <circle cx="${x}" cy="${y}" r="${r}" fill="${col}" fill-opacity="0.6" stroke="${col}" stroke-width="1.5">
+                <title>${_ctxEsc(q.title)} · Score ${q.composite}</title>
+            </circle>
+            <text x="${x}" y="${y + r + 10}" text-anchor="middle" font-size="9" fill="#475569" font-weight="600">${_ctxEsc((q.title || '').slice(0, 20))}${q.title && q.title.length > 20 ? '…' : ''}</text>
+        </g>`;
+    });
+    svg += `</svg>`;
+    el.innerHTML = svg;
+}
+
+function showScoringDetail(idx) {
+    const cs = (DASHBOARD_DATA && DASHBOARD_DATA.content_scoring) || {};
+    const t = (cs.topics || [])[idx];
+    const dims = cs.dimensions || {};
+    if (!t) return;
+    const host = document.getElementById('scoring-detail');
+    if (!host) return;
+
+    let html = `<div class="card"><div class="card-header">
+        <h3>Warum ${t.decision.startsWith('SHIP') ? '✓ schreiben' : t.decision.startsWith('HOLD') ? '⏸ parken' : t.decision.startsWith('KILL') ? '✗ verwerfen' : '📋 backlog'}: "${_ctxEsc(t.title)}"</h3>
+        <p style="font-size:12px;color:var(--gray-400);margin-top:2px;">Transparente Entscheidungs-Rationale · data-driven &amp; reviewbar</p>
+    </div><div class="card-body" style="padding:20px 24px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-bottom:20px;">
+            <!-- Radar chart -->
+            <div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Score-Radar</div>
+                <div id="scoring-radar-wrap" style="height:300px;"></div>
+            </div>
+            <!-- Metadata grid -->
+            <div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:10px;">Business-Daten</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                    <div style="padding:10px 12px;background:var(--gray-50);border-radius:var(--radius-sm);">
+                        <div style="font-size:10px;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;">Search Volume</div>
+                        <div style="font-size:18px;font-weight:800;color:var(--gray-900);">${_fmtNum(t.search_volume_monthly)}<span style="font-size:11px;color:var(--gray-500);font-weight:400;"> /Mon</span></div>
+                    </div>
+                    <div style="padding:10px 12px;background:var(--gray-50);border-radius:var(--radius-sm);">
+                        <div style="font-size:10px;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;">CPC</div>
+                        <div style="font-size:18px;font-weight:800;color:var(--gray-900);">€ ${t.cpc_eur}</div>
+                    </div>
+                    <div style="padding:10px 12px;background:var(--gray-50);border-radius:var(--radius-sm);">
+                        <div style="font-size:10px;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;">AOV</div>
+                        <div style="font-size:18px;font-weight:800;color:var(--gray-900);">€ ${_fmtNum(t.aov_eur)}</div>
+                    </div>
+                    <div style="padding:10px 12px;background:var(--beurer-magenta-subtle);border:1px solid var(--beurer-magenta);border-radius:var(--radius-sm);">
+                        <div style="font-size:10px;color:var(--beurer-magenta);text-transform:uppercase;letter-spacing:0.04em;font-weight:700;">Composite</div>
+                        <div style="font-size:24px;font-weight:800;color:var(--beurer-magenta);">${t.composite}<span style="font-size:14px;opacity:0.6;">/100</span></div>
+                    </div>
+                </div>
+                <div style="margin-top:14px;padding:14px 16px;background:white;border:1px solid var(--gray-200);border-radius:var(--radius-sm);">
+                    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:6px;">Decision Rationale</div>
+                    <div style="font-size:13px;color:var(--gray-700);line-height:1.55;">${_ctxEsc(t.rationale)}</div>
+                </div>
+            </div>
+        </div>
+    </div></div>`;
+
+    host.innerHTML = html;
+
+    // Render radar
+    const wrap = document.getElementById('scoring-radar-wrap');
+    if (wrap && typeof Chart !== 'undefined') {
+        const canvas = document.createElement('canvas');
+        wrap.appendChild(canvas);
+        const labels = Object.values(dims).map(d => d.label);
+        const dataArr = Object.keys(dims).map(k => t.scores[k]);
+        try {
+            new Chart(canvas, {
+                type: 'radar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Score',
+                        data: dataArr,
+                        backgroundColor: 'rgba(221,0,0,0.2)',
+                        borderColor: '#DD0000',
+                        pointBackgroundColor: '#DD0000',
+                        pointRadius: 4,
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        r: {
+                            min: 0, max: 100,
+                            ticks: { stepSize: 25, font: { size: 9 }, color: '#94A3B8' },
+                            pointLabels: { font: { size: 10 }, color: '#475569' },
+                            grid: { color: '#E2E8F0' },
+                            angleLines: { color: '#E2E8F0' },
+                        }
+                    }
+                }
+            });
+        } catch (e) {}
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   TAB INJECTION + ACTIVATION
+   ───────────────────────────────────────────────────────────────────────── */
+(function() {
+    if (typeof window === 'undefined' || window.location.protocol !== 'file:') return;
+
+    // Ensure tab panels exist
+    document.addEventListener('DOMContentLoaded', () => {
+        const main = document.querySelector('main.content');
+        if (main) {
+            ['tab-context', 'tab-scoring'].forEach(id => {
+                if (!document.getElementById(id)) {
+                    const p = document.createElement('div');
+                    p.className = 'tab-panel';
+                    p.id = id;
+                    p.setAttribute('role', 'tabpanel');
+                    main.appendChild(p);
+                }
+            });
+        }
+    });
+
+    // Patch activation
+    const _origActivate = window.activateSidebarTab;
+    window.activateSidebarTab = function(tabId) {
+        if (typeof _origActivate === 'function') _origActivate.call(this, tabId);
+        if (tabId === 'context') setTimeout(() => { try { renderContextLayerTab(); } catch (e) { console.error(e); } }, 30);
+        if (tabId === 'scoring') setTimeout(() => { try { renderContentScoringTab(); } catch (e) { console.error(e); } }, 30);
+    };
+
+    // Inject sidebar items
+    function injectNavItems() {
+        const nav = document.getElementById('sidebarNav');
+        if (!nav) { setTimeout(injectNavItems, 100); return; }
+
+        // Context Layer — positioned BEFORE Content Planung (upstream data)
+        if (!nav.querySelector('[data-tab="context"]')) {
+            const beforeContent = nav.querySelector('[data-tab="content"]');
+            const iconCtx = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="4" r="2"/><circle cx="20" cy="4" r="2"/><circle cx="4" cy="20" r="2"/><circle cx="20" cy="20" r="2"/><line x1="6" y1="6" x2="10" y2="10"/><line x1="18" y1="6" x2="14" y2="10"/><line x1="6" y1="18" x2="10" y2="14"/><line x1="18" y1="18" x2="14" y2="14"/></svg>`;
+            const btn = document.createElement('button');
+            btn.className = 'sidebar-nav-item';
+            btn.dataset.tab = 'context';
+            btn.dataset.tooltip = 'Context Layer';
+            btn.innerHTML = `${iconCtx}<span class="nav-label">Context Layer</span>`;
+            btn.addEventListener('click', () => activateSidebarTab('context'));
+            if (beforeContent) beforeContent.parentNode.insertBefore(btn, beforeContent);
+            else nav.appendChild(btn);
+        }
+
+        // Content Scoring — AFTER Pipeline (decision support)
+        if (!nav.querySelector('[data-tab="scoring"]')) {
+            const afterPipeline = nav.querySelector('[data-tab="pipeline"]');
+            const iconSco = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11H5a2 2 0 0 0-2 2v7h6v-9z"/><path d="M15 7h-6v13h6V7z"/><path d="M21 3h-6v17h6V3z"/></svg>`;
+            const btn = document.createElement('button');
+            btn.className = 'sidebar-nav-item';
+            btn.dataset.tab = 'scoring';
+            btn.dataset.tooltip = 'Content Scoring';
+            btn.innerHTML = `${iconSco}<span class="nav-label">Content Scoring</span>`;
+            btn.addEventListener('click', () => activateSidebarTab('scoring'));
+            if (afterPipeline && afterPipeline.nextSibling) afterPipeline.parentNode.insertBefore(btn, afterPipeline.nextSibling);
+            else nav.appendChild(btn);
+        }
+    }
+    document.addEventListener('DOMContentLoaded', injectNavItems);
+    if (document.readyState !== 'loading') injectNavItems();
 })();
 """
 
